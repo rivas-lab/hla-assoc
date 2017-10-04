@@ -5,7 +5,7 @@ import numpy as np
 # take in row with one column for each allele, max=2 per entry and convert it
 # to a row with two columns for each allele, max=1 per entry
 def double_row(row):
-    new_row = np.empty((2 * row.size,), dtype='string_')
+    new_row = np.empty((2 * row.size,), dtype=np.unicode)
     for i in range(row.size):
         if row[i] == 0:
             new_row[2*i] = 'N'
@@ -110,11 +110,10 @@ def main():
 
     print(fam_info.shape)
     print(ped_dosage_values.shape)
-    zero_col = np.zeros((fam_info.shape[0],))
+    zero_col = np.zeros((fam_info.shape[0],), dtype = int)
     print(zero_col.shape)
     all_ped_data = np.transpose(np.vstack((np.transpose(fam_info), zero_col, np.transpose(ped_dosage_values))))
-    #all_ped_data_decode = np.array([x.decode() for x in all_ped_data])
-    np.savetxt('test_100.ped', np.char.decode(all_ped_data[:,None][:,[0,0]]), delimiter = ' ', fmt = '%s')
+    np.savetxt('test_100.ped', all_ped_data, delimiter = ' ', fmt = '%s')
     if test:
         test_double_row(rounded_dosages, ped_dosage_values)
         test_round_dosages()
