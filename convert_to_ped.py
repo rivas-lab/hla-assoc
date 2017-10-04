@@ -30,12 +30,13 @@ def test_double_row(dosage_values, ped_dosage_values):
     for i in range(nnz_idx[0].size):
 #        print('dosage value: {} ped values: {} {}'.format(dosage_values[nnz_idx[0][i], nnz_idx[1][i]], ped_dosage_values[nnz_idx[0][i], nnz_idx[1][i]*2],ped_dosage_values[nnz_idx[0][i], nnz_idx[1][i]*2 + 1]))
         if dosage_values[nnz_idx[0][i], nnz_idx[1][i]] == 1:
-            assert(ped_dosage_values[nnz_idx[0][i], nnz_idx[1][i]*2] == b'P')
-            assert(ped_dosage_values[nnz_idx[0][i], nnz_idx[1][i]*2 + 1] == b'N')
+            assert(ped_dosage_values[nnz_idx[0][i], nnz_idx[1][i]*2] == 'P')
+            assert(ped_dosage_values[nnz_idx[0][i], nnz_idx[1][i]*2 + 1] == 'N')
         elif dosage_values[nnz_idx[0][i], nnz_idx[1][i]] == 2:
-            assert(ped_dosage_values[nnz_idx[0][i], nnz_idx[1][i]*2] == b'P')
-            assert(ped_dosage_values[nnz_idx[0][i], nnz_idx[1][i]*2 + 1] == b'P')
+            assert(ped_dosage_values[nnz_idx[0][i], nnz_idx[1][i]*2] == 'P')
+            assert(ped_dosage_values[nnz_idx[0][i], nnz_idx[1][i]*2 + 1] == 'P')
 
+# rounds value to nearest integer if within threshold; otherwise returns -1
 def round_dosages(val, thresh):
     if val < thresh:
         return 0
@@ -55,26 +56,36 @@ def test_round_dosages():
 def split_string_underscore(string):
     return string.split('_')[0]
 
+# return length-2 list: first entry is the sum of positive entries of row[idx]
+# second is sum of negative entries of row[idx]
 def sum_pos_neg(row, idx):
     sub_row = row[idx]
-    
-    #print(sub_row)
-    #print(sub_row > 0)
     return [np.sum(sub_row[sub_row > 0]), np.sum(sub_row[sub_row < 0])]
 
+# If a locus has no missing data and its sum != 2, replace all nonzero
+# entries for that locus and sample with -1 (missing data)
 def check_sum(rounded_dosages, loci_variants, loci_names):
-    
+    num_wrong = 0 
     v_split_string_underscore = np.vectorize(split_string_underscore)
     loci_variants_split = v_split_string_underscore(loci_variants)
+#    rounded_dosages[0][0] = 1
+#    rounded_dosages[5][200] = 1
     for locus in loci_names:
         locus_idx = np.where(loci_variants_split == locus)
         print(locus)
-    #    print(rounded_dosages[0,loci_idx])
         locus_sums = np.apply_along_axis(sum_pos_neg, 1, rounded_dosages, locus_idx)
+        rounded_wrong = [i for i in range(rounded_dosages.shape[0]) if locus_sums[i][1] == 0 and locus_sums[i][0] != 2]
+        num_wrong += len(rounded_wrong)
+        for i in rounded_wrong:
+             locus_entries = rounded_dosages[i,locus_idx]
+             locus_entries[np.nonzero(locus_entries)] = -1
+             rounded_dosages[i, locus_idx] = locus_entries
+        print(rounded_wrong)
+    return rounded_dosages, num_wrong
         
 def main():
 
-    test = False
+    test = True 
 
     # read in rounded dosage values
     dosage_values = np.loadtxt('test_100.txt', skiprows = 1)
@@ -101,7 +112,8 @@ def main():
 ##        print(dosage_values[i,:].shape)
     print(dosage_values)
 
-
+    rounded_dosages, num_wrong = check_sum(rounded_dosages, loci_variants, loci_names)
+    print('rounded {} entries wrong'.format(num_wrong))
     ped_dosage_values = np.apply_along_axis(double_row, 1, rounded_dosages)
     print(ped_dosage_values)
 
@@ -118,5 +130,5 @@ def main():
         test_double_row(rounded_dosages, ped_dosage_values)
         test_round_dosages()
     
-        check_sum(rounded_dosages, loci_variants, loci_names)
+#        check_sum(rounded_dosages, loci_variants, loci_names)
 main()
