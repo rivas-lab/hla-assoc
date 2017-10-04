@@ -89,13 +89,13 @@ def main():
 
     test = False
 
-#    dosage_file_name = 'test_100.txt'
-#    fam_file_name = 'test_100.fam'
-#    ped_file_name = 'test_100.ped'
+    dosage_file_name = 'test_100.txt'
+    fam_file_name = 'test_100.fam'
+    ped_file_name = 'test_100.ped'
 
-    dosage_file_name = '/scratch/PI/mrivas/ukbb/24983/hla/ukb_hla_v2.txt'
-    fam_file_name = '/scratch/PI/mrivas/ukbb/24983/fam/ukb2498_cal_v2_s488375.fam'
-    ped_file_name = 'ukb_hla_v2.ped'       
+#    dosage_file_name = '/scratch/PI/mrivas/ukbb/24983/hla/ukb_hla_v2.txt'
+#    fam_file_name = '/scratch/PI/mrivas/ukbb/24983/fam/ukb2498_cal_v2_s488374.fam'
+#    ped_file_name = 'ukb_hla_v2.ped'       
 
     print('begin: {}'.format(time.time() - t0))
 
