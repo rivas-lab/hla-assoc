@@ -1,9 +1,11 @@
 # convert_to_ped.py
 
 import numpy as np
+import time
 
 # take in row with one column for each allele, max=2 per entry and convert it
-# to a row with two columns for each allele, max=1 per entry
+# to a row with two columns for each allele; 'P' means 'present', 'N' means 
+# 'not present'
 def double_row(row):
     new_row = np.empty((2 * row.size,), dtype=np.unicode)
     for i in range(row.size):
@@ -72,60 +74,64 @@ def check_sum(rounded_dosages, loci_variants, loci_names):
 #    rounded_dosages[5][200] = 1
     for locus in loci_names:
         locus_idx = np.where(loci_variants_split == locus)
-        print(locus)
         locus_sums = np.apply_along_axis(sum_pos_neg, 1, rounded_dosages, locus_idx)
-        rounded_wrong = [i for i in range(rounded_dosages.shape[0]) if locus_sums[i][1] == 0 and locus_sums[i][0] != 2]
+        rounded_wrong = [i for i in range(rounded_dosages.shape[0]) if locus_sums[i][0] > 2 or (locus_sums[i][1] == 0 and locus_sums[i][0] != 2)]
         num_wrong += len(rounded_wrong)
         for i in rounded_wrong:
              locus_entries = rounded_dosages[i,locus_idx]
              locus_entries[np.nonzero(locus_entries)] = -1
              rounded_dosages[i, locus_idx] = locus_entries
-        print(rounded_wrong)
     return rounded_dosages, num_wrong
         
 def main():
 
-    test = True 
+    t0 = time.time()
+
+    test = False
+
+#    dosage_file_name = 'test_100.txt'
+#    fam_file_name = 'test_100.fam'
+#    ped_file_name = 'test_100.ped'
+
+    dosage_file_name = '/scratch/PI/mrivas/ukbb/24983/hla/ukb_hla_v2.txt'
+    fam_file_name = '/scratch/PI/mrivas/ukbb/24983/fam/ukb2498_cal_v2_s488375.fam'
+    ped_file_name = 'ukb_hla_v2.ped'       
+
+    print('begin: {}'.format(time.time() - t0))
 
     # read in rounded dosage values
-    dosage_values = np.loadtxt('test_100.txt', skiprows = 1)
+    dosage_values = np.loadtxt(dosage_file_name, skiprows = 1)
+    print('read dosage: {}'.format(time.time() - t0))
     
-    dosage_file = open('test_100.txt', 'r')
+    dosage_file = open(dosage_file_name, 'r')
     loci_variants = np.array(dosage_file.readline().split())
     dosage_file.close()
 
-    fam_info = np.loadtxt('test_100.fam', dtype = 'string_', usecols = range(5))
+    fam_info = np.loadtxt(fam_file_name, dtype = 'string_', usecols = range(5))
+
+    print('read fam: {}'.format(time.time() - t0))
+
     loci_names = ['A', 'B', 'C', 'DPA1', 'DPB1', 'DQA1', 'DQB1', 'DRB1', 'DRB3', 'DRB4', 'DRB5']
 
     thresh = 0.1
     v_round_dosages = np.vectorize(round_dosages)
     rounded_dosages = v_round_dosages(dosage_values, thresh)
-    print(rounded_dosages)
-    # don't all sum to 22
-#    for i in range(dosage_values.shape[0]):
-#        #print(dosage_values[i, np.nonzero(dosage_values[i,:])])
-#        print()
-#        print(dosage_values[i,:])
-#        print('doubled:')
-#        print(double_row(dosage_values[i,:]))
-##        print(np.sum(dosage_values[i,:]))
-##        print(dosage_values[i,:].shape)
-    print(dosage_values)
+
+    print('rounded dosages: {}'.format(time.time() - t0))
 
     rounded_dosages, num_wrong = check_sum(rounded_dosages, loci_variants, loci_names)
+
+    print('checked sum: {}'.format(time.time() - t0))
     print('rounded {} entries wrong'.format(num_wrong))
+
     ped_dosage_values = np.apply_along_axis(double_row, 1, rounded_dosages)
-    print(ped_dosage_values)
 
-    print(dosage_values.shape)
-    print(ped_dosage_values.shape)
+    print('converted to ped values: {}'.format(time.time() - t0))
 
-    print(fam_info.shape)
-    print(ped_dosage_values.shape)
     zero_col = np.zeros((fam_info.shape[0],), dtype = int)
-    print(zero_col.shape)
     all_ped_data = np.transpose(np.vstack((np.transpose(fam_info), zero_col, np.transpose(ped_dosage_values))))
-    np.savetxt('test_100.ped', all_ped_data, delimiter = ' ', fmt = '%s')
+    np.savetxt(ped_file_name, all_ped_data, delimiter = ' ', fmt = '%s')
+    print('done: {}'.format(time.time() - t0))
     if test:
         test_double_row(rounded_dosages, ped_dosage_values)
         test_round_dosages()
