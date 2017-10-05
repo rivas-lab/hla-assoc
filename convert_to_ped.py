@@ -2,6 +2,7 @@
 
 import numpy as np
 import time
+import sys
 
 # take in row with one column for each allele, max=2 per entry and convert it
 # to a row with two columns for each allele; 'P' means 'present', 'N' means 
@@ -87,15 +88,28 @@ def main():
 
     t0 = time.time()
 
+    prefix = ''
+
+    if len(sys.argv) == 2:
+        prefix = sys.argv[1]
+
     test = False
 
-    dosage_file_name = 'test_100.txt'
-    fam_file_name = 'test_100.fam'
-    ped_file_name = 'test_100.ped'
+    num_lines = 1000
 
-#    dosage_file_name = '/scratch/PI/mrivas/ukbb/24983/hla/ukb_hla_v2.txt'
-#    fam_file_name = '/scratch/PI/mrivas/ukbb/24983/fam/ukb2498_cal_v2_s488374.fam'
-#    ped_file_name = 'ukb_hla_v2.ped'       
+    if prefix == '':
+        dosage_file_name = 'test_' + str(num_lines) + '.txt'
+        fam_file_name = 'test_' + str(num_lines) + '.fam'
+        ped_file_name = 'test_' + str(num_lines) + '.ped'
+    #    dosage_file_name = '/scratch/PI/mrivas/ukbb/24983/hla/ukb_hla_v2.txt'
+    #    fam_file_name = '/scratch/PI/mrivas/ukbb/24983/fam/ukb2498_cal_v2_s488374.fam'
+    #    ped_file_name = 'ukb_hla_v2.ped'       
+
+    else:
+        dosage_file_name = prefix + '.txt'
+        fam_file_name = prefix + '.fam'
+        ped_file_name = prefix + '.ped'
+
 
     print('begin: {}'.format(time.time() - t0))
 
