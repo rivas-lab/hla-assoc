@@ -14,7 +14,7 @@ def main():
     loci_variants = np.array(dosage_file.readline().split())
     dosage_file.close()
 
-    col0 = np.full(loci_variants.shape, 27)
+    col0 = np.full(loci_variants.shape, 0)
     col2 = np.arange(loci_variants.size)
 
     map_data = np.transpose(np.vstack((col0, loci_variants, col2)))

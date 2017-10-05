@@ -13,3 +13,4 @@ sum of the entries is >2, or if the sum doesn't equal 2 and yet there is no
 missing data, replace all nonzero entries for that sample/locus combo with the
 missing data symbol.
 
+I have been using thresh = 0.1 so far.
