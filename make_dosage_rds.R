@@ -9,10 +9,12 @@ remove <- "/scratch/PI/mrivas/ukbb/24983/phe/sampleqc_16698.phe"
 save_RDS <- FALSE
 covar_RDS <- TRUE
 covar <- "/scratch/PI/mrivas/ukbb/24983/phe/covar_16698.phe"
+phe <- "HC303.phe"
 
 dosage <- read.table(paste(dosage_name), header=TRUE)
 rounded_dosage <- read.table(paste(root, "_rounded.txt", sep=""), header=TRUE)
-covar <- read.table(covar, header=TRUE)
+covar <- read.table(covar, header=TRUE, row.names=1)
+phe <- read.table(phe, header=FALSE)
 
 print(nrow(covar))
 
@@ -38,6 +40,7 @@ inds <- which(ids[,1] %in% to_remove[,1])
 dosage <- dosage[-inds,]
 rounded_dosage <- rounded_dosage[-inds,]
 covar <- covar[-inds,]
+phe <- phe[-inds,]
 #dosage <- dosage[-to_remove]
 #rounded_dosage <- rounded_dosage[-to_remove]
 #covar <- covar[-to_remove]
@@ -48,14 +51,15 @@ print(nrow(dosage))
 print(nrow(covar))
 
 if (covar_RDS) {
-    saveRDS(covar, "covar_16698.rds")
+    saveRDS(phe, "HC303_remove.rds")
+    saveRDS(covar, "covar_16698_remove.rds")
 }
 #write.table(dosage, file=paste(root,"_remove.txt",sep=""))
 #write.table(rounded_dosage, file=paste(root,"_rounded_remove.txt",sep=""))
 if (save_RDS) {
 #    dosage <- read.table(paste(root, "txt", sep="."), header=TRUE)
-    saveRDS(dosage, paste(root,".rds", sep=""))
+    saveRDS(dosage, paste(root,"_remove.rds", sep=""))
     
 #    rounded_dosage <- read.table(paste(root, "_rounded.txt", sep=""), header=TRUE)
-    saveRDS(rounded_dosage, paste(root, "_rounded.rds", sep=""))
+    saveRDS(rounded_dosage, paste(root, "_rounded_remove.rds", sep=""))
 }

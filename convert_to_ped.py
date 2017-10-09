@@ -94,16 +94,19 @@ def main():
         prefix = sys.argv[1]
 
     test = False
+    create_rounded = True
+    create_ped = False
 
     num_lines = 1000
 
     if prefix == '':
-        dosage_file_name = 'test_' + str(num_lines) + '.txt'
-        fam_file_name = 'test_' + str(num_lines) + '.fam'
-        ped_file_name = 'test_' + str(num_lines) + '.ped'
-    #    dosage_file_name = '/scratch/PI/mrivas/ukbb/24983/hla/ukb_hla_v2.txt'
-    #    fam_file_name = '/scratch/PI/mrivas/ukbb/24983/fam/ukb2498_cal_v2_s488374.fam'
-    #    ped_file_name = 'ukb_hla_v2.ped'       
+    #    dosage_file_name = 'test_' + str(num_lines) + '.txt'
+    #    fam_file_name = 'test_' + str(num_lines) + '.fam'
+    #    ped_file_name = 'test_' + str(num_lines) + '.ped'
+        dosage_file_name = '/scratch/PI/mrivas/ukbb/24983/hla/ukb_hla_v2.txt'
+        fam_file_name = '/scratch/PI/mrivas/ukbb/24983/fam/ukb2498_cal_v2_s488374.fam'
+        ped_file_name = 'ukb_hla_v2.ped'       
+        prefix = dosage_file_name.split('/')[-1].split('.')[0]
 
     else:
         dosage_file_name = prefix + '.txt'
@@ -130,25 +133,31 @@ def main():
     thresh = 0.1
     v_round_dosages = np.vectorize(round_dosages)
     rounded_dosages = v_round_dosages(dosage_values, thresh)
+ 
+    # creates without header
+    if create_rounded:
+        np.savetxt(prefix + '_rounded.txt', rounded_dosages, delimiter = '\t', fmt = '%s')
 
-    print('rounded dosages: {}'.format(time.time() - t0))
+    if create_ped:
 
-    rounded_dosages, num_wrong = check_sum(rounded_dosages, loci_variants, loci_names)
-
-    print('checked sum: {}'.format(time.time() - t0))
-    print('rounded {} entries wrong'.format(num_wrong))
-
-    ped_dosage_values = np.apply_along_axis(double_row, 1, rounded_dosages)
-
-    print('converted to ped values: {}'.format(time.time() - t0))
-
-    zero_col = np.zeros((fam_info.shape[0],), dtype = int)
-    all_ped_data = np.transpose(np.vstack((np.transpose(fam_info), zero_col, np.transpose(ped_dosage_values))))
-    np.savetxt(ped_file_name, all_ped_data, delimiter = ' ', fmt = '%s')
-    print('done: {}'.format(time.time() - t0))
-    if test:
-        test_double_row(rounded_dosages, ped_dosage_values)
-        test_round_dosages()
+        print('rounded dosages: {}'.format(time.time() - t0))
+    
+        rounded_dosages, num_wrong = check_sum(rounded_dosages, loci_variants, loci_names)
+    
+        print('checked sum: {}'.format(time.time() - t0))
+        print('rounded {} entries wrong'.format(num_wrong))
+    
+        ped_dosage_values = np.apply_along_axis(double_row, 1, rounded_dosages)
+    
+        print('converted to ped values: {}'.format(time.time() - t0))
+    
+        zero_col = np.zeros((fam_info.shape[0],), dtype = int)
+        all_ped_data = np.transpose(np.vstack((np.transpose(fam_info), zero_col, np.transpose(ped_dosage_values))))
+        np.savetxt(ped_file_name, all_ped_data, delimiter = ' ', fmt = '%s')
+        print('done: {}'.format(time.time() - t0))
+        if test:
+            test_double_row(rounded_dosages, ped_dosage_values)
+            test_round_dosages()
     
 #        check_sum(rounded_dosages, loci_variants, loci_names)
 main()
