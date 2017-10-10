@@ -8,9 +8,7 @@ if (test) {
     root <- "test_100"
     fam <- "test_100.fam"
     covar <- "test_100_covar.phe"
-}
-
-else {
+} else {
     dosage_name <- "/scratch/PI/mrivas/ukbb/24983/hla/ukb_hla_v2.txt"
     root <- "ukb_hla_v2"
     fam <- "ukb_hla_v2.fam"

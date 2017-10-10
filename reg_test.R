@@ -1,19 +1,31 @@
 
-dosage <- as.data.frame(readRDS("ukb_hla_v2.rds"))
-rounded_dosage <- as.data.frame(readRDS("ukb_hla_v2_rounded.rds"))
-covar <- readRDS("covar_16698_remove.rds")
-#phe <- readRDS("HC303_remove.rds")
+test <- TRUE
+
+if (test) {
+    dosage <- readRDS("test_100_remove.rds")
+    rounded_dosage <- readRDS("test_100_rounded_remove.rds")
+    covars <- readRDS("test_100_covar_16698_remove.rds")
+} else {
+    dosage <- readRDS("ukb_hla_v2_remove.rds")
+    rounded_dosage <- readRDS("ukb_hla_v2_rounded_remove.rds")
+    covars <- readRDS("ukb_hla_v2_covar_16698_remove.rds")                              
+}
+
 phe <- as.data.frame(read.table("HC303.phe", header=FALSE, row.names=1))
-outname <- "dosage_out"
+outname <- "out_dosage"
 
 print(nrow(dosage))
 print(nrow(rounded_dosage))
-print(nrow(covar))
-phe <- phe[rownames(covar),]
+print(nrow(covars))
+phe <- phe[rownames(covars),]
 print(nrow(phe))
+
 print("done loading")
 
 print(phe[1:10,])
+print(dosage[1:10,])
+print(rounded_dosage[1:10,])
+print(covars[1:10,])
 
 covars <- covars[, c("age", "sex", "Array", "PC1", "PC2", "PC3", "PC4")]
 covars["status"] = as.numeric(phe$V3)
@@ -45,3 +57,18 @@ for (gene in colnames(dosage)) {
 
 saveRDS(results.gen, paste(outname, "_gen.rds", sep=""))
 saveRDS(results.add, paste(outname, "_add.rds", sep=""))
+
+for (gene in colnames(rounded_dosage)) {
+	covars["gcounts"] <- as.numeric(dosage[,gene])
+	fit <- summary(glm(status ~ as.factor(gcounts) + age + sex + Array + PC1 + PC2 + PC3 + PC4,
+		       family="binomial", data=covars))
+	fit$deviance.resid <- NULL
+	results.gen[[gene]] <- fit
+	fit <- summary(glm(status ~ as.numeric(gcounts) + age + sex + Array + PC1 + PC2 + PC3 + PC4,
+		       family="binomial", data=covars))
+	fit$deviance.resid <- NULL
+	results.add[[gene]] <- fit
+}
+
+saveRDS(results.gen, paste(outname, "_rounded_gen.rds", sep=""))
+saveRDS(results.add, paste(outname, "_rounded_add.rds", sep=""))
