@@ -45,18 +45,16 @@ names(results.add) <- colnames(dosage)
 
 for (gene in colnames(dosage)) {
 	covars["gcounts"] <- as.numeric(dosage[,gene])
-	fit <- summary(glm(status ~ as.factor(gcounts) + age + sex + Array + PC1 + PC2 + PC3 + PC4,
-		       family="binomial", data=covars))
-	fit$deviance.resid <- NULL
-	results.gen[[gene]] <- fit
 	fit <- summary(glm(status ~ as.numeric(gcounts) + age + sex + Array + PC1 + PC2 + PC3 + PC4,
 		       family="binomial", data=covars))
 	fit$deviance.resid <- NULL
 	results.add[[gene]] <- fit
 }
 
-saveRDS(results.gen, paste(outname, "_gen.rds", sep=""))
+#print(results.add)
 saveRDS(results.add, paste(outname, "_add.rds", sep=""))
+#save(results.add, paste(outname, "_add.txt", sep=""))
+
 
 for (gene in colnames(rounded_dosage)) {
 	covars["gcounts"] <- as.numeric(dosage[,gene])
