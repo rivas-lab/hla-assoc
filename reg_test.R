@@ -1,3 +1,5 @@
+args <- commandArgs(TRUE)
+phe <- args[1]
 
 test <- TRUE
 
@@ -5,14 +7,14 @@ if (test) {
     dosage <- readRDS("test_100_remove.rds")
     rounded_dosage <- readRDS("test_100_rounded_remove.rds")
     covars <- readRDS("test_100_covar_16698_remove.rds")
+    outname <- "test_out_dosage"
 } else {
     dosage <- readRDS("ukb_hla_v2_remove.rds")
     rounded_dosage <- readRDS("ukb_hla_v2_rounded_remove.rds")
-    covars <- readRDS("ukb_hla_v2_covar_16698_remove.rds")                              
+    covars <- readRDS("ukb_hla_v2_covar_16698_remove.rds")                          outname <- "out_dosage"
 }
 
-phe <- as.data.frame(read.table("HC303.phe", header=FALSE, row.names=1))
-outname <- "out_dosage"
+phe <- as.data.frame(read.table(phe, header=FALSE, row.names=1))
 
 print(nrow(dosage))
 print(nrow(rounded_dosage))
@@ -22,10 +24,10 @@ print(nrow(phe))
 
 print("done loading")
 
-print(phe[1:10,])
-print(dosage[1:10,])
-print(rounded_dosage[1:10,])
-print(covars[1:10,])
+#print(phe[1:10,])
+#print(dosage[1:10,])
+#print(rounded_dosage[1:10,])
+#print(covars[1:10,])
 
 covars <- covars[, c("age", "sex", "Array", "PC1", "PC2", "PC3", "PC4")]
 covars["status"] = as.numeric(phe$V3)
