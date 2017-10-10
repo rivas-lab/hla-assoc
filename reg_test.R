@@ -57,15 +57,27 @@ saveRDS(results.add, paste(outname, "_add.rds", sep=""))
 
 
 for (gene in colnames(rounded_dosage)) {
-	covars["gcounts"] <- as.numeric(dosage[,gene])
-	fit <- summary(glm(status ~ as.factor(gcounts) + age + sex + Array + PC1 + PC2 + PC3 + PC4,
-		       family="binomial", data=covars))
-	fit$deviance.resid <- NULL
-	results.gen[[gene]] <- fit
+	covars["gcounts"] <- as.numeric(rounded_dosage[,gene])
+
 	fit <- summary(glm(status ~ as.numeric(gcounts) + age + sex + Array + PC1 + PC2 + PC3 + PC4,
 		       family="binomial", data=covars))
 	fit$deviance.resid <- NULL
 	results.add[[gene]] <- fit
+
+	covars["gcounts"] <- as.factor(rounded_dosage[,gene])
+#        print(covars["gcounts"])
+        #print(covars["gcounts"][which(!covars["gcounts"] == 0),])
+        n_levs <- nlevels(covars["gcounts"][which(!covars["gcounts"] == 0),])
+        #print("n_levs:")
+        #print(n_levs)
+        #print(n_levs)
+
+        if (n_levs > 1) {
+	    fit <- summary(glm(status ~ as.factor(gcounts) + age + sex + Array + PC1 + PC2 + PC3 + PC4,
+	    	       family="binomial", data=covars))
+	    fit$deviance.resid <- NULL
+	    results.gen[[gene]] <- fit
+        }
 }
 
 saveRDS(results.gen, paste(outname, "_rounded_gen.rds", sep=""))
