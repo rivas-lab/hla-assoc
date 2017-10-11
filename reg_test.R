@@ -3,7 +3,7 @@ phe <- args[1]
 
 test <- F
 run_rounded <- T
-run_dosage <- F
+run_dosage <- T
 t0 <- proc.time()
 
 if (test) {
@@ -46,7 +46,7 @@ names(results.add) <- colnames(dosage)
 if (run_dosage) {
 #    for (gene in colnames(dosage[,1:30])) {
     for (gene in colnames(dosage)) {
-        print(gene)
+        #print(gene)
     	covars["gcounts"] <- as.numeric(dosage[,gene])
     	fit <- summary(glm(status ~ as.numeric(gcounts) + age + sex + Array + PC1 + PC2 + PC3 + PC4,
     		       family="binomial", data=covars))
@@ -65,7 +65,6 @@ if (run_rounded) {
         dosage <- readRDS("ukb_hla_v2_rounded_remove.rds")
     }
 
-    
     if (dim(covars)[1] != dim(dosage)[1]) {
     	dosage <- dosage[rownames(covars),]
     }
@@ -73,14 +72,15 @@ if (run_rounded) {
     # use same columns as before (based on number of nonzero entries)
     dosage <- dosage[,col_idx]
     print(paste0("number excluded (rounded additive):",362 - ncol(dosage)))
-    
+    #print(dosage)    
     #for (gene in colnames(dosage)) {
     #    print(length(unique(dosage[,gene])))
     #}
 
+#    for (gene in colnames(dosage[,1:30])) {
+    for (gene in colnames(dosage)) {
 
-    for (gene in colnames(dosage[,30])) {
-        print(gene)
+        #print(gene)
         #print(paste0("gcounts rows: ", nrow(covars[,"gcounts"])))
         #print(paste0("dosage rows: ", nrow(as.numeric(dosage[,gene]))))
     	covars["gcounts"] <- as.numeric(dosage[,gene])
@@ -97,8 +97,9 @@ if (run_rounded) {
     dosage <- dosage[,unique_counts > 2]
     print(paste0("number excluded (rounded factor):",362 - ncol(dosage)))
 
-    for (gene in colnames(dosage[,30])) {
-        print(gene) 
+#    for (gene in colnames(dosage[,1:30])) {
+    for (gene in colnames(dosage)) {
+        #print(gene) 
     	covars["gcounts"] <- as.factor(dosage[,gene])
         n_levs <- nlevels(covars["gcounts"][which(!covars["gcounts"] == 0),])
        # print(covars["gcounts"][which(!covars["gcounts"] == 0),])
