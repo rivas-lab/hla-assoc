@@ -1,19 +1,24 @@
 args <- commandArgs(TRUE)
 phe <- args[1]
+outname <- args[2]
+
+print("start")
+options(warn=1)
 
 test <- F
 run_rounded <- T
 run_dosage <- T
+print_gene <- T
 t0 <- proc.time()
 
 if (test) {
     dosage <- readRDS("test_100_remove.rds")
     covars <- readRDS("test_100_covar_16698_remove.rds")
-    outname <- "test_out_dosage"
+#    outname <- "test_out_dosage"
 } else {
     dosage <- readRDS("ukb_hla_v2_remove.rds")
     covars <- readRDS("ukb_hla_v2_covar_16698_remove.rds")                          
-    outname <- "out_dosage"
+#    outname <- "out_dosage"
 }
 
 phe <- as.data.frame(read.table(phe, header=FALSE, row.names=1))
@@ -46,7 +51,9 @@ names(results.add) <- colnames(dosage)
 if (run_dosage) {
 #    for (gene in colnames(dosage[,1:30])) {
     for (gene in colnames(dosage)) {
-        #print(gene)
+        if (print_gene) {
+            print(gene)
+        }
     	covars["gcounts"] <- as.numeric(dosage[,gene])
     	fit <- summary(glm(status ~ as.numeric(gcounts) + age + sex + Array + PC1 + PC2 + PC3 + PC4,
     		       family="binomial", data=covars))
@@ -54,7 +61,7 @@ if (run_dosage) {
     	results.add[[gene]] <- fit
     }
     
-    saveRDS(results.add, paste(outname, "_add.rds", sep=""))
+    saveRDS(results.add, paste0("reg_results/", outname, "_add.rds"))
 }
 
 if (run_rounded) {
@@ -79,8 +86,9 @@ if (run_rounded) {
 
 #    for (gene in colnames(dosage[,1:30])) {
     for (gene in colnames(dosage)) {
-
-        #print(gene)
+        if (print_gene) {
+            print(gene)
+        }
         #print(paste0("gcounts rows: ", nrow(covars[,"gcounts"])))
         #print(paste0("dosage rows: ", nrow(as.numeric(dosage[,gene]))))
     	covars["gcounts"] <- as.numeric(dosage[,gene])
@@ -99,7 +107,9 @@ if (run_rounded) {
 
 #    for (gene in colnames(dosage[,1:30])) {
     for (gene in colnames(dosage)) {
-        #print(gene) 
+        if (print_gene) {
+            print(gene) 
+        }
     	covars["gcounts"] <- as.factor(dosage[,gene])
         n_levs <- nlevels(covars["gcounts"][which(!covars["gcounts"] == 0),])
        # print(covars["gcounts"][which(!covars["gcounts"] == 0),])
@@ -112,8 +122,8 @@ if (run_rounded) {
         }
     }
     
-    saveRDS(results.gen, paste(outname, "_rounded_gen.rds", sep=""))
-    saveRDS(results.add, paste(outname, "_rounded_add.rds", sep=""))
+    saveRDS(results.gen, paste0("reg_results/", outname, "_rounded_gen.rds"))
+    saveRDS(results.add, paste0("reg_results/", outname, "_rounded_add.rds"))
 }
 
 print(proc.time() - t0)
