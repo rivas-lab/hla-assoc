@@ -44,6 +44,23 @@ values and the log odds ratios for each haplotype. The haplotypes of interest
 are highlighted in yellow. We can see that their position in these plots makes
 sense.
 
-![alt text](https://github.com/rivas-lab/hla-assoc/blob/master/plots/OR_plot.png)
+### Odds ratio
 
-![alt text](https://github.com/rivas-lab/hla-assoc/blob/master/plots/log10_pval_plot.png)
+#### PLINK
+
+![alt text](https://github.com/rivas-lab/hla-assoc/blob/master/plots/OR_PLINK_plot.png)
+
+#### R
+
+![alt text](https://github.com/rivas-lab/hla-assoc/blob/master/plots/OR_R_plot.png)
+
+
+### P value
+
+#### PLINK
+
+![alt text](https://github.com/rivas-lab/hla-assoc/blob/master/plots/log10_pval_PLINK_plot.png)
+
+#### R
+![alt text](https://github.com/rivas-lab/hla-assoc/blob/master/plots/log10_pval_R_plot.png)
+
