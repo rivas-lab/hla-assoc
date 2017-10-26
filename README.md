@@ -14,3 +14,5 @@ missing data, replace all nonzero entries for that sample/locus combo with the
 missing data symbol.
 
 I have been using thresh = 0.1 so far.
+
+![alt text](https://github.com/rivas-lab/hla-assoc/blob/master/plots/out_dosage_add_plot.png)
