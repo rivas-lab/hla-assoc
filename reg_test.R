@@ -10,14 +10,15 @@ run_rounded <- T
 run_dosage <- T
 print_gene <- T
 t0 <- proc.time()
-
+#ukbb_files <- "$SCRATCH/ukbb_files/"
+ukbb_files <- "/scratch/users/jolivier/ukbb_files/"
 if (test) {
     dosage <- readRDS("test_100_remove.rds")
     covars <- readRDS("test_100_covar_16698_remove.rds")
 #    outname <- "test_out_dosage"
 } else {
     dosage <- readRDS("ukb_hla_v2_remove.rds")
-    covars <- readRDS("ukb_hla_v2_covar_16698_remove.rds")                          
+    covars <- readRDS(paste0(ukbb_files,"ukb_hla_v2_covar_16698_remove.rds"))
 #    outname <- "out_dosage"
 }
 
@@ -69,7 +70,7 @@ if (run_rounded) {
     if (test) {
         dosage <- readRDS("test_100_rounded_remove.rds")
     } else {
-        dosage <- readRDS("ukb_hla_v2_rounded_remove.rds")
+        dosage <- readRDS(paste0(ukbb_files,"ukb_hla_v2_rounded_remove.rds"))
     }
 
     if (dim(covars)[1] != dim(dosage)[1]) {

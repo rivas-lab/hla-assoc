@@ -57,6 +57,8 @@ sense.
 
 ### P value
 
+The p values from the R regressions are cut off at 2e-16.
+
 #### PLINK
 
 ![alt text](https://github.com/rivas-lab/hla-assoc/blob/master/plots/log10_pval_PLINK_plot.png)
