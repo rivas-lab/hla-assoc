@@ -9,7 +9,7 @@ def write_job_R(file_name, phe, out_name, phe_directory):
     job_file.write("#SBATCH --job-name=" + job_name + "\n")
     job_file.write("#SBATCH --output=job_output/" + job_name + ".%j.out\n")
     job_file.write("#SBATCH --error=job_output/" + job_name + ".%j.err\n")
-    job_file.write("#SBATCH --time=5:00:00\n")
+    job_file.write("#SBATCH --time=12:00:00\n")
     job_file.write("#SBATCH --qos=normal\n")
     job_file.write("#SBATCH -p owners\n")
     job_file.write("#SBATCH --nodes=1\n")
@@ -104,7 +104,7 @@ def main():
         reg = sys.argv[1]
 
     phe_directory = "/oak/stanford/groups/mrivas/ukbb/16698/phe/highconfidenceqc/"
-    phe_ids = choose_phes(phe_directory, 3)
+    phe_ids = choose_phes(phe_directory)
 
 #    phe_ids = [phe for phe in phe_ids if phe > 275]
 
