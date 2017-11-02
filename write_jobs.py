@@ -2,6 +2,23 @@ import subprocess
 import sys
 import time
 
+def write_processing_job(file_name, phe):
+    job_name = phe + "proc"
+    job_file = open(file_name, 'w')
+    job_file.write("#!/bin/bash\n#\n")
+    job_file.write("#SBATCH --job-name=" + job_name + "\n")
+    job_file.write("#SBATCH --output=job_output/" + job_name + ".%j.out\n")
+    job_file.write("#SBATCH --error=job_output/" + job_name + ".%j.err\n")
+    job_file.write("#SBATCH --time=10:00\n")
+    job_file.write("#SBATCH --qos=normal\n")
+    job_file.write("#SBATCH -p owners\n")
+    job_file.write("#SBATCH --nodes=1\n")
+    job_file.write("#SBATCH --mem=2Gb\n") 
+    job_file.write("source activate h2-estimation\n")
+    job_file.write("Rscript examine_output.R reg_results/" + phe + "\n")
+    job_file.write("python process_output.py " + phe)
+    job_file.close()
+
 def write_job_R(file_name, phe, out_name, phe_directory):
     job_name = out_name + "R"
     job_file = open(file_name, 'w')
@@ -55,6 +72,16 @@ def submit_job(file_name):
         sys.stderr.write('{} not submitted on sherlock2\n'.format(file_name))
         success = False
 
+def choose_phes_2(num = "all"):
+    """Just list names, no intelligent sorting"""
+    phes = []
+    for i in range(446):
+        phes.append(str(i))
+    if num == "all":
+        return phes
+    else:
+        return phes[:num]
+
 def choose_phes(phe_directory, num = 'all'):
     if num == 'all':
         map_file = open(phe_directory + "highconfidenceqc_map.txt", "r")
@@ -95,28 +122,47 @@ def choose_phes(phe_directory, num = 'all'):
 
 def main():
 
+    num = "all"
+
     # choose which regressions to run
     if len(sys.argv) < 2:
         raise ValueError("Not enough arguments")
-    elif sys.argv[1] not in ["PLINK", "R"]:
+    elif sys.argv[1] not in ["PLINK", "R", "proc"]:
         raise ValueError("invalid argument") 
     else:
         reg = sys.argv[1]
 
-    phe_directory = "/oak/stanford/groups/mrivas/ukbb/16698/phe/highconfidenceqc/"
-    phe_ids = choose_phes(phe_directory)
+    if len(sys.argv) == 3:
+        num = int(sys.argv[2])
+
+#    phe_directory = "/oak/stanford/groups/mrivas/ukbb/16698/phe/highconfidenceqc/"
+    phe_directory = "/share/PI/mrivas/data/ukbb/phefiles/highconfidenceqc/"
+
+    phe_ids = choose_phes(phe_directory, num)
+#    phe_ids = choose_phes_2(num)
 
 #    phe_ids = [phe for phe in phe_ids if phe > 275]
 
+    #phe_ids = ['29', '65']
     print(phe_ids)
+    if reg == "R":
+        file_name = "scripts/run_reg_R.sh"
+    elif reg == "PLINK":
+        file_name = "scripts/run_reg_PLINK.sh"
+#    if reg in ["PLINK", "R"]:
+#        file_name = "run_reg.sh"
+    elif reg == "proc":
+        file_name = "scripts/process_output.sh"
 
     # run jobs
     for phe in phe_ids:
         if reg == "R":
-            write_job_R("run_reg.sh", "HC" + phe + ".phe", "HC" + phe, phe_directory)
+            write_job_R(file_name, "HC" + phe + ".phe", "HC" + phe, phe_directory)
         elif reg == "PLINK":
-            write_job_PLINK("run_reg.sh", "HC" + phe + ".phe", "HC" + phe, phe_directory)
+            write_job_PLINK(file_name, "HC" + phe + ".phe", "HC" + phe, phe_directory)
+        elif reg == "proc":
+            write_processing_job(file_name, phe)
 
-        submit_job("run_reg.sh")
+        submit_job(file_name)
         time.sleep(1)
 main()
