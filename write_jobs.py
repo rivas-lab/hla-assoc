@@ -2,6 +2,23 @@ import subprocess
 import sys
 import time
 
+
+def write_printrds_job(file_name, phe):
+    job_name = phe + "print"
+    job_file = open(file_name, 'w')
+    job_file.write("#!/bin/bash\n#\n")
+    job_file.write("#SBATCH --job-name=" + job_name + "\n")
+    job_file.write("#SBATCH --output=job_output/" + job_name + ".%j.out\n")
+    job_file.write("#SBATCH --error=job_output/" + job_name + ".%j.err\n")
+    job_file.write("#SBATCH --time=10:00\n")
+    job_file.write("#SBATCH --qos=normal\n")
+    job_file.write("#SBATCH -p owners\n")
+    job_file.write("#SBATCH --nodes=1\n")
+    job_file.write("#SBATCH --mem=2Gb\n") 
+    job_file.write("ml load R\n")
+    job_file.write("Rscript print_rds.R results_BMA/bma_HC" + phe + ".rds " + "results_BMA/bma_HC" + phe + ".txt")
+    job_file.close()
+
 def write_processing_job(file_name, phe):
     job_name = phe + "proc"
     job_file = open(file_name, 'w')
@@ -19,6 +36,7 @@ def write_processing_job(file_name, phe):
     job_file.write("python process_output.py " + phe)
     job_file.close()
 
+# make sure to check the true/false settings to see what's being run
 def write_job_R(file_name, phe, out_name, phe_directory):
     job_name = out_name + "R"
     job_file = open(file_name, 'w')
@@ -31,8 +49,11 @@ def write_job_R(file_name, phe, out_name, phe_directory):
     job_file.write("#SBATCH -p owners\n")
     job_file.write("#SBATCH --nodes=1\n")
     job_file.write("#SBATCH --mem=20Gb\n") 
-    job_file.write("ml load R\n")
-    job_file.write("Rscript reg_test.R " + phe_directory + phe + " " + out_name)
+#    job_file.write("ml load R\n")
+    job_file.write("source activate h2-estimation\n")
+    job_file.write("ml load libpng/1.2.57\n")
+    job_file.write("ml load cairo/1.14.10\n")
+    job_file.write("Rscript reg_test.R " + phe_directory + phe + " " + out_name + " 10")
     job_file.close()
 
 def write_job_PLINK(file_name, phe, out_name, phe_directory):
@@ -127,7 +148,7 @@ def main():
     # choose which regressions to run
     if len(sys.argv) < 2:
         raise ValueError("Not enough arguments")
-    elif sys.argv[1] not in ["PLINK", "R", "proc"]:
+    elif sys.argv[1] not in ["PLINK", "R", "proc", "print"]:
         raise ValueError("invalid argument") 
     else:
         reg = sys.argv[1]
@@ -153,6 +174,8 @@ def main():
 #        file_name = "run_reg.sh"
     elif reg == "proc":
         file_name = "scripts/process_output.sh"
+    elif reg == "print":
+        file_name = "scripts/run_print.sh"
 
     # run jobs
     for phe in phe_ids:
@@ -162,6 +185,8 @@ def main():
             write_job_PLINK(file_name, "HC" + phe + ".phe", "HC" + phe, phe_directory)
         elif reg == "proc":
             write_processing_job(file_name, phe)
+        elif reg == "print":
+            write_printrds_job(file_name, phe)
 
         submit_job(file_name)
         time.sleep(1)

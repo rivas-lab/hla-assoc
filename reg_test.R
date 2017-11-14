@@ -1,7 +1,10 @@
 args <- commandArgs(TRUE)
 phe <- args[1]
 outname <- args[2]
-
+num_haps <- args[3]
+phe_name <- strsplit(phe, "/")[[1]]
+phe_name <- strsplit(phe_name[length(phe_name)], "[.]")[[1]][1]
+print(paste("phe name", phe_name))
 print("start")
 options(warn=1)
 
@@ -11,7 +14,7 @@ run_dosage <- F
 rounded_add <- F
 rounded_factor <- F
 run_BMA <- T
-print_gene <- T
+print_gene <- F
 t0 <- proc.time()
 #ukbb_files <- "$SCRATCH/ukbb_files/"
 ukbb_files <- "/scratch/users/jolivier/ukbb_files/"
@@ -35,6 +38,10 @@ print("done loading")
 # use only columns with more than 5 nonzero entries
 col_idx = colSums(dosage != 0) > 5
 dosage <- dosage[,col_idx]
+#sink("haps_used.txt")
+#colnames(dosage)
+#sink()
+#print(paste0("column names: ", colnames(dosage)))
 print(paste0("number excluded (additive):",362 - ncol(dosage)))
 
 covars <- covars[, c("age", "sex", "Array", "PC1", "PC2", "PC3", "PC4")]
@@ -134,13 +141,39 @@ if (run_rounded) {
 }
 
 if (run_BMA) {
-    library("BMA")
     #print(dosage)
+    phe_results <- as.data.frame(read.table(paste0("results_processed/", phe_name, "_processed.txt"), header=FALSE, skip=1))
+    phe_results <- phe_results[order(phe_results["V3"])[1:num_haps],]
+
+
+    
+    #top_haps <- phe_results["V1"][order(phe_results["V3"])[1:10]]
+    #print(top_haps)
+    print(phe_results)
+    print(phe_results["V1"])
+    hap_names = phe_results[1:num_haps, "V1"]
+    print(hap_names)
+#    print(dosage[,phe_results["V1"]])
+#    dosage <- dosage[,hap_names]
+    dosage <- dosage[, names(dosage) %in% hap_names]
+    print(colnames(dosage))
+#    print(dosage[,phe_results["V1"]])
+
+#    for i in 1:jk {
+#        dosage[phe_results[i,"V1"]] <- NULL
+#    }
+
+    print("printed dosage")
+#    dosage <- dosage[,phe_results["V1"]]
+    library("BMA")
+
+    #read.csv( 
     print("starting BMA")
-    dosage = cbind(dosage, covars)
+#    dosage = cbind(dosage, covars)
 #    dosage = subset(dosage, select = -c(status))
     #dosage = subset(dosage, select = c(A_101, B_801, C_701)) 
-    dosage = dosage[,1:50]
+    
+    #dosage = dosage[,1:num_haps]
     #print(dosage)
 
 #    print(covars["status"])
@@ -148,14 +181,17 @@ if (run_BMA) {
 #    print(y)
     glm.out.FF <- bic.glm(dosage, covars$status, strict = FALSE, OR = 30,
         glm.family="binomial", factor.type=FALSE) 
-    summary(glm.out.FF)
-    print(glm.out.FF$probne0)
-    #png("bicglm.png", type="quartz")
+    fit <- summary(glm.out.FF)
+    print(paste0("postmean: ", glm.out.FF$postmean))
+    print(paste0("postsd: ", glm.out.FF$postsd))
+    #print(glm.out.FF$probne0)
+    saveRDS(fit, paste0("results_BMA/bma_", phe_name, ".rds"))
+    pdf(paste0("plots/bma_", phe_name, ".pdf"))
     imageplot.bma(glm.out.FF)
-    #dev.off()
-    write(ncol(dosage), file="timing.txt", append=TRUE)
+    dev.off()
+    #write(ncol(dosage), file="timing.txt", append=TRUE)
 }
 
 #print(proc.time() - t0)
-write(proc.time() - t0, file="timing.txt", append=TRUE)
+#write(proc.time() - t0, file="timing.txt", append=TRUE)
 #write(paste(ncol(dosage), proc.time, sep=","), file="timing.txt", append=TRUE)
