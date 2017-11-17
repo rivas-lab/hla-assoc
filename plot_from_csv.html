@@ -1,0 +1,102 @@
+<!-- Plotly example 1
+Yosuke Tanigawa
+2017/11/14
+The description is in README.md
+-->
+
+<head>
+    
+    <!-- Plotly.js -->
+    <title>HLA Haplotypes</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.3/jquery.csv.js"></script>
+    <script type="text/javascript" src="https://d3js.org/d3.v3.min.js"></script>
+    
+    <script type="text/javascript" src="https://cdn.plot.ly/plotly-latest.min.js"></script> 
+    
+    <script>        
+        var genes = ["A", "B", "C","DPA1","DPB1","DQA1","DQB1","DRB1","DRB3","DRB4","DRB5"];
+
+        function plotly_from_csv_callback(csv_string, plotDivName, label_col_idx, gene, phe_dict){
+            var csv_array_of_cols=$.csv.toArrays(csv_string);
+            var x = csv_array_of_cols[label_col_idx];
+            var data = [];
+            for (var i = 1; i < csv_array_of_cols["length"]; i++) {
+              var y = csv_array_of_cols[i];
+              y = y.slice(1,);
+              y.unshift("");
+              var trace = {
+                'x': x, 'y': y, 
+                type: 'scattergl', 'mode': 'markers',
+                name: phe_dict[csv_array_of_cols[i][0]]
+              }
+              data.push(trace);
+            }
+
+            var layout = {
+                hovermode:'closest',
+                showlegend: false,
+                title: "Posterior probabilities of top 10 HLA-" + gene + " alleles for " + csv_array_of_cols["length"] + " phenotypes",
+            		xaxis: {
+            		  tickangle: 45
+            		},
+                yaxis: {
+                  title: "posterior probability",
+                  range: [-0.1,1.1]
+                }
+            };
+
+            Plotly.newPlot(plotDivName, data, layout);             
+        } 
+        
+        function plotly_from_csv(csv_file, plotDivName, label_col_idx, gene, phe_dict) {
+            console.log("here" + gene);
+
+            $.ajax({
+                url: csv_file,
+                dataType: 'text',
+            }).done(
+                text => plotly_from_csv_callback(
+                    text, plotDivName, label_col_idx, gene, phe_dict
+                )
+            );
+        }
+      var phe_dict = {};
+      d3.csv("highconfidenceqc_map.csv", function(data) {
+        for (var i = 0; i < data.length; i++) {
+          phe_dict[data[i].code] = data[i].disease;
+        }
+      });
+        $(document).ready(function () {
+	    
+          plotly_from_csv('phe_hap/phe_post_table_' + genes[0] + '.csv', 'plotly_div',  0, genes[0], phe_dict);
+	    
+        });
+  
+    </script>
+
+</head>
+
+<body>
+  <h1> Posterior Probabilities for HLA Haplotypes </h1>
+  <div id='plots'></div>
+  <script> 
+    var container = document.getElementById("plots");
+    container.innerHTML += '<div id="plotly_div"></div>';
+
+</script>
+  <div id='buttons'></div>
+  <script>
+    var button;
+    for (i=0; i<genes.length; i++) {
+    button = document.createElement('button');
+    button.innerHTML = "HLA-" + genes[i];
+    button.id = genes[i];
+    button.addEventListener('click', function() {
+      plotly_from_csv('phe_hap/phe_post_table_' + this.id + '.csv', 'plotly_div',  0, this.id, phe_dict);
+    });
+    document.getElementById('buttons').appendChild(button);
+}
+    </script>
+</body>
+

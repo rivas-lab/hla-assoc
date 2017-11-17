@@ -1,0 +1,447 @@
+code,disease
+HC0,scoliosis
+HC1,bowel / intestinal obstruction
+HC2,myocarditis
+HC3,ectopic pregnancy
+HC4,nephritis
+HC5,myositis/myopathy
+HC6,eye/eyelid problem
+HC7,back pain
+HC8,gall bladder disease
+HC9,renal failure not requiring dialysis
+HC10,dysmenorrhoea / dysmenorrhea
+HC11,septicaemia / sepsis
+HC12,testicular problems (not cancer)
+HC13,lichen sclerosis
+HC14,fracture vertebra / crush fracture / vertebral collapse
+HC15,sciatica
+HC16,rectal or colon adenoma/polyps
+HC17,diabetic eye disease
+HC18,pemphigoid/pemphigus
+HC19,phaeochromocytoma
+HC20,cervical erosion
+HC21,mitral valve disease
+HC22,osteoporosis
+HC23,fibrosing alveolitis/unspecified alveolitis
+HC24,mrsa / methicillin resistant staphylococcus aureus
+HC25,cataract
+HC26,iritis
+HC27,gastrointestinal bleeding
+HC28,bronchiectasis
+HC29,yellow fever
+HC30,aortic regurgitation / incompetence
+HC31,uterine fibroids
+HC32,other renal/kidney problem
+HC33,spinal cord disorder
+HC34,pleurisy
+HC35,sick sinus syndrome
+HC36,pneumonia
+HC37,parathyroid hyperplasia/adenoma
+HC38,psoriasis
+HC39,lichen planus
+HC40,nervous breakdown
+HC41,depression
+HC42,spontaneous pneumothorax/recurrent pneumothorax
+HC43,unclassifiable
+HC44,bile duct obstruction/ascending cholangitis
+HC45,mumps / epidemic parotitis
+HC46,renal failure requiring dialysis
+HC47,malaria
+HC48,aplastic anaemia
+HC49,hayfever/allergic rhinitis
+HC50,chlamydia
+HC51,paraplegia
+HC52,aortic dissection
+HC53,spinal injury
+HC54,peptic ulcer
+HC55,hyperthyroidism/thyrotoxicosis
+HC56,monoclonal gammopathy/not myeloma
+HC57,fracture radius
+HC58,benign breast lump
+HC59,thyroiditis
+HC60,oesophagitis/barretts oesophagus
+HC61,haemorrhoids / piles
+HC62,tuberculosis (tb)
+HC63,pituitary adenoma/tumour
+HC64,irritable bowel syndrome
+HC65,hepatitis d
+HC66,myelofibrosis
+HC67,hepatitis b
+HC68,disorder of adrenal gland
+HC69,polycythaemia vera
+HC70,aortic valve disease
+HC71,microscopic polyarteritis
+HC72,chronic fatigue syndrome
+HC73,dermatopolymyositis
+HC74,female infertility
+HC75,alpha-1 antitrypsin deficiency
+HC76,fracture foot
+HC77,allergy or anaphylactic reaction to drug
+HC78,arthritis (nos)
+HC79,appendicitis
+HC80,sickle cell disease
+HC81,essential thrombocytosis
+HC82,cerebral palsy
+HC83,fracture forearm / wrist
+HC84,pulmonary fibrosis
+HC85,enlarged prostate
+HC86,migraine
+HC87,spina bifida
+HC88,heart/cardiac problem
+HC89,food intolerance
+HC90,myasthenia gravis
+HC91,psoriatic arthropathy
+HC92,allergy to elastoplast
+HC93,dry eyes
+HC94,dementia/alzheimers/cognitive impairment
+HC95,inflammatory bowel disease
+HC96,polymyalgia rheumatica
+HC97,pleural plaques (not known asbestosis)
+HC98,stomach disorder
+HC99,neutropenia/lymphopenia
+HC100,gastroenteritis/dysentry
+HC101,eye trauma
+HC102,vertigo
+HC103,thyroid goitre
+HC104,osteomyelitis
+HC105,shingles
+HC106,emphysema/chronic bronchitis
+HC107,miscarriage
+HC108,giardia / giardiasis
+HC109,gestational hypertension/pre-eclampsia
+HC110,stroke
+HC111,meningioma / benign meningeal tumour
+HC112,pyelonephritis
+HC113,irregular heart beat
+HC114,pericardial effusion
+HC115,contact dermatitis
+HC116,tinnitus / tiniitis
+HC117,abdominal hernia
+HC118,constipation
+HC119,disc degeneration
+HC120,typhoid fever
+HC121,peritonitis
+HC122,disorder or pituitary gland
+HC123,muscle/soft tissue problem
+HC124,undescended testicle
+HC125,anaemia
+HC126,polycystic kidney
+HC127,hydatiform mole
+HC128,peripheral nerve disorder
+HC129,muscle or soft tissue injuries
+HC130,housemaid's knee (prepatellar bursitis)
+HC131,svt / supraventricular tachycardia
+HC132,angina
+HC133,anal fissure
+HC134,bone disorder
+HC135,anxiety/panic attacks
+HC136,connective tissue disorder
+HC137,anal problem
+HC138,polyartertis nodosa
+HC139,breast cysts
+HC140,urinary frequency / incontinence
+HC141,antiphospholipid syndrome
+HC142,synovitis
+HC143,retinal problem
+HC144,chickenpox
+HC145,thyroid radioablation therapy
+HC146,pleural effusion
+HC147,diphtheria
+HC148,wolff parkinson white / wpw syndrome
+HC149,rheumatic fever
+HC150,rosacea
+HC151,multiple sclerosis
+HC152,deliberate self-harm/suicide attempt
+HC153,joint pain
+HC154,pelvic inflammatory disease/ pid
+HC155,joint disorder
+HC156,nasal polyps
+HC157,jaundice (unknown cause)
+HC158,spine arthritis/spondylitis
+HC159,opioid dependency
+HC160,fibrocystic disease
+HC161,prostatitis
+HC162,brain abscess/intracranial abscess
+HC163,scleroderma/systemic sclerosis
+HC164,gastro-oesophageal reflux (gord) / gastric reflux
+HC165,type 2 diabetes
+HC166,deep venous thrombosis (dvt)
+HC167,raynaud's phenomenon/disease
+HC168,cervical polyps
+HC169,pernicious anaemia
+HC170,sarcoidosis
+HC171,alcoholic liver disease / alcoholic cirrhosis
+HC172,gynaecological disorder (not cancer)
+HC173,fracture shaft of femur
+HC174,haemochromatosis
+HC175,ischaemic stroke
+HC176,prolapsed disc/slipped disc
+HC177,dupuytren's contracture
+HC178,stress
+HC179,iron deficiency anaemia
+HC180,thyroid problem (not cancer)
+HC181,eye infection
+HC182,osteopenia
+HC183,spinal abscess
+HC184,aortic aneurysm rupture
+HC185,cellulitis
+HC186,paget's disease
+HC187,chronic laryngitis
+HC188,cholelithiasis/gall stones
+HC189,hyperaldosteronism/conn's syndrome
+HC190,scrotal problem (not cancer)
+HC191,peripheral nerve injury
+HC192,bowel / intestinal perforation
+HC193,heart arrhythmia
+HC194,liver/biliary/pancreas problem
+HC195,ureteric obstruction/hydronephrosis
+HC196,labyrinthitis
+HC197,clotting disorder/excessive bleeding
+HC198,hyperparathyroidism
+HC199,cervical problem
+HC200,fracture tibia
+HC201,ulcerative colitis
+HC202,trapped nerve/compressed nerve
+HC203,pulmonary embolism +/- dvt
+HC204,bursitis
+HC205,endometriosis
+HC206,parkinsons disease
+HC207,soft tissue inflammation
+HC208,parathyroid gland problem (not cancer)
+HC209,gastric/stomach ulcers
+HC210,non-infective hepatitis
+HC211,dermatomyositis
+HC212,oesophageal disorder
+HC213,pericardial problem
+HC214,empyema
+HC215,hypertension
+HC216,pneumothorax
+HC217,neck problem/injury
+HC218,motor neurone disease
+HC219,hypothyroidism/myxoedema
+HC220,interstitial lung disease
+HC221,diabetes
+HC222,arterial embolism
+HC223,fracture pelvis
+HC224,rubella / german measles
+HC225,cholecystitis
+HC226,herpes simplex
+HC227,erectile dysfunction / impotence
+HC228,infection of nervous system
+HC229,chronic skin ulcers
+HC230,disc problem
+HC231,heart valve problem/heart murmur
+HC232,abnormal smear (cervix)
+HC233,mania/bipolar disorder/manic depression
+HC234,allergy or anaphylactic reaction to food
+HC235,other demyelinating disease
+HC236,ovarian problem
+HC237,back problem
+HC238,acromegaly
+HC239,subdural haemorrhage/haematoma
+HC240,fracture finger
+HC241,cranial nerve problem/palsy
+HC242,pericarditis
+HC243,inguinal hernia
+HC244,carcinoid syndrome/tumour
+HC245,bile duct disease
+HC246,schizophrenia
+HC247,breast disease (not cancer)
+HC248,allergy to house dust mite
+HC249,hepatitis c
+HC250,acute infective polyneuritis/guillain-barre syndrome
+HC251,liver failure/cirrhosis
+HC252,leg claudication/ intermittent claudication
+HC253,meniere's disease
+HC254,uterine polyps
+HC255,subarachnoid haemorrhage
+HC256,fracture toe
+HC257,femoral hernia
+HC258,haemophilia
+HC259,aortic stenosis
+HC260,fracture fibula
+HC261,eczema/dermatitis
+HC262,diverticular disease/diverticulitis
+HC263,nasal/sinus disorder
+HC264,hepatitis a
+HC265,bowel / intestinal infarction
+HC266,other venous/lymphatic disease
+HC267,tennis elbow / lateral epicondylitis
+HC268,varicose ulcer
+HC269,high cholesterol
+HC270,encephalitis
+HC271,epicondylitis
+HC272,stevens johnson syndrome
+HC273,essential hypertension
+HC274,umbilical hernia
+HC275,gastritis/gastric erosions
+HC276,glaucoma
+HC277,menopausal symptoms / menopause
+HC278,cerebral aneurysm
+HC279,myeloproliferative disorder
+HC280,peripheral neuropathy
+HC281,atrial fibrillation
+HC282,whooping cough / pertussis
+HC283,cystitis
+HC284,fracture nose
+HC285,other joint disorder
+HC286,plantar fascitis
+HC287,infectious mononucleosis / glandular fever / epstein barr virus (ebv)
+HC288,alopecia / hair loss
+HC289,vitiligo
+HC290,fracture upper arm / humerus / elbow
+HC291,polycystic ovaries/polycystic ovarian syndrome
+HC292,vasculitis
+HC293,fracture patella / knee
+HC294,renal/kidney failure
+HC295,carpal tunnel syndrome
+HC296,fracture thumb
+HC297,dengue fever
+HC298,chronic sinusitis
+HC299,heart failure/pulmonary odema
+HC300,benign / essential tremor
+HC301,asbestosis
+HC302,retinal detachment
+HC303,malabsorption/coeliac disease
+HC304,burns  N/A
+HC305,mitral stenosis
+HC306,insomnia
+HC307,colitis/not crohns or ulcerative colitis
+HC308,hypertrophic cardiomyopathy (hcm / hocm)
+HC309,brain haemorrhage
+HC310,hiatus hernia
+HC311,measles / morbillivirus
+HC312,wegners granulmatosis
+HC313,primary biliary cirrhosis
+HC314,fracture hand
+HC315,fracture neck / cervical fracture
+HC316,dyspepsia / indigestion
+HC317,breast fibroadenoma
+HC318,vocal cord polyp
+HC319,cushings syndrome
+HC320,meningitis
+HC321,sjogren's syndrome/sicca syndrome
+HC322,crohns disease
+HC323,head injury
+HC324,obsessive compulsive disorder (ocd)
+HC325,chronic/degenerative neurological problem
+HC326,heart attack/myocardial infarction
+HC327,fracture metatarsal
+HC328,gout
+HC329,benign neuroma
+HC330,myasthenia gravis
+HC331,tonsiltis
+HC332,post-traumatic stress disorder
+HC333,lung abscess
+HC334,fracture sternum
+HC335,pancytopenia
+HC336,iga nephropathy
+HC337,type 1 diabetes
+HC338,giant cell/temporal arteritis
+HC339,fracture lower leg / ankle
+HC340,menorrhagia (unknown cause)
+HC341,fracture face / orbit / eye socket
+HC342,prostate problem (not cancer)
+HC343,glomerulnephritis
+HC344,post-natal depression
+HC345,neurological injury/trauma
+HC346,fibromyalgia
+HC347,blistering/desquamating skin disorder
+HC348,bell's palsy/facial nerve palsy
+HC349,bowen's disease
+HC350,hyperprolactinaemia
+HC351,blepharitis / eyelid infection
+HC352,systemic lupus erythematosis/sle
+HC353,other neurological problem
+HC354,kidney nephropathy
+HC355,rectal prolapse
+HC356,retinal artery/vein occlusion
+HC357,duodenal ulcer
+HC358,optic neuritis
+HC359,adrenocortical insufficiency/addison's disease
+HC360,grave's disease
+HC361,anorexia/bulimia/other eating disorder
+HC362,respiratory infection
+HC363,fracture clavicle / collar bone
+HC364,sleep apnoea
+HC365,schistosomiasis/bilharzia
+HC366,allergy/hypersensitivity/anaphylaxis
+HC367,other substance abuse/dependency
+HC368,diabetes insipidus
+HC369,gestational diabetes
+HC370,other respiratory problems
+HC371,bronchitis
+HC372,uterine problem
+HC373,fracture rib
+HC374,kidney stone/ureter stone/bladder stone
+HC375,alcohol dependency
+HC376,osteoarthritis
+HC377,oesophageal stricture
+HC378,diabetic nephropathy
+HC379,infective/viral hepatitis
+HC380,fracture ulna
+HC381,venous thromboembolic disease
+HC382,asthma
+HC383,bph / benign prostatic hypertrophy
+HC384,throat or larynx disorder
+HC385,peripheral vascular disease
+HC386,helicobacter pylori
+HC387,polymyositis
+HC388,diabetic neuropathy/ulcers
+HC389,urticaria
+HC390,trigemminal neuralgia
+HC391,pyloric stenosis
+HC392,pancreatitis
+HC393,allergy to nickel
+HC394,mitral regurgitation / incompetence
+HC395,bladder problem (not cancer)
+HC396,fracture shoulder / scapula
+HC397,scarlet fever / scarlatina
+HC398,fracture wrist / colles fracture
+HC399,incisional hernia
+HC400,transient ischaemic attack (tia)
+HC401,varicose veins
+HC402,spinal stenosis
+HC403,varicella zoster virus
+HC404,urinary tract infection/kidney infection
+HC405,vaginal prolapse/uterine prolapse
+HC406,fracture neck of femur / hip
+HC407,pancreatic disease
+HC408,polio / poliomyelitis
+HC409,male infertility
+HC410,cervical intra-epithelial neoplasia (cin) / precancerous cells cervix
+HC411,thalassaemia
+HC412,tendonitis / tendinitis / tenosynovitis
+HC413,hereditary/genetic haematological disorder
+HC414,cardiomyopathy
+HC415,aortic aneurysm
+HC416,retinitis pigmentosa
+HC417,sclerosing cholangitis
+HC418,cervical spondylosis
+HC419,otosclerosis
+HC420,psychological/psychiatric problem
+HC421,other abdominal problem
+HC422,ankylosing spondylitis
+HC423,respiratory failure
+HC424,fracture skull / head
+HC425,adrenal tumour
+HC426,benign insulinoma
+HC427,ovarian cyst or cysts
+HC428,low platelets/platelet disorder
+HC429,hiv/aids
+HC430,rheumatoid arthritis
+HC431,emphysema
+HC432,mitral valve prolapse
+HC433,lymphoedema
+HC434,macular degeneration
+HC435,ear/vestibular disorder
+HC436,acne/acne vulgaris
+HC437,epilepsy
+HC438,hepatitis
+HC439,hepatitis e
+HC440,atrial flutter
+HC441,hypopituitarism
+HC442,chronic obstructive airways disease/copd
+HC443,headaches (not migraine)
+HC444,fracture jaw
+HC445,oesophageal varicies
