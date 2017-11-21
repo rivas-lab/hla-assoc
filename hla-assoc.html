@@ -230,7 +230,7 @@ The description is in README.md
             //console.log(csv_array_of_cols);
 
       function draw_buttons(gene, thresh, hla_name_dict) {
-        console.log("hla_name_dict: " + hla_name_dict);
+        //console.log("hla_name_dict: " + hla_name_dict);
         var myNode = document.getElementById("buttons_0");
         while (myNode.firstChild) {
             myNode.removeChild(myNode.firstChild);
@@ -273,7 +273,7 @@ The description is in README.md
             button.id = include_haps[i];
             //console.log("i: " + i);
             button.addEventListener('click', function() {
-              console.log("gene: " + gene);
+              //console.log("gene: " + gene);
               odds_plot('/static/hla-assoc/phe_hap/phe_post_table_' + gene + '.csv', this.id, thresh, phe_dict, hla_name_dict);
             });
             document.getElementById('buttons_0').appendChild(button);
@@ -302,7 +302,7 @@ The description is in README.md
           hla_name_dict[data[i].ukb_names] = data[i].literature_names;
         }
       });
-      console.log("hla_name_dict: " + hla_name_dict);
+      //console.log("hla_name_dict: " + hla_name_dict);
         $(document).ready(function () {
 	    
           plotly_from_csv('/static/hla-assoc/phe_hap/phe_post_table_' + genes[0] + '.csv', 'plotly_div',  0, genes[0], phe_dict, disease_dict, hla_name_dict);
@@ -398,7 +398,7 @@ The description is in README.md
       button.id = labels[i];
       //console.log("i: " + i);
       button.addEventListener('click', function() {
-        console.log("labels[i]: " + labels[i]);
+        //console.log("labels[i]: " + labels[i]);
         odds_plot('/static/hla-assoc/phe_hap/phe_post_table_' + gene + '.csv', this.id, 0.7, phe_dict);
       });
       document.getElementById('buttons_0').appendChild(button);
