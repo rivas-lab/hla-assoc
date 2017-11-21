@@ -19,17 +19,21 @@ The description is in README.md
 
         function plotly_from_csv_callback(csv_string, plotDivName, label_col_idx, gene, phe_dict, disease_dict, hla_name_dict){
             var csv_array_of_cols=$.csv.toArrays(csv_string);
+
+            // change to literature allele names
             var labels = csv_array_of_cols[label_col_idx];            
             for (var i = 0; i < labels.length; i++) {
               labels[i] = hla_name_dict[labels[i]];
             }
             
+            //Create set of points for each phenotype
             var x = d3.range(1, 1 + labels.length);
-            //console.log("x.length: " + x.length);
             var data = [];
             var trace;
             for (var i = 1; i < csv_array_of_cols["length"]; i++) {
               var x_noise = x.slice(0,x.length);
+
+              // add jitter (there will be 0.5 space where there are points and then a 0.5 break)
               for (var j = 0; j < x_noise.length; j++) {
                 var sign = Math.random();
                 if (sign < 0.5) {
@@ -37,17 +41,14 @@ The description is in README.md
                 } else {
                   sign = 1;
                 }
-                // add jitter (there will be 0.5 space where there are points and then a 0.5 break)
                 x_noise[j] = x_noise[j] + sign*Math.random()*0.25;
-
               }
-              //console.log("x_noise.length: " + x_noise.length);
               var y = csv_array_of_cols[i];
-              // Get rid of label in the first entry
               y = y.slice(1,);
               y.unshift("");
+
+              // Create hover text
               var new_text = [];
-              //console.log("y.length: " + y.length);
               for (var k = 0; k < x.length; k++) {
                 new_text.push("post prob: " + y[k] + "<br>" + "hap: " + labels[k] + "<br>" + "pheno: " + phe_dict[csv_array_of_cols[i][0]]);
               }
@@ -64,7 +65,6 @@ The description is in README.md
 
             var layout = {
                 hovermode:'closest',
-
                 hoverinfo: "text",
                 showlegend: false,
                 title: "Posterior probabilities of top 10 HLA-" + gene + " alleles for " + csv_array_of_cols["length"] + " phenotypes",
@@ -75,9 +75,7 @@ The description is in README.md
                   ticks: "", 
                   ticktext: labels,
                   tickvals: x
-
             		},
-
                 yaxis: {
                   title: "posterior probability",
                   range: [-0.1,1.1]
@@ -89,7 +87,6 @@ The description is in README.md
             
             // Go to GBE page for given phenotype on click
             myPlot.on('plotly_click', function(data){
-              //console.log(data);
               window.open("https://biobankengine.stanford.edu/coding/" + disease_dict[data.points[0].data.name]);
             });
               
@@ -97,7 +94,6 @@ The description is in README.md
         } 
         
         function plotly_from_csv(csv_file, plotDivName, label_col_idx, gene, phe_dict, disease_dict, hla_name_dict) {
-            //console.log("here" + gene);
 
             $.ajax({
                 url: csv_file,
@@ -109,77 +105,46 @@ The description is in README.md
             );
         }
 
-        function odds_plot(csv_file, hap, thresh, phe_dict, hla_name_dict) {
-          //console.log("hap");
-          //console.log(hap);
-          //var dataset;
+        function odds_plot(csv_file, hap, thresh, phe_dict, hla_name_dict, disease_dict) {
           var sig_phes = [];
-          //sig_phes.push(0);
           var phe_names = [];
-          //var num_phes = 0;
 
           // find significant phenotypes by posterior probability
           d3.csv(csv_file, function(data) {
-            //console.log(data);
             for (var i = 0; i < data.length; i++) {
               if (data[i][hap] > thresh) {
-                //console.log(data[i][""]);
                 phe_names.push(phe_dict[data[i][""]]);
                 sig_phes.push(i);
-                //
-                //console.log(sig_phes);
               } 
             }
-            //console.log(sig_phes.slice(0));
           });
-            //console.log(sig_phes.slice(0));
-            //console.log(sig_phes.length);
 
             // find associated odds values
             var odds = [];
-            d3.csv("phe_hap/phe_hap_table_EV.csv", function(data) {
-            //console.log(data);
-            
-            for (var i = 0; i < sig_phes.length; i++) {
-              odds.push(data[sig_phes[i]][hap]);
-
-              //console.log(data[sig_phes[i]][hap]);
-            }
-            
-            //console.log(odds);
+            d3.csv("phe_hap/phe_hap_table_EV.csv", function(data) {            
+              for (var i = 0; i < sig_phes.length; i++) {
+                odds.push(data[sig_phes[i]][hap]);
+              }
             });
 
+            // find associated standard deviations
             var SDs = [];
             d3.csv("phe_hap/phe_hap_table_SD.csv", function(data) {
-            //console.log(data);
-            
             for (var i = 0; i < sig_phes.length; i++) {
               // multiply to get 95% confidence interval
               SDs.push(data[sig_phes[i]][hap] * 1.959);
-              //console.log(data[sig_phes[i]][hap]);
             }
-            //console.log(SDs);
-            //console.log(odds);
-            odds_plot_callback(odds,SDs, phe_names, thresh, hap, hla_name_dict);
-          });
-            //console.log(sig_phes);
-            //odds_plot_callback(odds.slice(1,), SDs.slice(1,));
-            
- 
-            
+            // create plot
+            odds_plot_callback(odds,SDs, phe_names, thresh, hap, hla_name_dict, disease_dict);
+          });            
       }
 
-      function odds_plot_callback(odds, SDs, phe_names, thresh, hap, hla_name_dict) {
-          //console.log("odds");
-          //console.log(odds);
-          //console.log(odds.length);
-
+      function odds_plot_callback(odds, SDs, phe_names, thresh, hap, hla_name_dict, disease_dict) {
            var y = [];
             for (var i = 1; i < odds.length + 1; i++) {
               y.push(i);
             }
-            //console.log("y");
-            //console.log(y);
+            // create data
             var data  = [
               {
                 'x': odds, 'y': y,
@@ -188,7 +153,6 @@ The description is in README.md
                   type: 'data',
                   array: SDs,
                   visible: true
-                  //symmetric: true
                  }
               }
             ];
@@ -200,7 +164,6 @@ The description is in README.md
                 l: 300
               },
               yaxis: {
-                //tickangle: 45,
                 showgrid: false,
                 showticklabels: true,
                 tickmode: "array",
@@ -212,73 +175,65 @@ The description is in README.md
               xaxis: {
                 title: "posterior coefficient mean",
                 range: [-2.5,10]
-                  //range: [-0.1,1.1]
               }
             };
-            //console.log(data);
             Plotly.newPlot('plotly_div', data, layout);        
-      }
-            //console.log(csv_array_of_cols);
+      
+      /*
+            myPlot = document.getElementById('plotly_div'); 
+            
+            // Go to GBE page for given phenotype on click
+            myPlot.on('plotly_click', function(data){
+              console.log("data: " + JSON.stringify(data));
+              window.open("https://biobankengine.stanford.edu/coding/" + disease_dict[data.points[0].data.name]);
+            
+            });
+            */
+            
+          }
 
-      function draw_buttons(gene, thresh, hla_name_dict) {
-        console.log("hla_name_dict: " + hla_name_dict);
+
+      function draw_buttons(gene, thresh, hla_name_dict, disease_dict) {
+
+        // delete all current buttons
         var myNode = document.getElementById("buttons_0");
         while (myNode.firstChild) {
             myNode.removeChild(myNode.firstChild);
         }
+
+        // find all alleles that have probabilities above the threshold
         var labels; 
         var include_haps = [];
-        //var labels_2;
         d3.csv('phe_hap/phe_post_table_' + gene + '.csv', function(data) {
-          //console.log(Object.keys(d3.values(data)[0]));
           labels = Object.keys(d3.values(data)[0]).slice(1,);
-          //console.log(data);
-          
           for (var j = 0; j < labels.length; j++){
             var include = false;
             for (var i = 0; i < data.length; i++) {
               if (data[i][labels[j]] > thresh){
-                //console.log("data[labels[0]]: " + data[i][labels[j]]);
-                //console.log(labels[j]);
                 include = true;
               }
-              
             }
             if (include) {
               include_haps.push(labels[j]);
             }
           }
-          //console.log("include_haps: " + include_haps);
-          //console.log(labels);
-          /*
-        var labels_2 = [];   
-        for (var i = 0; i < labels.length; i++) {
-          labels_2.push(hla_name_dict[labels[i]]);
-          
-        }
-        */
-        var button;
+
+          // add a button for each of these alleles
+          var button;
           for (var i=0; i<include_haps.length; i++) {
             button = document.createElement('button');
             button.innerHTML = hla_name_dict[include_haps[i]];
             button.id = include_haps[i];
-            //console.log("i: " + i);
             button.addEventListener('click', function() {
               console.log("gene: " + gene);
-              odds_plot('phe_hap/phe_post_table_' + gene + '.csv', this.id, thresh, phe_dict, hla_name_dict);
+              odds_plot('phe_hap/phe_post_table_' + gene + '.csv', this.id, thresh, phe_dict, hla_name_dict, disease_dict);
             });
             document.getElementById('buttons_0').appendChild(button);
           }
-          });
-          
-          //console.log("labels: " + labels);
-          
-
-    
-  
-  
+        });
       }
-        
+       
+      // create dictionaries to convert names of phenotypes and alleles 
       var phe_dict = {};
       var disease_dict = {};
       d3.csv("highconfidenceqc_map.csv", function(data) {
@@ -293,39 +248,11 @@ The description is in README.md
           hla_name_dict[data[i].ukb_names] = data[i].literature_names;
         }
       });
-      console.log("hla_name_dict: " + hla_name_dict);
-        $(document).ready(function () {
-	    
-          plotly_from_csv('phe_hap/phe_post_table_' + genes[0] + '.csv', 'plotly_div',  0, genes[0], phe_dict, disease_dict, hla_name_dict);
-	    
-        });
-        /*
-        var gene = genes[0];
-        var labels; 
-        var labels_2;
-        d3.csv('phe_hap/phe_post_table_' + genes[0] + '.csv', function(data) {
-          //console.log(Object.keys(d3.values(data)[0]));
-          labels = Object.keys(d3.values(data)[0]).slice(1,);
-          */
-          //console.log(labels);
-          /*
-        var labels_2 = [];   
-        for (var i = 0; i < labels.length; i++) {
-          labels_2.push(hla_name_dict[labels[i]]);
-          
-        }
-        */
-          //});
 
-          
-        //console.log(labels);
-        /*   
-        var labels_2 = [];   
-        for (var i = 0; i < labels.length; i++) {
-          labels_2.push(hla_name_dict[labels[i]]);
-        }
-        */
-  
+        // start with plot from first gene
+        $(document).ready(function () {
+          plotly_from_csv('phe_hap/phe_post_table_' + genes[0] + '.csv', 'plotly_div',  0, genes[0], phe_dict, disease_dict, hla_name_dict);
+        });
     </script>
 
 </head>
@@ -335,13 +262,6 @@ The description is in README.md
   <div id='plots'></div>
   <div id='odd_plot'></div>
   
-  <script>
-    /*
-    odds_plot('phe_hap/phe_post_table_' + genes[0] + '.csv', "A_2501", 0.7, phe_dict);
-    */
-  </script>
-
-  
   <script> 
     var container = document.getElementById("plots");
     container.innerHTML += '<div id="plotly_div"></div>';
@@ -349,66 +269,33 @@ The description is in README.md
 </script>
   <h2>Alleles</h2>
   <div id='buttons_0'></div>
-    <script>
-    //var class_1 = genes.slice(0,3);
+
+  <script>
+    // set threshold for including phenotype in odds plot 
     thresh = 0.7;
-    $(document).ready(function () {
-      draw_buttons(genes[0], thresh, hla_name_dict);
-    //console.log("labels: " + labels);
-   /* 
-    var button;
-    for (var i=0; i<labels.length; i++) {
-      button = document.createElement('button');
-      button.innerHTML = labels[i];
-      button.id = labels[i];
-      //console.log("i: " + i);
-      button.addEventListener('click', function() {
-        console.log("labels[i]: " + labels[i]);
-        odds_plot('phe_hap/phe_post_table_' + gene + '.csv', this.id, 0.7, phe_dict);
-      });
-      document.getElementById('buttons_0').appendChild(button);
-      */
-    
+    draw_buttons(genes[0], thresh, hla_name_dict, disease_dict);
+  </script>
 
-    
-  
-  });
-
-    </script>
   <h2>Class I</h2>
   <div id='buttons_1'></div>
   <h2>Class II</h2>
   <div id='buttons_2'></div>
   
   <script>
+    // create gene buttons
     var class_1 = genes.slice(0,3);
     var button;
     for (var i=0; i<class_1.length; i++) {
-    button = document.createElement('button');
-    button.innerHTML = "HLA-" + class_1[i];
-    button.id = class_1[i];
-    button.addEventListener('click', function() {
-      plotly_from_csv('phe_hap/phe_post_table_' + this.id + '.csv', 'plotly_div',  0, this.id, phe_dict, disease_dict, hla_name_dict);
-      gene = this.id;
-      draw_buttons(this.id, thresh, hla_name_dict);
-        //d3.csv('phe_hap/phe_post_table_' + this.id + '.csv', function(data) {
-          //console.log(Object.keys(d3.values(data)[0]));
-        //labels = Object.keys(d3.values(data)[0]).slice(1,);
-          //console.log(labels);
-          /*
-        var labels_2 = [];   
-        for (var i = 0; i < labels.length; i++) {
-          labels_2.push(hla_name_dict[labels[i]]);
-          
-        }
-        */
-          //});
-    });
-    document.getElementById('buttons_1').appendChild(button);
-}
-    </script>
- 
-     <script>
+      button = document.createElement('button');
+      button.innerHTML = "HLA-" + class_1[i];
+      button.id = class_1[i];
+      button.addEventListener('click', function() {
+        plotly_from_csv('phe_hap/phe_post_table_' + this.id + '.csv', 'plotly_div',  0, this.id, phe_dict, disease_dict, hla_name_dict);
+        gene = this.id;
+        draw_buttons(this.id, thresh, hla_name_dict, disease_dict);
+      });
+      document.getElementById('buttons_1').appendChild(button);
+    }
     var class_2 = genes.slice(4,);
     var button;
     for (i=0; i<class_2.length; i++) {
@@ -417,8 +304,7 @@ The description is in README.md
     button.id = class_2[i];
     button.addEventListener('click', function() {
       plotly_from_csv('phe_hap/phe_post_table_' + this.id + '.csv', 'plotly_div',  0, this.id, phe_dict, disease_dict, hla_name_dict);
-      //gene = class_2[i];
-      draw_buttons(this.id, thresh, hla_name_dict);
+      draw_buttons(this.id, thresh, hla_name_dict, disease_dict);
     });
     document.getElementById('buttons_2').appendChild(button);
 }
