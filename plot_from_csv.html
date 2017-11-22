@@ -123,6 +123,7 @@ The description is in README.md
             var odds = [];
             d3.csv("phe_hap/phe_hap_table_EV.csv", function(data) {            
               for (var i = 0; i < sig_phes.length; i++) {
+                // take exp(odds)
                 odds.push(data[sig_phes[i]][hap]);
               }
             });
@@ -131,6 +132,7 @@ The description is in README.md
             var SDs = [];
             d3.csv("phe_hap/phe_hap_table_SD.csv", function(data) {
             for (var i = 0; i < sig_phes.length; i++) {
+
               // multiply to get 95% confidence interval
               SDs.push(data[sig_phes[i]][hap] * 1.959);
             }
@@ -144,22 +146,45 @@ The description is in README.md
             for (var i = 1; i < odds.length + 1; i++) {
               y.push(i);
             }
-            // create data
+            var new_text = [];
+
+            // keep track of biggest value for setting range
+            // (range will always be >= [-2,2])
+            var abs_max = 2;
+            for (var k = 0; k < odds.length; k++) {
+              
+              var odds_minus = round_2(odds[k] - SDs[k]);
+              var odds_plus = round_2(parseFloat(odds[k]) + SDs[k]);
+              var exp_minus = round_2(Math.pow(Math.E,odds[k] - SDs[k]));
+              var exp_plus = round_2(Math.pow(Math.E,parseFloat(odds[k]) + SDs[k]));
+              if (Math.abs(odds_minus) > abs_max) {
+                abs_max = Math.abs(odds_minus);
+              }
+              if (Math.abs(odds_plus) > abs_max) {
+                abs_max = Math.abs(odds_plus);
+              }
+              new_text.push("log(odds ratio): " + round_2(odds[k]) + ", (" + odds_minus + "," + odds_plus + ")" + "<br>odds ratio: " + round_2(Math.pow(Math.E,odds[k])) + ", (" + exp_minus + "," + exp_plus + ")"  + "<br>" + "pheno: " + phe_names[k]);
+            }
+            abs_max += 0.1;
             var data  = [
               {
                 'x': odds, 'y': y,
                  type: 'scatter', 'mode': 'markers',
+                 text: new_text,
+                 hoverinfo: "text",
                  error_x: {
                   type: 'data',
                   array: SDs,
-                  visible: true
+                  visible: true,
                  }
+
+
               }
             ];
             var layout  = {
               hovermode: 'closest',
-              title: "Postmean for phenotypes with posterior probability >" + thresh + " for " + hla_name_dict[hap],
-              
+              title: "Posterior log(odds ratios) for phenotypes with posterior probability >" + thresh + " for " + hla_name_dict[hap],
+              hoverinfo: 'text',
               margin: {
                 l: 300
               },
@@ -173,8 +198,8 @@ The description is in README.md
 
               },
               xaxis: {
-                title: "posterior coefficient mean",
-                range: [-2.5,10]
+                title: "posterior effect size",
+                range: [-abs_max,abs_max]
               }
             };
             Plotly.newPlot('plotly_div', data, layout);        
@@ -192,6 +217,9 @@ The description is in README.md
             
           }
 
+      function round_2(x) {
+        return Math.round(x * 100)/100;
+      }
 
       function draw_buttons(gene, thresh, hla_name_dict, disease_dict) {
 
