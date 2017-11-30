@@ -275,7 +275,7 @@ function round_2(x) {
           disease_dict[data[i].disease] = [data[i].code];
         }
       });
-     d3.csv("cancermap.csv", function(data) {
+     d3.csv("/static/hla-assoc/cancermap.csv", function(data) {
         for (var i = 0; i < data.length; i++) {
           phe_dict[data[i].code.toString()] = data[i].disease;
           disease_dict[data[i].disease] = [data[i].code.toString()];
