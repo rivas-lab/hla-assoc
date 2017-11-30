@@ -25,7 +25,7 @@ The description is in README.md
     
     <script>        
         var genes = ["A", "B", "C","DPA1","DPB1","DQA1","DQB1","DRB1","DRB3","DRB4","DRB5"];
-
+        var phe_folder = "/static/hla-assoc/hap_post_plot"
  function plotly_from_csv_callback(csv_string, plotDivName, label_col_idx, gene, phe_dict, disease_dict, hla_name_dict){
             var csv_array_of_cols=$.csv.toArrays(csv_string);
 
@@ -129,7 +129,7 @@ The description is in README.md
           });
             // find associated odds values
             var odds = [];
-            d3.csv("/static/hla-assoc/phe_hap/phe_hap_table_EV.csv", function(data) {            
+            d3.csv(phe_folder + "phe_hap_table_EV.csv", function(data) {            
               for (var i = 0; i < sig_phes.length; i++) {
 	      // take exp(odds)
                 odds.push(data[sig_phes[i]][hap]);
@@ -138,7 +138,7 @@ The description is in README.md
 
             // find associated standard deviations
             var SDs = [];
-            d3.csv("/static/hla-assoc/phe_hap/phe_hap_table_SD.csv", function(data) {
+            d3.csv(phe_folder + "phe_hap_table_SD.csv", function(data) {
             for (var i = 0; i < sig_phes.length; i++) {
               // multiply to get 95% confidence interval
               SDs.push(data[sig_phes[i]][hap] * 1.959);
@@ -237,7 +237,7 @@ function round_2(x) {
         // find all alleles that have probabilities above the threshold
         var labels; 
         var include_haps = [];
-        d3.csv('/static/hla-assoc/phe_hap/phe_post_table_' + gene + '.csv', function(data) {
+        d3.csv(phe_folder + 'phe_post_table_' + gene + '.csv', function(data) {
           labels = Object.keys(d3.values(data)[0]).slice(1,);
           for (var j = 0; j < labels.length; j++){
             var include = false;
@@ -259,7 +259,7 @@ function round_2(x) {
             button.id = include_haps[i];
             button.addEventListener('click', function() {
               console.log("gene: " + gene);
-              odds_plot('/static/hla-assoc/phe_hap/phe_post_table_' + gene + '.csv', this.id, thresh, phe_dict, hla_name_dict, disease_dict);
+              odds_plot(phe_folder + 'phe_post_table_' + gene + '.csv', this.id, thresh, phe_dict, hla_name_dict, disease_dict);
             });
             document.getElementById('buttons_0').appendChild(button);
           }
@@ -275,6 +275,12 @@ function round_2(x) {
           disease_dict[data[i].disease] = [data[i].code];
         }
       });
+     d3.csv("cancermap.csv", function(data) {
+        for (var i = 0; i < data.length; i++) {
+          phe_dict[data[i].code.toString()] = data[i].disease;
+          disease_dict[data[i].disease] = [data[i].code.toString()];
+        }
+      });
       var hla_name_dict = {};
       d3.csv("/static/hla-assoc/ukb_to_asterisk_names.csv", function(data){
         for (var i = 0; i < data.length; i++) {
@@ -284,7 +290,7 @@ function round_2(x) {
 
         // start with plot from first gene
         $(document).ready(function () {
-          plotly_from_csv('/static/hla-assoc/phe_hap/phe_post_table_' + genes[0] + '.csv', 'plotly_div',  0, genes[0], phe_dict, disease_dict, hla_name_dict);
+          plotly_from_csv(phe_folder + 'phe_post_table_' + genes[0] + '.csv', 'plotly_div',  0, genes[0], phe_dict, disease_dict, hla_name_dict);
         });
     </script>
 
@@ -359,7 +365,7 @@ function round_2(x) {
       button.innerHTML = "HLA-" + class_1[i];
       button.id = class_1[i];
       button.addEventListener('click', function() {
-        plotly_from_csv('/static/hla-assoc/phe_hap/phe_post_table_' + this.id + '.csv', 'plotly_div',  0, this.id, phe_dict, disease_dict, hla_name_dict);
+        plotly_from_csv(phe_folder + 'phe_post_table_' + this.id + '.csv', 'plotly_div',  0, this.id, phe_dict, disease_dict, hla_name_dict);
         gene = this.id;
         draw_buttons(this.id, thresh, hla_name_dict, disease_dict);
       });
@@ -372,7 +378,7 @@ function round_2(x) {
     button.innerHTML = "HLA-" + class_2[i];
     button.id = class_2[i];
     button.addEventListener('click', function() {
-      plotly_from_csv('/static/hla-assoc/phe_hap/phe_post_table_' + this.id + '.csv', 'plotly_div',  0, this.id, phe_dict, disease_dict, hla_name_dict);
+      plotly_from_csv(phe_folder + 'phe_post_table_' + this.id + '.csv', 'plotly_div',  0, this.id, phe_dict, disease_dict, hla_name_dict);
       draw_buttons(this.id, thresh, hla_name_dict, disease_dict);
     });
     document.getElementById('buttons_2').appendChild(button);
