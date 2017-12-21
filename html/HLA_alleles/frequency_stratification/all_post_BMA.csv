@@ -1,0 +1,336 @@
+allelotype,phe_ID,phenotype,posterior_probability
+DQA1_301,cancer1037,female genital tract cancer,1.001
+DPA1_201,HC303,malabsorption/coeliac disease,1.0
+DQA1_102,HC219,hypothyroidism/myxoedema,1.0
+DRB1_404,HC96,polymyalgia rheumatica,1.0
+C_602,HC91,psoriatic arthropathy,1.0
+DQB1_302,HC17,diabetic eye disease,1.0
+B_2702,HC422,ankylosing spondylitis,1.0
+B_3901,HC91,psoriatic arthropathy,1.0
+DQA1_301,HC219,hypothyroidism/myxoedema,1.0
+DQA1_301,HC78,arthritis (nos),1.0
+DRB1_103,HC95,inflammatory bowel disease,1.0
+DQB1_201,HC303,malabsorption/coeliac disease,1.0
+B_2705,HC422,ankylosing spondylitis,1.0
+B_801,HC352,systemic lupus erythematosis/sle,1.0
+B_2705,HC91,psoriatic arthropathy,1.0
+DQB1_301,HC219,hypothyroidism/myxoedema,1.0
+DRB1_401,HC221,diabetes,1.0
+DRB3_9901,HC170,sarcoidosis,1.0
+B_801,HC321,sjogren's syndrome/sicca syndrome,1.0
+B_801,HC170,sarcoidosis,1.0
+DQB1_302,HC221,diabetes,1.0
+DRB1_401,HC96,polymyalgia rheumatica,1.0
+DPB1_401,HC28,bronchiectasis,1.0
+DQA1_102,HC430,rheumatoid arthritis,1.0
+B_801,HC303,malabsorption/coeliac disease,1.0
+B_5701,HC38,psoriasis,1.0
+DRB1_401,HC430,rheumatoid arthritis,1.0
+DRB3_9901,HC430,rheumatoid arthritis,1.0
+C_602,HC38,psoriasis,1.0
+DRB1_404,HC430,rheumatoid arthritis,1.0
+DRB1_404,HC136,connective tissue disorder,0.999
+DQA1_301,HC136,connective tissue disorder,0.999
+B_801,HC136,connective tissue disorder,0.999
+DQB1_501,cancer1060,non-melanoma skin cancer,0.983
+DQB1_201,HC219,hypothyroidism/myxoedema,0.975
+DQA1_101,HC169,pernicious anaemia,0.97
+DQA1_301,HC156,nasal polyps,0.968
+DQB1_503,HC170,sarcoidosis,0.966
+DQB1_302,cancer1060,non-melanoma skin cancer,0.965
+B_4001,cancer1060,non-melanoma skin cancer,0.965
+DQB1_303,HC28,bronchiectasis,0.965
+DQB1_501,cancer1053,non-hodgkins lymphoma,0.958
+B_702,HC269,high cholesterol,0.954
+DRB1_1301,HC321,sjogren's syndrome/sicca syndrome,0.952
+B_801,HC55,hyperthyroidism/thyrotoxicosis,0.933
+B_801,HC310,hiatus hernia,0.927
+DRB1_404,HC49,hayfever/allergic rhinitis,0.917
+DQA1_103,HC49,hayfever/allergic rhinitis,0.917
+B_702,HC273,essential hypertension,0.892
+DQB1_201,HC17,diabetic eye disease,0.886
+DQA1_501,HC55,hyperthyroidism/thyrotoxicosis,0.883
+B_5701,HC261,eczema/dermatitis,0.881
+A_101,HC401,varicose veins,0.878
+DQB1_501,cancer1003,skin cancer,0.869
+DQB1_302,cancer1003,skin cancer,0.869
+B_3906,HC169,pernicious anaemia,0.866
+A_2608,HC28,bronchiectasis,0.853
+DRB4_101,HC261,eczema/dermatitis,0.828
+DQA1_101,cancer1055,chronic lymphocytic,0.815
+DRB1_103,HC201,ulcerative colitis,0.808
+B_4001,cancer1003,skin cancer,0.754
+DQA1_101,HC382,asthma,0.749
+DRB1_401,HC382,asthma,0.749
+DRB1_301,HC55,hyperthyroidism/thyrotoxicosis,0.726
+DQA1_501,HC150,rosacea,0.721
+DRB1_701,HC430,rheumatoid arthritis,0.712
+DRB4_9901,HC151,multiple sclerosis,0.693
+DQA1_301,HC298,chronic sinusitis,0.65
+DQB1_201,HC22,osteoporosis,0.617
+DQB1_302,HC422,ankylosing spondylitis,0.613
+DQB1_302,HC201,ulcerative colitis,0.612
+DRB1_301,HC295,carpal tunnel syndrome,0.608
+DQB1_302,HC95,inflammatory bowel disease,0.608
+DRB5_101,HC151,multiple sclerosis,0.605
+DQA1_301,HC261,eczema/dermatitis,0.591
+DQB1_602,HC201,ulcerative colitis,0.582
+DQB1_201,HC179,iron deficiency anaemia,0.58
+DQA1_301,cancer1041,cervical cancer,0.57
+B_5701,HC91,psoriatic arthropathy,0.566
+DRB1_101,HC125,anaemia,0.549
+DRB1_301,HC243,inguinal hernia,0.547
+DQA1_201,HC55,hyperthyroidism/thyrotoxicosis,0.538
+DRB1_701,HC96,polymyalgia rheumatica,0.516
+DQB1_201,HC125,anaemia,0.503
+DQA1_201,HC136,connective tissue disorder,0.491
+DRB1_701,cancer1060,non-melanoma skin cancer,0.489
+C_701,HC85,enlarged prostate,0.477
+B_4403,HC49,hayfever/allergic rhinitis,0.469
+DRB1_301,cancer1053,non-hodgkins lymphoma,0.467
+DRB3_202,HC298,chronic sinusitis,0.464
+DQA1_201,HC96,polymyalgia rheumatica,0.463
+DQA1_301,HC382,asthma,0.462
+DRB4_103,HC382,asthma,0.462
+DQA1_103,HC382,asthma,0.458
+DQB1_201,HC243,inguinal hernia,0.453
+DQA1_101,HC269,high cholesterol,0.448
+DPA1_103,HC49,hayfever/allergic rhinitis,0.429
+DRB1_1501,cancer1041,cervical cancer,0.419
+DQA1_201,cancer1003,skin cancer,0.413
+DRB4_101,HC49,hayfever/allergic rhinitis,0.413
+DQB1_303,HC91,psoriatic arthropathy,0.41
+DQA1_201,cancer1060,non-melanoma skin cancer,0.404
+DRB1_301,cancer1047,lymphoma,0.404
+DRB1_301,HC179,iron deficiency anaemia,0.401
+DQB1_201,cancer1053,non-hodgkins lymphoma,0.397
+DRB1_701,HC55,hyperthyroidism/thyrotoxicosis,0.395
+DRB1_301,HC22,osteoporosis,0.383
+DQB1_501,HC269,high cholesterol,0.381
+DRB1_301,HC25,cataract,0.374
+B_801,HC219,hypothyroidism/myxoedema,0.372
+DQB1_501,HC39,lichen planus,0.362
+DRB4_9901,HC382,asthma,0.362
+DRB1_701,cancer1003,skin cancer,0.359
+DRB1_701,HC136,connective tissue disorder,0.349
+DRB5_9901,HC39,lichen planus,0.345
+A_301,HC401,varicose veins,0.343
+DQB1_201,HC295,carpal tunnel syndrome,0.342
+DRB5_101,cancer1041,cervical cancer,0.329
+DRB1_1501,HC221,diabetes,0.328
+DQB1_201,HC25,cataract,0.322
+B_801,HC85,enlarged prostate,0.32
+DRB1_301,HC125,anaemia,0.316
+DQA1_301,HC95,inflammatory bowel disease,0.311
+DQB1_602,HC221,diabetes,0.311
+C_1202,HC432,mitral valve prolapse,0.309
+B_702,HC215,hypertension,0.306
+DQB1_201,cancer1047,lymphoma,0.299
+DQB1_501,cancer1037,female genital tract cancer,0.298
+DRB5_101,HC221,diabetes,0.292
+DQB1_603,HC382,asthma,0.291
+DQA1_201,HC430,rheumatoid arthritis,0.288
+B_5201,HC432,mitral valve prolapse,0.285
+DRB1_101,HC179,iron deficiency anaemia,0.284
+DRB1_1501,HC151,multiple sclerosis,0.282
+DQB1_602,HC215,hypertension,0.275
+A_101,HC85,enlarged prostate,0.269
+DRB1_404,HC95,inflammatory bowel disease,0.266
+DRB1_404,HC201,ulcerative colitis,0.254
+DQA1_101,HC39,lichen planus,0.25
+DQB1_201,HC150,rosacea,0.25
+DRB1_1501,HC201,ulcerative colitis,0.226
+B_801,cancer1047,lymphoma,0.221
+DQB1_201,HC55,hyperthyroidism/thyrotoxicosis,0.207
+DQA1_301,HC201,ulcerative colitis,0.196
+DRB4_103,HC151,multiple sclerosis,0.194
+DRB3_9901,HC298,chronic sinusitis,0.19
+DQB1_501,cancer1055,chronic lymphocytic,0.185
+DRB1_401,HC261,eczema/dermatitis,0.185
+DRB4_9901,cancer1041,cervical cancer,0.178
+DRB5_101,HC39,lichen planus,0.175
+B_1302,HC38,psoriasis,0.171
+DRB5_101,HC156,nasal polyps,0.165
+DRB3_9901,HC303,malabsorption/coeliac disease,0.165
+B_5701,HC269,high cholesterol,0.145
+DRB1_1501,HC156,nasal polyps,0.141
+B_801,cancer1053,non-hodgkins lymphoma,0.136
+DRB1_101,HC269,high cholesterol,0.125
+C_702,HC215,hypertension,0.123
+DRB1_301,HC17,diabetic eye disease,0.114
+DRB1_103,HC422,ankylosing spondylitis,0.114
+DQB1_602,HC156,nasal polyps,0.112
+C_702,HC273,essential hypertension,0.108
+DRB5_9901,HC156,nasal polyps,0.103
+DRB5_101,HC215,hypertension,0.1
+B_4403,cancer1003,skin cancer,0.097
+DRB1_1501,HC215,hypertension,0.097
+C_401,HC125,anaemia,0.094
+DRB3_9901,cancer1041,cervical cancer,0.094
+DQB1_501,cancer1041,cervical cancer,0.094
+A_101,HC303,malabsorption/coeliac disease,0.092
+DRB1_1501,HC39,lichen planus,0.092
+DQA1_101,cancer1037,female genital tract cancer,0.076
+C_701,cancer1047,lymphoma,0.075
+C_701,HC310,hiatus hernia,0.073
+B_4403,cancer1060,non-melanoma skin cancer,0.072
+DRB5_9901,HC221,diabetes,0.069
+DQB1_301,HC261,eczema/dermatitis,0.065
+DQA1_201,HC261,eczema/dermatitis,0.053
+DRB3_101,HC295,carpal tunnel syndrome,0.05
+DRB1_1501,HC78,arthritis (nos),0.042
+DRB1_101,cancer1053,non-hodgkins lymphoma,0.042
+DRB1_101,cancer1037,female genital tract cancer,0.042
+C_702,HC151,multiple sclerosis,0.038
+DRB5_101,HC78,arthritis (nos),0.036
+C_1601,HC49,hayfever/allergic rhinitis,0.035
+DRB1_701,HC28,bronchiectasis,0.035
+DRB1_1401,HC170,sarcoidosis,0.034
+DRB1_301,HC219,hypothyroidism/myxoedema,0.025
+DRB3_101,HC179,iron deficiency anaemia,0.019
+DRB4_9901,cancer1060,non-melanoma skin cancer,0.018
+C_304,cancer1060,non-melanoma skin cancer,0.018
+DQA1_102,HC78,arthritis (nos),0.0
+DRB1_1501,HC219,hypothyroidism/myxoedema,0.0
+DRB5_101,HC219,hypothyroidism/myxoedema,0.0
+C_102,HC91,psoriatic arthropathy,0.0
+DRB4_9901,HC430,rheumatoid arthritis,0.0
+DQB1_602,HC269,high cholesterol,0.0
+DQB1_602,HC219,hypothyroidism/myxoedema,0.0
+DRB1_701,HC91,psoriatic arthropathy,0.0
+DQA1_501,HC219,hypothyroidism/myxoedema,0.0
+DQA1_301,HC430,rheumatoid arthritis,0.0
+DRB5_9901,HC215,hypertension,0.0
+DQB1_302,HC430,rheumatoid arthritis,0.0
+A_101,HC310,hiatus hernia,0.0
+DQB1_302,HC78,arthritis (nos),0.0
+DRB1_401,HC78,arthritis (nos),0.0
+DRB4_103,HC78,arthritis (nos),0.0
+DRB4_103,HC221,diabetes,0.0
+DQA1_102,HC221,diabetes,0.0
+DRB3_101,HC321,sjogren's syndrome/sicca syndrome,0.0
+DQB1_301,HC382,asthma,0.0
+DRB1_101,HC382,asthma,0.0
+DQB1_501,HC382,asthma,0.0
+DQB1_303,HC261,eczema/dermatitis,0.0
+B_1302,HC91,psoriatic arthropathy,0.0
+C_602,HC261,eczema/dermatitis,0.0
+C_702,HC269,high cholesterol,0.0
+DRB5_101,HC269,high cholesterol,0.0
+DRB4_103,HC91,psoriatic arthropathy,0.0
+DRB5_9901,HC269,high cholesterol,0.0
+DRB1_701,HC261,eczema/dermatitis,0.0
+DRB4_9901,HC78,arthritis (nos),0.0
+DQA1_201,HC91,psoriatic arthropathy,0.0
+DQB1_602,HC78,arthritis (nos),0.0
+DRB4_103,HC430,rheumatoid arthritis,0.0
+DRB4_9901,HC221,diabetes,0.0
+DQB1_201,HC321,sjogren's syndrome/sicca syndrome,0.0
+DQA1_301,HC221,diabetes,0.0
+A_101,HC321,sjogren's syndrome/sicca syndrome,0.0
+C_701,HC321,sjogren's syndrome/sicca syndrome,0.0
+DRB1_301,HC321,sjogren's syndrome/sicca syndrome,0.0
+DRB1_1501,HC269,high cholesterol,0.0
+DQA1_501,HC321,sjogren's syndrome/sicca syndrome,0.0
+DRB3_9901,HC78,arthritis (nos),0.0
+DQB1_201,HC136,connective tissue disorder,0.0
+DQB1_602,HC39,lichen planus,0.0
+A_101,HC243,inguinal hernia,0.0
+DQB1_501,HC201,ulcerative colitis,0.0
+DRB4_9901,HC201,ulcerative colitis,0.0
+C_701,HC55,hyperthyroidism/thyrotoxicosis,0.0
+DRB3_9901,HC55,hyperthyroidism/thyrotoxicosis,0.0
+DRB4_9901,HC55,hyperthyroidism/thyrotoxicosis,0.0
+DRB3_101,HC55,hyperthyroidism/thyrotoxicosis,0.0
+DQA1_101,cancer1003,skin cancer,0.0
+C_304,cancer1003,skin cancer,0.0
+DRB1_101,cancer1003,skin cancer,0.0
+DRB4_9901,cancer1003,skin cancer,0.0
+B_801,HC243,inguinal hernia,0.0
+DRB4_9901,HC38,psoriasis,0.0
+DQA1_501,HC243,inguinal hernia,0.0
+DRB3_101,HC243,inguinal hernia,0.0
+DRB4_103,HC95,inflammatory bowel disease,0.0
+DQA1_101,HC95,inflammatory bowel disease,0.0
+DRB4_9901,HC95,inflammatory bowel disease,0.0
+DRB4_103,HC96,polymyalgia rheumatica,0.0
+DQB1_302,HC96,polymyalgia rheumatica,0.0
+B_4001,HC96,polymyalgia rheumatica,0.0
+DQA1_301,HC96,polymyalgia rheumatica,0.0
+C_304,HC96,polymyalgia rheumatica,0.0
+DQA1_101,HC201,ulcerative colitis,0.0
+DRB4_103,HC201,ulcerative colitis,0.0
+C_701,cancer1053,non-hodgkins lymphoma,0.0
+DQA1_501,HC179,iron deficiency anaemia,0.0
+DQB1_302,HC136,connective tissue disorder,0.0
+A_101,HC136,connective tissue disorder,0.0
+C_701,HC136,connective tissue disorder,0.0
+DRB1_301,HC136,connective tissue disorder,0.0
+DQA1_101,cancer1060,non-melanoma skin cancer,0.0
+DRB1_101,cancer1060,non-melanoma skin cancer,0.0
+DQA1_201,HC28,bronchiectasis,0.0
+DQA1_101,HC422,ankylosing spondylitis,0.0
+B_702,HC422,ankylosing spondylitis,0.0
+C_102,HC422,ankylosing spondylitis,0.0
+DQB1_501,HC422,ankylosing spondylitis,0.0
+C_202,HC422,ankylosing spondylitis,0.0
+DRB1_101,HC422,ankylosing spondylitis,0.0
+DQB1_201,HC170,sarcoidosis,0.0
+C_701,HC170,sarcoidosis,0.0
+DRB1_301,HC170,sarcoidosis,0.0
+DRB4_9901,HC170,sarcoidosis,0.0
+DQA1_501,HC170,sarcoidosis,0.0
+DRB3_101,HC170,sarcoidosis,0.0
+C_701,HC179,iron deficiency anaemia,0.0
+B_801,HC179,iron deficiency anaemia,0.0
+DRB4_9901,HC96,polymyalgia rheumatica,0.0
+DRB4_103,cancer1041,cervical cancer,0.0
+DRB1_401,cancer1041,cervical cancer,0.0
+DRB5_9901,HC273,essential hypertension,0.0
+DQB1_602,HC273,essential hypertension,0.0
+A_101,HC295,carpal tunnel syndrome,0.0
+DQB1_201,HC352,systemic lupus erythematosis/sle,0.0
+A_101,HC352,systemic lupus erythematosis/sle,0.0
+C_701,HC352,systemic lupus erythematosis/sle,0.0
+DRB1_301,HC352,systemic lupus erythematosis/sle,0.0
+DPB1_101,HC352,systemic lupus erythematosis/sle,0.0
+DQA1_501,HC352,systemic lupus erythematosis/sle,0.0
+DRB3_101,HC352,systemic lupus erythematosis/sle,0.0
+DQA1_101,HC125,anaemia,0.0
+C_701,HC125,anaemia,0.0
+B_801,HC125,anaemia,0.0
+DQB1_501,HC125,anaemia,0.0
+DQA1_501,HC125,anaemia,0.0
+DRB3_101,HC125,anaemia,0.0
+A_3001,HC38,psoriasis,0.0
+DRB4_103,HC38,psoriasis,0.0
+DQB1_303,HC38,psoriasis,0.0
+DQA1_201,HC38,psoriasis,0.0
+DRB1_701,HC38,psoriasis,0.0
+B_3701,HC38,psoriasis,0.0
+DRB5_101,HC273,essential hypertension,0.0
+DRB4_9901,cancer1037,female genital tract cancer,0.0
+DQA1_101,cancer1041,cervical cancer,0.0
+DRB1_401,cancer1037,female genital tract cancer,0.0
+DRB1_101,cancer1041,cervical cancer,0.0
+DRB3_101,cancer1047,lymphoma,0.0
+DRB5_9901,HC151,multiple sclerosis,0.0
+DQA1_102,HC151,multiple sclerosis,0.0
+B_702,HC151,multiple sclerosis,0.0
+DQA1_301,HC151,multiple sclerosis,0.0
+DQB1_602,HC151,multiple sclerosis,0.0
+DRB4_103,HC156,nasal polyps,0.0
+DRB1_404,HC156,nasal polyps,0.0
+DQB1_302,HC156,nasal polyps,0.0
+DRB1_901,HC156,nasal polyps,0.0
+DRB4_9901,HC156,nasal polyps,0.0
+C_701,HC303,malabsorption/coeliac disease,0.0
+DRB1_301,HC303,malabsorption/coeliac disease,0.0
+DQA1_501,HC303,malabsorption/coeliac disease,0.0
+DRB3_101,HC303,malabsorption/coeliac disease,0.0
+DRB1_1301,HC49,hayfever/allergic rhinitis,0.0
+DQA1_201,HC49,hayfever/allergic rhinitis,0.0
+DQB1_603,HC49,hayfever/allergic rhinitis,0.0
+DRB1_701,HC49,hayfever/allergic rhinitis,0.0
+DRB4_103,cancer1037,female genital tract cancer,0.0
+DPB1_101,HC303,malabsorption/coeliac disease,0.0
