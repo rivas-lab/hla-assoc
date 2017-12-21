@@ -26,7 +26,7 @@ The description is in README.md
     <script>        
         var genes = ["A", "B", "C","DPA1","DPB1","DQA1","DQB1","DRB1","DRB3","DRB4","DRB5"];
         var phe_folder = "/static/hla-assoc/hap_post_plot/"
-        var file_dr = "/static/hla-assoc/";
+         var file_dr = "/static/hla-assoc/";
         var strat_folder = "/static/hla-assoc/frequency_stratification/";
         var thresh1 = 0.01;
         var thresh2 = 0.05;
@@ -39,7 +39,7 @@ The description is in README.md
     function freq_donut(gene) {
       var freq, allel;
 
-      Plotly.d3.csv("donut/" + gene + "_freq.csv", function(err, rows){
+      Plotly.d3.csv(file_dr + "donut/" + gene + "_freq.csv", function(err, rows){
         function unpack(rows, key) {
           return rows.map(function(row) { return row[key]; });
         }
@@ -113,7 +113,7 @@ The description is in README.md
       for (var i = 0; i < gene_list.length; i++) {
         (function(foo){
           var allel = [], freq = [];
-          d3.csv("donut/" + gene_list[i] + "_freq.csv", function(d) {
+          d3.csv(file_dr + "donut/" + gene_list[i] + "_freq.csv", function(d) {
             for (var j = 0; j < d.length; j++) {
               allel.push(d[j].allelotype);
               f = d[j].frequency;
@@ -217,7 +217,7 @@ The description is in README.md
       
       
       var allel0 = [], freq0 = [];
-      d3.csv("donut/" + gene_list[0] + "_freq.csv", function(d) {
+      d3.csv(file_dr + "donut/" + gene_list[0] + "_freq.csv", function(d) {
         for (var j = 0; j < d.length; j++) {
           allel0.push(d[j].allelotype);
           var f = d[j].frequency;
@@ -286,7 +286,7 @@ The description is in README.md
       
       
         var allel1 = [], freq1 = [];
-        d3.csv("donut/" + gene_list[1] + "_freq.csv", function(d) {
+        d3.csv(file_dr + "donut/" + gene_list[1] + "_freq.csv", function(d) {
           for (var j = 0; j < d.length; j++) {
             allel1.push(d[j].allelotype);
             var f = d[j].frequency;
@@ -356,7 +356,7 @@ The description is in README.md
         }); 
       
         var allel2 = [], freq2 = [];
-        d3.csv("donut/" + gene_list[2] + "_freq.csv", function(d) {
+        d3.csv(file_dr + "donut/" + gene_list[2] + "_freq.csv", function(d) {
           for (var j = 0; j < d.length; j++) {
             allel2.push(d[j].allelotype);
             var f = d[j].frequency;
@@ -523,7 +523,7 @@ The description is in README.md
       
       
       var allel0 = [], freq0 = [];
-      d3.csv("donut/" + gene_list[0] + "_freq.csv", function(d) {
+      d3.csv(file_dr + "donut/" + gene_list[0] + "_freq.csv", function(d) {
         for (var j = 0; j < d.length; j++) {
           allel0.push(d[j].allelotype);
           var f = d[j].frequency;
@@ -594,7 +594,7 @@ The description is in README.md
       
       
         var allel1 = [], freq1 = [];
-        d3.csv("donut/" + gene_list[1] + "_freq.csv", function(d) {
+        d3.csv(file_dr + "donut/" + gene_list[1] + "_freq.csv", function(d) {
           for (var j = 0; j < d.length; j++) {
             allel1.push(d[j].allelotype);
             var f = d[j].frequency;
@@ -665,7 +665,7 @@ The description is in README.md
         }); 
       
         var allel2 = [], freq2 = [];
-        d3.csv("donut/" + gene_list[2] + "_freq.csv", function(d) {
+        d3.csv(file_dr + "donut/" + gene_list[2] + "_freq.csv", function(d) {
           for (var j = 0; j < d.length; j++) {
             allel2.push(d[j].allelotype);
             var f = d[j].frequency;
@@ -736,7 +736,7 @@ The description is in README.md
         });
 
         var allel3 = [], freq3 = [];
-        d3.csv("donut/" + gene_list[3] + "_freq.csv", function(d) {
+        d3.csv(file_dr + "donut/" + gene_list[3] + "_freq.csv", function(d) {
           for (var j = 0; j < d.length; j++) {
             allel3.push(d[j].allelotype);
             var f = d[j].frequency;
@@ -790,7 +790,7 @@ The description is in README.md
         });
 
         var allel4 = [], freq4 = [];
-        d3.csv("donut/" + gene_list[4] + "_freq.csv", function(d) {
+        d3.csv(file_dr + "donut/" + gene_list[4] + "_freq.csv", function(d) {
           for (var j = 0; j < d.length; j++) {
             allel4.push(d[j].allelotype);
             var f = d[j].frequency;
@@ -839,7 +839,7 @@ The description is in README.md
         });
 
         var allel5 = [], freq5 = [];
-        d3.csv("donut/" + gene_list[5] + "_freq.csv", function(d) {
+        d3.csv(file_dr + "donut/" + gene_list[5] + "_freq.csv", function(d) {
           for (var j = 0; j < d.length; j++) {
             allel5.push(d[j].allelotype);
             var f = d[j].frequency;
@@ -888,7 +888,7 @@ The description is in README.md
       });
 
         var allel6 = [], freq6 = [];
-        d3.csv("donut/" + gene_list[6] + "_freq.csv", function(d) {
+        d3.csv(file_dr + "donut/" + gene_list[6] + "_freq.csv", function(d) {
           for (var j = 0; j < d.length; j++) {
             allel6.push(d[j].allelotype);
             var f = d[j].frequency;
@@ -937,7 +937,7 @@ The description is in README.md
       });
 
         var allel7 = [], freq7 = [];
-        d3.csv("donut/" + gene_list[7] + "_freq.csv", function(d) {
+        d3.csv(file_dr + "donut/" + gene_list[7] + "_freq.csv", function(d) {
           for (var j = 0; j < d.length; j++) {
             allel7.push(d[j].allelotype);
             var f = d[j].frequency;
