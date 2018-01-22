@@ -17,7 +17,11 @@ def write_printrds_job(file_name, phe):
     job_file.write("#SBATCH --mem=2Gb\n") 
     job_file.write("ml load R\n")
 #    job_file.write("Rscript print_rds.R results_BMA/bma_" + phe + "_10.rds " + "results_BMA/bma_" + phe + "_10.txt")
-    job_file.write("Rscript print_rds.R output/reg_test/results_BMA/bma_" + phe + "_10_round.rds " + "output/reg_test/results_BMA/bma_" + phe + "_adjp.txt")
+    if phe in ["HC303","HC382","HC38","HC430","HC219"]:
+        job_file.write("Rscript print_rds.R output/reg_test/results_BMA/bma_" + phe + "_round_all.rds " + "output/reg_test/results_BMA/bma_" + phe + "_round_adjp_all.txt")
+    else:
+        job_file.write("Rscript print_rds.R output/reg_test/results_BMA/bma_" + phe + "_10_round_all.rds " + "output/reg_test/results_BMA/bma_" + phe + "_round_adjp_all.txt")
+
 
     job_file.close()
 
@@ -46,7 +50,7 @@ def write_job_R(file_name, phe, out_name, phe_directory):
     job_file.write("#SBATCH --job-name=" + job_name + "\n")
     job_file.write("#SBATCH --output=output/write_jobs/" + job_name + ".%j.out\n")
     job_file.write("#SBATCH --error=output/write_jobs/" + job_name + ".%j.err\n")
-    job_file.write("#SBATCH --time=45:00\n")
+    job_file.write("#SBATCH --time=24:00:00\n")
     job_file.write("#SBATCH --qos=normal\n")
     job_file.write("#SBATCH -p owners\n")
     job_file.write("#SBATCH --nodes=1\n")
@@ -171,6 +175,7 @@ def main():
     if len(sys.argv) == 3:
         num = int(sys.argv[2])
 
+    # choose which phenotype set to run on
     phe_type = "HC"
 
 #    phe_directory = "/oak/stanford/groups/mrivas/ukbb/16698/phe/highconfidenceqc/"
@@ -182,8 +187,9 @@ def main():
        phe_directory = "/oak/stanford/groups/mrivas/private_data/ukbb/16698/phe/cancer3/"
        phe_ids = choose_phes_cancer(phe_directory, num)
 
-
-    BMA = True
+    # only run on phenotypes we perform BME
+    # analysis for
+    BMA = False
 #    phe_ids = [3,10, 20, 29, 65, 74, 107, 127, 168, 205, 232, 236, 291,317,340,372,405,410,426,427]
 #    phe_ids = ["3","10"]
     if BMA:
@@ -194,6 +200,7 @@ def main():
             phe_ids = phe_file.readline().split()[:num]
 
     print(phe_ids)
+    #phe_ids = ["HC303","HC382","HC38","HC430","HC219"]
     if reg == "R":
         file_name = "shell_scripts/run_reg_R.sh"
     elif reg == "PLINK":

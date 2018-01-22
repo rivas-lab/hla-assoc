@@ -9,11 +9,11 @@ print("start")
 options(warn=1)
 
 test <- F
-run_rounded <- F
-run_dosage <- F
-rounded_add <- F
-rounded_factor <- F
-run_BMA <- T
+run_rounded <- T
+run_dosage <- T
+rounded_add <- T
+rounded_factor <- T
+run_BMA <- F
 print_gene <- F
 t0 <- proc.time()
 #ukbb_files <- "$SCRATCH/ukbb_files/"
@@ -213,7 +213,7 @@ if (run_BMA) {
     print(paste0("postsd: ", glm.out.FF$postsd))
 
     # save output
-    saveRDS(fit, paste0("output/reg_test/results_BMA/bma_", phe_name, "_",num_haps,"_round_all",".rds"))
+    saveRDS(fit, paste0("output/reg_test/results_BMA/bma_", phe_name, "_","round_all",".rds"))
     pdf(paste0("output/reg_test/plots_bma/bma_", phe_name, "_round_adjp_all",".pdf"))
 
     # plot image
