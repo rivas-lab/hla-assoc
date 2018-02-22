@@ -2,7 +2,7 @@ args <- commandArgs(TRUE)
 root <- args[1]
 options(warn=1)
 model <- "gen"
-model <- "add"
+#model <- "add"
 
 dosage_add <- readRDS(paste0(root,"_rounded_",model,".rds"))
 #dosage_add <- readRDS(root)

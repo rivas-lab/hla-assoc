@@ -9,11 +9,11 @@ print("start")
 options(warn=1)
 
 test <- F
-run_rounded <- T
-run_dosage <- T
-rounded_add <- T
-rounded_factor <- T
-run_BMA <- F
+run_rounded <- F
+run_dosage <- F
+rounded_add <- F
+rounded_factor <- F
+run_BMA <- T
 print_gene <- F
 t0 <- proc.time()
 #ukbb_files <- "$SCRATCH/ukbb_files/"
@@ -206,8 +206,7 @@ if (run_BMA) {
     print("starting BMA")
 
     # run BMA analysis
-    glm.out.FF <- bic.glm(dosage, covars$status, strict = FALSE, OR = 30,
-        glm.family="binomial", factor.type=FALSE) 
+    glm.out.FF <- bic.glm(dosage, covars$status, strict = FALSE, OR = 30, glm.family="binomial", factor.type=FALSE, maxCol=100)
     fit <- summary(glm.out.FF)
     print(paste0("postmean: ", glm.out.FF$postmean))
     print(paste0("postsd: ", glm.out.FF$postsd))

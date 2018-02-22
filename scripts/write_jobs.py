@@ -3,6 +3,7 @@ import sys
 import time
 
 
+
 def write_printrds_job(file_name, phe):
     job_name = phe + "print"
     job_file = open(file_name, 'w')
@@ -41,6 +42,46 @@ def write_processing_job(file_name, phe):
     job_file.write("Rscript examine_output.R output/reg_test/reg_results/" + phe + "\n")
     job_file.write("python process_output.py " + phe)
     job_file.close()
+
+def write_job_interact(file_name, phe, phe_directory):
+    job_name = phe + "inter"
+    job_file = open(file_name, 'w')
+    job_file.write("#!/bin/bash\n#\n")
+    job_file.write("#SBATCH --job-name=" + job_name + "\n")
+    job_file.write("#SBATCH --output=output/write_jobs/" + job_name + ".%j.out\n")
+    job_file.write("#SBATCH --error=output/write_jobs/" + job_name + ".%j.err\n")
+    job_file.write("#SBATCH --time=24:00:00\n")
+    job_file.write("#SBATCH --qos=normal\n")
+    job_file.write("#SBATCH -p owners\n")
+    job_file.write("#SBATCH --nodes=1\n")
+    job_file.write("#SBATCH --mem=5Gb\n") 
+#    job_file.write("ml load R\n")
+    job_file.write("ml load R\n")
+    job_file.write("Rscript interact.R " + phe_directory + phe + ".phe\n")
+    job_file.write("Rscript print_rds.R output/interact/" + phe + "_rounded_inter.rds output/interact/" + phe + "_rounded_inter.txt")
+    job_file.close()
+
+
+
+def write_job_R(file_name, phe, out_name, phe_directory):
+    job_name = out_name + "R"
+    job_file = open(file_name, 'w')
+    job_file.write("#!/bin/bash\n#\n")
+    job_file.write("#SBATCH --job-name=" + job_name + "\n")
+    job_file.write("#SBATCH --output=output/write_jobs/" + job_name + ".%j.out\n")
+    job_file.write("#SBATCH --error=output/write_jobs/" + job_name + ".%j.err\n")
+    job_file.write("#SBATCH --time=24:00:00\n")
+    job_file.write("#SBATCH --qos=normal\n")
+    job_file.write("#SBATCH -p owners\n")
+    job_file.write("#SBATCH --nodes=1\n")
+    job_file.write("#SBATCH --mem=20Gb\n") 
+#    job_file.write("ml load R\n")
+    job_file.write("source activate h2-estimation\n")
+    job_file.write("ml load libpng/1.2.57\n")
+    job_file.write("ml load cairo/1.14.10\n")
+    job_file.write("Rscript reg_test.R " + phe_directory + phe + " " + out_name + " 10")
+    job_file.close()
+
 
 # make sure to check the true/false settings to see what's being run
 def write_job_R(file_name, phe, out_name, phe_directory):
@@ -167,7 +208,7 @@ def main():
     # choose which regressions to run
     if len(sys.argv) < 2:
         raise ValueError("Not enough arguments")
-    elif sys.argv[1] not in ["BMA","PLINK", "R", "proc", "print"]:
+    elif sys.argv[1] not in ["BMA","PLINK", "R", "proc", "print", "inter"]:
         raise ValueError("invalid argument") 
     else:
         reg = sys.argv[1]
@@ -189,7 +230,7 @@ def main():
 
     # only run on phenotypes we perform BME
     # analysis for
-    BMA = False
+    BMA = True
 #    phe_ids = [3,10, 20, 29, 65, 74, 107, 127, 168, 205, 232, 236, 291,317,340,372,405,410,426,427]
 #    phe_ids = ["3","10"]
     if BMA:
@@ -199,8 +240,12 @@ def main():
         else:
             phe_ids = phe_file.readline().split()[:num]
 
+    #phe_ids = ["HC151","HC219","HC303","HC38","HC382","HC430","HC55"]
+    phe_ids = ["HC303"]
+    # rerun for over 29
+#    phe_ids = ["HC303","HC382","HC38","HC430","HC219","HC55"]
     print(phe_ids)
-    #phe_ids = ["HC303","HC382","HC38","HC430","HC219"]
+
     if reg == "R":
         file_name = "shell_scripts/run_reg_R.sh"
     elif reg == "PLINK":
@@ -213,6 +258,8 @@ def main():
         file_name = "shell_scripts/run_print.sh"
     elif reg == "BMA":
         file_name = "shell_scripts/run_BMA.sh"
+    elif reg == "inter":
+        file_name = "shell_scripts/inter.sh"
 
     # run jobs
     for phe in phe_ids:
@@ -224,6 +271,8 @@ def main():
             write_processing_job(file_name, phe)
         elif reg == "print":
             write_printrds_job(file_name, phe)
+        elif reg == "inter":
+            write_job_interact(file_name, phe, phe_directory)
 
         submit_job(file_name)
         time.sleep(1)
