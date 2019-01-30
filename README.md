@@ -19,7 +19,7 @@ I have been using thresh = 0.1 so far.
 
 We ran PLINK and R both with the white British subset of samples, both with 
 age, sex, and PC1-PC4 as covariates. For the PLINK run we used a `.bed` file
-based on the rounded dosages.
+based on the rounded dosages. (Chris/Guhan: PLINK results on oak at `/oak/stanford/groups/mrivas/users/jolivier/repos/hla-assoc/data/PLINK_results`.)
 
 We ran three regressions in R on each of the haplotypes with >5 nonzero entries
 (312 out of 362): an additive logistic regression on the dosages,
