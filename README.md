@@ -1,5 +1,15 @@
 # hla-assoc
 
+## Cloning
+
+Clone using `git lfs clone git@github.com:rivas-lab/hla-assoc.git`.
+If you don't use LFS to clone, you may need to to do `git lfs pull` after you
+clone to pull in the files tracked by LFS.
+
+## Git LFS
+
+The files in `output` directory are tracked with git LFS.
+
 ## Rounding for dosage in .ped file
 
 Round every dosage within some threshold to the nearest integer, and replace
