@@ -12,6 +12,13 @@ The files in `output` directory are tracked with git LFS.
 
 ## Directories
 
+### `data`
+
+This directory contains data files that were generally were created by hand,
+downloaded from somewhere, or otherwise created using code that isn't tracked
+in this repo. The directory is **not** tracked by LFS by default, but any large
+files should be added using LFS.
+
 ### `output`
 
 This directory is tracked by Git LFS and contains one output directory per
@@ -22,6 +29,12 @@ safe to share publicly, though care should be taken to double-check that before
 sharing.
 
 ### `private_data`
+
+This directory is **not** tracked by Git and contains data files that were
+created by hand, downloaded from somewhere, or otherwise created using code
+that isn't tracked in this repo. 
+
+### `private_output`
 
 This directory is **not** tracked by Git and contains one output directory per
 notebook or script from the `notebooks` and `scripts` directories. These files
