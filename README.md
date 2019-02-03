@@ -10,7 +10,27 @@ clone to pull in the files tracked by LFS.
 
 The files in `output` directory are tracked with git LFS.
 
-## Rounding for dosage in .ped file
+## Directories
+
+### `output`
+
+This directory is tracked by Git LFS and contains one output directory per
+notebook or script from the `notebooks` and `scripts` directories. These
+output files are small enough to reasonably track with Git LFS and should not
+contain identifiable information or other sensitive information and should be
+safe to share publicly, though care should be taken to double-check that before
+sharing.
+
+### `private_data`
+
+This directory is **not** tracked by Git and contains one output directory per
+notebook or script from the `notebooks` and `scripts` directories. These files
+may contain sensitive information, be too large to track with Git LFS, or 
+otherwise don't need to go into the output directory at this time.
+
+## Notes
+
+### Rounding for dosage in .ped file
 
 Round every dosage within some threshold to the nearest integer, and replace
 dosages outside of the threshold with the "missing data" tag. For example, if
@@ -25,7 +45,7 @@ missing data symbol.
 
 I have been using thresh = 0.1 so far.
 
-## PLINK vs R regressions
+### PLINK vs R regressions
 
 We ran PLINK and R both with the white British subset of samples, both with 
 age, sex, and PC1-PC4 as covariates. For the PLINK run we used a `.bed` file
@@ -46,7 +66,7 @@ used firth):
 
 We can see that there are a few outliers.
 
-## Testing concordance for Celiac disease
+### Testing concordance for Celiac disease
 
 We identified DQA1\_501 and DQB1\_201 as haplotypes related to Celiac disease
 from the literature. Here are the plots of the sorted -log<sub>10</sub> p
@@ -54,25 +74,25 @@ values and the log odds ratios for each haplotype. The haplotypes of interest
 are highlighted in yellow. We can see that their position in these plots makes
 sense.
 
-### Odds ratio
+#### Odds ratio
 
-#### PLINK
+##### PLINK
 
 ![alt text](https://github.com/rivas-lab/hla-assoc/blob/master/plots/OR_PLINK_plot.png)
 
-#### R
+##### R
 
 ![alt text](https://github.com/rivas-lab/hla-assoc/blob/master/plots/OR_R_plot.png)
 
 
-### P value
+#### P value
 
 The p values from the R regressions are cut off at 2e-16.
 
-#### PLINK
+##### PLINK
 
 ![alt text](https://github.com/rivas-lab/hla-assoc/blob/master/plots/log10_pval_PLINK_plot.png)
 
-#### R
+##### R
 ![alt text](https://github.com/rivas-lab/hla-assoc/blob/master/plots/log10_pval_R_plot.png)
 
