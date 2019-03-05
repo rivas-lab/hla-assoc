@@ -109,3 +109,7 @@ significantly associated with phenotype (if the cell is full).
 association testing. Row is phenotype, column is pairs of allelotypes shown to be
 significantly associated with phenotype (if the cell is full). Only selected rows 
 and columns that had significant associations (p<=0.05).
+
+* `interaction_results_adjusted.csv`: LogORs, SEs, and p-values for the 3 terms
+in the interaction GLM (term1, term2, interaction term) for each pairing of 
+phenotype and  allelotype-pair.
