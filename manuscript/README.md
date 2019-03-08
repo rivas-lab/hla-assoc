@@ -113,3 +113,14 @@ and columns that had significant associations (p<=0.05).
 * `interaction_results_adjusted.csv`: LogORs, SEs, and p-values for the 3 terms
 in the interaction GLM (term1, term2, interaction term) for each pairing of 
 phenotype and  allelotype-pair.
+
+* `figures.ipynb`: Contains draft figures for the manuscript.
+
+* `hla_NHGRI_hits_bma.tsv`: Guhan manually went through the 46 phenotypes that had
+significant single variant analysis allelotypes, selected the best HLA-region NHGRI
+phenotype matches for each, then joined this list with the NHGRI database. Then, he
+right-joined on `bma_post_prob_sig_literature.csv` on both `gene` and `NHGRI phenotype`
+columns, which results in this list. Nice verification that scraping NHGRI worked: most
+of the hits that successfully join are marked `Yes` in the `Present in literature` column
+Guhan populated manually. The unjoined allelotype-phenotype pairs at bottom mostly have
+`No` in this column. Worth it to consult the NHGRI database and find the rows marked N.
