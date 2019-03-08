@@ -121,6 +121,6 @@ significant single variant analysis allelotypes, selected the best HLA-region NH
 phenotype matches for each, then joined this list with the NHGRI database. Then, he
 right-joined on `bma_post_prob_sig_literature.csv` on both `gene` and `NHGRI phenotype`
 columns, which results in this list. Nice verification that scraping NHGRI worked: most
-of the hits that successfully join are marked `Yes` in the `Present in literature` column
+of the hits that successfully join are marked `Yes` in the `Manual curation found` column
 Guhan populated manually. The unjoined allelotype-phenotype pairs at bottom mostly have
-`No` in this column. Worth it to consult the NHGRI database and find the rows marked N.
+`No` in this column.
