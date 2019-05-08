@@ -1,271 +1,271 @@
-#GBE_ID	GBE_NAME	FIELD	TABLE	BASKET	APP_ID	N	N_GBE	N_AFR	N_EAS	N_SAS
-HC0	scoliosis				24983	1531	1047	20	5	16
-HC1	bowel_/_intestinal_obstruction				24983	5073	3599	68	11	54
-HC101	eye_trauma				24983	730	536	6	0	9
-HC102	vertigo				24983	1029	712	10	4	25
-HC104	osteomyelitis				24983	1377	948	22	3	15
-HC106	emphysema/chronic_bronchitis				24983	8067	5599	40	12	63
-HC107	miscarriage				24983	1360	978	7	4	10
-HC109	gestational_hypertension/pre-eclampsia				24983	1991	1418	21	5	13
-HC110	stroke				24983	8353	5783	121	18	114
-HC113	irregular_heart_beat				24983	989	689	8	2	19
-HC114	pericardial_effusion				24983	780	531	13	3	15
-HC116	tinnitus_/_tiniitis				24983	2005	1368	12	6	37
-HC117	abdominal_hernia				24983	814	557	7	1	10
-HC118	constipation				24983	12966	8688	214	31	209
-HC119	disc_degeneration				24983	4329	2984	52	9	91
-HC12	testicular_problems_(not_cancer)				24983	693	492	6	1	4
-HC121	peritonitis				24983	3607	2585	22	4	27
-HC123	muscle/soft_tissue_problem				24983	4034	2836	37	5	45
-HC125	anaemia				24983	24213	15942	584	80	669
-HC129	muscle_or_soft_tissue_injuries				24983	3995	2821	42	10	47
-HC131	svt_/_supraventricular_tachycardia				24983	3771	2653	34	3	55
-HC132	angina				24983	27094	18471	263	45	689
-HC133	anal_fissure				24983	4109	2721	72	12	160
-HC134	bone_disorder				24983	2116	1458	11	8	29
-HC135	anxiety/panic_attacks				24983	7074	4985	36	9	38
-HC136	connective_tissue_disorder				24983	3694	2514	63	11	61
-HC139	breast_cysts				24983	1977	1398	16	3	10
-HC140	urinary_frequency_/_incontinence				24983	2552	1767	19	10	37
-HC142	synovitis				24983	6280	4302	87	34	102
-HC143	retinal_problem				24983	832	600	5	5	9
-HC144	chickenpox				24983	3446	2458	43	8	46
-HC146	pleural_effusion				24983	6257	4391	73	14	80
-HC149	rheumatic_fever				24983	1479	1009	5	2	7
-HC15	sciatica				24983	7572	5151	86	17	105
-HC150	rosacea				24983	1238	880	1	0	8
-HC151	multiple_sclerosis				24983	2054	1466	7	0	5
-HC153	joint_pain				24983	11374	7725	201	32	249
-HC155	joint_disorder				24983	2674	1861	22	2	36
-HC156	nasal_polyps				24983	6589	4608	37	12	89
-HC158	spine_arthritis/spondylitis				24983	4286	3030	28	8	24
-HC16	rectal_or_colon_adenoma/polyps				24983	1533	1057	11	2	9
-HC161	prostatitis				24983	1360	983	12	1	16
-HC164	gastro-oesophageal_reflux_(gord)_/_gastric_reflux				24983	43620	30224	400	108	708
-HC165	type_2_diabetes				24983	3677	2389	76	14	128
-HC166	deep_venous_thrombosis_(dvt)				24983	9845	6928	110	11	93
-HC169	pernicious_anaemia				24983	1527	1048	6	0	45
-HC17	diabetic_eye_disease				24983	1273	728	68	9	89
-HC170	sarcoidosis				24983	1319	841	48	0	39
-HC171	alcoholic_liver_disease_/_alcoholic_cirrhosis				24983	1150	778	12	5	20
-HC172	gynaecological_disorder_(not_cancer)				24983	817	562	8	3	7
-HC176	prolapsed_disc/slipped_disc				24983	8467	5939	62	13	95
-HC178	stress				24983	1717	1215	11	3	23
-HC179	iron_deficiency_anaemia				24983	12046	7810	302	40	453
-HC180	thyroid_problem_(not_cancer)				24983	1305	894	14	7	20
-HC182	osteopenia				24983	1521	1063	4	6	17
-HC184	aortic_aneurysm_rupture				24983	1501	1084	7	1	9
-HC185	cellulitis				24983	8897	6168	69	9	102
-HC188	cholelithiasis/gall_stones				24983	21280	14938	126	54	236
-HC193	heart_arrhythmia				24983	2642	1884	23	8	14
-HC194	liver/biliary/pancreas_problem				24983	931	640	3	4	8
-HC195	ureteric_obstruction/hydronephrosis				24983	1245	870	14	6	18
-HC196	labyrinthitis				24983	1140	764	18	6	18
-HC198	hyperparathyroidism				24983	1015	699	23	2	16
-HC200	fracture_tibia				24983	2577	1811	16	6	23
-HC201	ulcerative_colitis				24983	4580	3147	28	5	85
-HC202	trapped_nerve/compressed_nerve				24983	1532	1084	12	1	29
-HC203	pulmonary_embolism_+/-_dvt				24983	7001	4968	81	10	39
-HC204	bursitis				24983	2766	1928	28	3	28
-HC205	endometriosis				24983	7769	5390	104	23	102
-HC206	parkinsons_disease				24983	1525	1082	8	2	18
-HC209	gastric/stomach_ulcers				24983	3700	2406	76	20	57
-HC215	hypertension				24983	156133	107391	2790	523	2716
-HC216	pneumothorax				24983	1590	1143	13	4	20
-HC219	hypothyroidism/myxoedema				24983	28859	19917	170	53	541
-HC22	osteoporosis				24983	13486	9133	78	33	162
-HC221	diabetes				24983	32146	20437	895	136	1473
-HC222	arterial_embolism				24983	1134	782	7	1	10
-HC223	fracture_pelvis				24983	1823	1268	12	6	15
-HC224	rubella_/_german_measles				24983	886	638	1	3	2
-HC225	cholecystitis				24983	18490	12961	117	44	216
-HC231	heart_valve_problem/heart_murmur				24983	3368	2326	25	7	21
-HC232	abnormal_smear_(cervix)				24983	773	527	8	2	15
-HC233	mania/bipolar_disorder/manic_depression				24983	1461	958	17	1	16
-HC234	allergy_or_anaphylactic_reaction_to_food				24983	2421	1621	33	11	27
-HC237	back_problem				24983	8727	5947	95	29	112
-HC239	subdural_haemorrhage/haematoma				24983	6512	4450	87	18	95
-HC240	fracture_finger				24983	2150	1498	12	1	39
-HC243	inguinal_hernia				24983	19487	14039	117	22	239
-HC246	schizophrenia				24983	1021	568	57	4	29
-HC25	cataract				24983	28901	19446	550	145	837
-HC253	meniere's_disease				24983	1701	1199	4	2	13
-HC254	uterine_polyps				24983	1545	1122	8	6	10
-HC255	subarachnoid_haemorrhage				24983	1558	1091	21	5	22
-HC257	femoral_hernia				24983	845	597	5	2	3
-HC259	aortic_stenosis				24983	2248	1593	5	3	25
-HC260	fracture_fibula				24983	1146	798	12	1	13
-HC261	eczema/dermatitis				24983	16538	11642	140	67	214
-HC262	diverticular_disease/diverticulitis				24983	5561	4033	11	2	14
-HC263	nasal/sinus_disorder				24983	1868	1327	7	3	28
-HC267	tennis_elbow_/_lateral_epicondylitis				24983	1084	725	9	5	23
-HC269	high_cholesterol				24983	62762	43047	699	193	1362
-HC271	epicondylitis				24983	973	655	8	2	17
-HC273	essential_hypertension				24983	93930	64225	1709	260	1879
-HC274	umbilical_hernia				24983	4773	3311	101	3	63
-HC275	gastritis/gastric_erosions				24983	862	573	20	1	23
-HC276	glaucoma				24983	8614	5863	222	30	182
-HC28	bronchiectasis				24983	2726	1938	16	7	30
-HC280	peripheral_neuropathy				24983	758	566	2	0	3
-HC281	atrial_fibrillation				24983	17578	12665	85	23	124
-HC282	whooping_cough_/_pertussis				24983	4333	2962	60	14	75
-HC283	cystitis				24983	3928	2711	44	10	48
-HC284	fracture_nose				24983	740	522	1	0	10
-HC285	other_joint_disorder				24983	45581	31602	566	97	643
-HC287	infectious_mononucleosis_/_glandular_fever_/_epstein_barr_virus_(ebv)				24983	813	588	4	0	4
-HC290	fracture_upper_arm_/_humerus_/_elbow				24983	2494	1749	8	2	24
-HC291	polycystic_ovaries/polycystic_ovarian_syndrome				24983	791	511	14	2	18
-HC293	fracture_patella_/_knee				24983	736	511	7	4	16
-HC294	renal/kidney_failure				24983	10485	7081	215	22	235
-HC295	carpal_tunnel_syndrome				24983	11936	8150	159	40	184
-HC298	chronic_sinusitis				24983	6384	4393	58	25	81
-HC299	heart_failure/pulmonary_odema				24983	6784	4657	70	9	145
-HC3	ectopic_pregnancy				24983	827	514	29	5	18
-HC302	retinal_detachment				24983	4517	3247	39	13	58
-HC303	malabsorption/coeliac_disease				24983	2907	2093	5	0	20
-HC307	colitis/not_crohns_or_ulcerative_colitis				24983	1532	1095	6	3	31
-HC308	hypertrophic_cardiomyopathy_(hcm_/_hocm)				24983	1579	1096	32	2	19
-HC31	uterine_fibroids				24983	8217	5416	363	34	93
-HC310	hiatus_hernia				24983	58526	41254	469	81	736
-HC311	measles_/_morbillivirus				24983	2863	2120	15	2	20
-HC314	fracture_hand				24983	3493	2438	16	5	52
-HC316	dyspepsia_/_indigestion				24983	15129	10001	265	82	300
-HC32	other_renal/kidney_problem				24983	2174	1502	15	2	25
-HC320	meningitis				24983	2321	1639	17	3	21
-HC321	sjogren's_syndrome/sicca_syndrome				24983	850	555	15	4	26
-HC322	crohns_disease				24983	2365	1652	17	2	35
-HC323	head_injury				24983	6429	4398	58	12	67
-HC326	heart_attack/myocardial_infarction				24983	17618	12138	122	25	403
-HC328	gout				24983	9002	6278	83	43	137
-HC331	tonsiltis				24983	3634	2608	19	4	39
-HC334	fracture_sternum				24983	2213	1587	6	2	21
-HC339	fracture_lower_leg_/_ankle				24983	8426	5880	68	14	82
-HC34	pleurisy				24983	2320	1626	6	2	13
-HC340	menorrhagia_(unknown_cause)				24983	1605	1112	25	4	22
-HC342	prostate_problem_(not_cancer)				24983	852	593	6	0	18
-HC346	fibromyalgia				24983	1734	1166	27	0	24
-HC347	blistering/desquamating_skin_disorder				24983	787	525	9	1	9
-HC351	blepharitis_/_eyelid_infection				24983	762	519	9	0	12
-HC352	systemic_lupus_erythematosis/sle				24983	794	473	37	3	22
-HC353	other_neurological_problem				24983	1968	1406	9	1	19
-HC355	rectal_prolapse				24983	1381	965	8	3	18
-HC357	duodenal_ulcer				24983	5389	3619	57	20	93
-HC36	pneumonia				24983	18008	12610	173	34	204
-HC361	anorexia/bulimia/other_eating_disorder				24983	1325	902	15	2	13
-HC362	respiratory_infection				24983	11866	8173	137	21	187
-HC363	fracture_clavicle_/_collar_bone				24983	825	591	2	1	9
-HC364	sleep_apnoea				24983	6143	4082	93	12	113
-HC366	allergy/hypersensitivity/anaphylaxis				24983	3517	2490	17	12	36
-HC370	other_respiratory_problems				24983	819	585	7	2	8
-HC371	bronchitis				24983	7083	4985	46	12	59
-HC373	fracture_rib				24983	1196	853	3	3	6
-HC374	kidney_stone/ureter_stone/bladder_stone				24983	3925	2811	12	15	48
-HC376	osteoarthritis				24983	42162	29941	310	66	422
-HC379	infective/viral_hepatitis				24983	1132	709	10	16	9
-HC38	psoriasis				24983	7193	5074	18	10	88
-HC380	fracture_ulna				24983	2079	1485	7	6	13
-HC382	asthma				24983	63457	43619	788	206	1078
-HC383	bph_/_benign_prostatic_hypertrophy				24983	1041	720	7	0	15
-HC385	peripheral_vascular_disease				24983	5167	3516	54	6	69
-HC386	helicobacter_pylori				24983	2515	1564	56	9	55
-HC389	urticaria				24983	1652	1125	17	8	41
-HC39	lichen_planus				24983	852	586	6	2	12
-HC392	pancreatitis				24983	3012	2106	33	1	48
-HC395	bladder_problem_(not_cancer)				24983	2974	2066	17	4	34
-HC396	fracture_shoulder_/_scapula				24983	3452	2429	12	7	23
-HC397	scarlet_fever_/_scarlatina				24983	732	555	0	0	0
-HC398	fracture_wrist_/_colles_fracture				24983	1546	1096	9	2	8
-HC4	nephritis				24983	1632	1060	30	4	43
-HC40	nervous_breakdown				24983	717	530	4	1	5
-HC400	transient_ischaemic_attack_(tia)				24983	3938	2827	30	4	41
-HC401	varicose_veins				24983	14496	10151	87	31	156
-HC402	spinal_stenosis				24983	4513	3112	77	6	83
-HC404	urinary_tract_infection/kidney_infection				24983	16705	11507	211	53	269
-HC405	vaginal_prolapse/uterine_prolapse				24983	2878	2041	8	3	25
-HC406	fracture_neck_of_femur_/_hip				24983	3272	2335	16	5	29
-HC41	depression				24983	29300	20456	195	39	300
-HC414	cardiomyopathy				24983	1909	1309	32	2	34
-HC415	aortic_aneurysm				24983	1679	1209	10	2	9
-HC418	cervical_spondylosis				24983	6252	4317	56	9	85
-HC42	spontaneous_pneumothorax/recurrent_pneumothorax				24983	1978	1398	13	3	15
-HC421	other_abdominal_problem				24983	709	478	8	0	4
-HC422	ankylosing_spondylitis				24983	1664	1184	7	2	19
-HC423	respiratory_failure				24983	2669	1819	28	4	48
-HC424	fracture_skull_/_head				24983	2959	2012	24	7	42
-HC427	ovarian_cyst_or_cysts				24983	4145	2831	39	19	35
-HC43	unclassifiable				24983	20564	14353	125	45	174
-HC430	rheumatoid_arthritis				24983	8203	5586	105	18	156
-HC431	emphysema				24983	2221	1581	10	1	8
-HC432	mitral_valve_prolapse				24983	682	487	5	2	7
-HC433	lymphoedema				24983	772	516	14	1	6
-HC435	ear/vestibular_disorder				24983	4404	3086	27	13	55
-HC437	epilepsy				24983	5977	4210	54	11	68
-HC438	hepatitis				24983	1875	1138	72	39	36
-HC44	bile_duct_obstruction/ascending_cholangitis				24983	1391	980	10	3	20
-HC440	atrial_flutter				24983	16906	12186	82	23	120
-HC442	chronic_obstructive_airways_disease/copd				24983	10451	7286	40	5	99
-HC443	headaches_(not_migraine)				24983	4400	2974	64	23	56
-HC45	mumps_/_epidemic_parotitis				24983	1707	1228	13	7	18
-HC49	hayfever/allergic_rhinitis				24983	29660	20720	354	237	444
-HC52	aortic_dissection				24983	1649	1185	10	2	10
-HC53	spinal_injury				24983	982	681	6	2	7
-HC54	peptic_ulcer				24983	1011	662	17	4	17
-HC55	hyperthyroidism/thyrotoxicosis				24983	5429	3647	89	40	83
-HC57	fracture_radius				24983	6378	4584	13	14	50
-HC58	benign_breast_lump				24983	3504	2354	68	16	62
-HC6	eye/eyelid_problem				24983	3902	2697	41	10	43
-HC60	oesophagitis/barretts_oesophagus				24983	13614	9525	78	26	178
-HC61	haemorrhoids_/_piles				24983	29396	19958	378	178	515
-HC62	tuberculosis_(tb)				24983	2815	1739	50	14	156
-HC64	irritable_bowel_syndrome				24983	16346	11554	125	15	133
-HC68	disorder_of_adrenal_gland				24983	878	588	21	3	7
-HC69	polycythaemia_vera				24983	675	482	0	3	6
-HC7	back_pain				24983	13227	8707	270	43	341
-HC72	chronic_fatigue_syndrome				24983	2158	1558	7	0	12
-HC74	female_infertility				24983	1832	1185	50	17	35
-HC76	fracture_foot				24983	1767	1269	5	5	11
-HC77	allergy_or_anaphylactic_reaction_to_drug				24983	4674	3397	41	14	36
-HC78	arthritis_(nos)				24983	22341	15330	330	38	407
-HC79	appendicitis				24983	8063	5533	82	23	100
-HC8	gall_bladder_disease				24983	2274	1637	4	3	22
-HC82	cerebral_palsy				24983	2711	1843	46	5	48
-HC83	fracture_forearm_/_wrist				24983	8410	6014	30	16	73
-HC84	pulmonary_fibrosis				24983	1113	747	13	3	25
-HC85	enlarged_prostate				24983	7142	5078	46	16	90
-HC86	migraine				24983	17228	12177	134	35	196
-HC88	heart/cardiac_problem				24983	1647	1148	13	4	27
-HC91	psoriatic_arthropathy				24983	1366	954	2	1	18
-HC93	dry_eyes				24983	1026	672	10	4	35
-HC95	inflammatory_bowel_disease				24983	5478	3783	31	6	101
-HC96	polymyalgia_rheumatica				24983	1978	1421	11	2	10
-HC98	stomach_disorder				24983	2259	1570	19	10	24
-cancer1001	lung_cancer				24983	2858	1981	26	6	12
-cancer1002	breast_cancer				24983	15992	11241	112	59	144
-cancer1003	skin_cancer				24983	26066	19168	11	7	23
-cancer1004	cancer_of_lip/mouth/pharynx/oral_cavity				24983	935	659	6	5	11
-cancer1017	oesophageal_cancer				24983	911	667	3	0	1
-cancer1018	stomach_cancer				24983	816	568	13	2	5
-cancer1020	large_bowel_cancer/colorectal_cancer				24983	6178	4382	49	17	44
-cancer1022	colon_cancer/sigmoid_cancer				24983	4594	3251	38	15	33
-cancer1023	rectal_cancer				24983	2839	2026	17	5	18
-cancer1026	pancreas_cancer				24983	828	593	4	4	8
-cancer1032	brain_cancer_/_primary_malignant_brain_tumour				24983	791	555	6	6	7
-cancer1034	kidney/renal_cell_cancer				24983	1556	1093	8	1	16
-cancer1035	bladder_cancer				24983	2771	1996	11	2	24
-cancer1037	female_genital_tract_cancer				24983	7091	4945	51	21	39
-cancer1038	male_genital_tract_cancer				24983	4677	3448	68	4	25
-cancer1039	ovarian_cancer				24983	1726	1207	12	9	17
-cancer1040	uterine/endometrial_cancer				24983	2291	1610	13	12	27
-cancer1041	cervical_cancer				24983	4022	2814	30	8	16
-cancer1044	prostate_cancer				24983	8869	6459	161	13	58
-cancer1045	testicular_cancer				24983	907	678	1	0	6
-cancer1047	lymphoma				24983	2632	1852	14	8	25
-cancer1048	leukaemia				24983	1218	870	5	0	9
-cancer1050	multiple_myeloma				24983	735	501	21	1	9
-cancer1053	non-hodgkins_lymphoma				24983	2038	1429	8	7	21
-cancer1055	chronic_lymphocytic				24983	834	596	4	0	5
-cancer1059	malignant_melanoma				24983	5564	4099	2	4	4
-cancer1060	non-melanoma_skin_cancer				24983	22828	16789	10	4	21
-cancer1065	thyroid_cancer				24983	784	513	11	11	11
-cancer1084	respiratory_/_intrathoracic_cancer				24983	3449	2392	27	7	17
-cancer1085	bone_metastases_/_bony_secondaries				24983	2507	1780	24	7	14
+#GBE_ID	GBE_NAME	N	N_GBE	N_AFR	N_EAS	N_SAS
+HC0	scoliosis	1531	1047	20	5	16
+HC1	bowel_/_intestinal_obstruction	5073	3599	68	11	54
+HC101	eye_trauma	730	536	6	0	9
+HC102	vertigo	1029	712	10	4	25
+HC104	osteomyelitis	1377	948	22	3	15
+HC106	emphysema/chronic_bronchitis	8067	5599	40	12	63
+HC107	miscarriage	1360	978	7	4	10
+HC109	gestational_hypertension/pre-eclampsia	1991	1418	21	5	13
+HC110	stroke	8353	5783	121	18	114
+HC113	irregular_heart_beat	989	689	8	2	19
+HC114	pericardial_effusion	780	531	13	3	15
+HC116	tinnitus_/_tiniitis	2005	1368	12	6	37
+HC117	abdominal_hernia	814	557	7	1	10
+HC118	constipation	12966	8688	214	31	209
+HC119	disc_degeneration	4329	2984	52	9	91
+HC12	testicular_problems_(not_cancer)	693	492	6	1	4
+HC121	peritonitis	3607	2585	22	4	27
+HC123	muscle/soft_tissue_problem	4034	2836	37	5	45
+HC125	anaemia	24213	15942	584	80	669
+HC129	muscle_or_soft_tissue_injuries	3995	2821	42	10	47
+HC131	svt_/_supraventricular_tachycardia	3771	2653	34	3	55
+HC132	angina	27094	18471	263	45	689
+HC133	anal_fissure	4109	2721	72	12	160
+HC134	bone_disorder	2116	1458	11	8	29
+HC135	anxiety/panic_attacks	7074	4985	36	9	38
+HC136	connective_tissue_disorder	3694	2514	63	11	61
+HC139	breast_cysts	1977	1398	16	3	10
+HC140	urinary_frequency_/_incontinence	2552	1767	19	10	37
+HC142	synovitis	6280	4302	87	34	102
+HC143	retinal_problem	832	600	5	5	9
+HC144	chickenpox	3446	2458	43	8	46
+HC146	pleural_effusion	6257	4391	73	14	80
+HC149	rheumatic_fever	1479	1009	5	2	7
+HC15	sciatica	7572	5151	86	17	105
+HC150	rosacea	1238	880	1	0	8
+HC151	multiple_sclerosis	2054	1466	7	0	5
+HC153	joint_pain	11374	7725	201	32	249
+HC155	joint_disorder	2674	1861	22	2	36
+HC156	nasal_polyps	6589	4608	37	12	89
+HC158	spine_arthritis/spondylitis	4286	3030	28	8	24
+HC16	rectal_or_colon_adenoma/polyps	1533	1057	11	2	9
+HC161	prostatitis	1360	983	12	1	16
+HC164	gastro-oesophageal_reflux_(gord)_/_gastric_reflux	43620	30224	400	108	708
+HC165	type_2_diabetes	3677	2389	76	14	128
+HC166	deep_venous_thrombosis_(dvt)	9845	6928	110	11	93
+HC169	pernicious_anaemia	1527	1048	6	0	45
+HC17	diabetic_eye_disease	1273	728	68	9	89
+HC170	sarcoidosis	1319	841	48	0	39
+HC171	alcoholic_liver_disease_/_alcoholic_cirrhosis	1150	778	12	5	20
+HC172	gynaecological_disorder_(not_cancer)	817	562	8	3	7
+HC176	prolapsed_disc/slipped_disc	8467	5939	62	13	95
+HC178	stress	1717	1215	11	3	23
+HC179	iron_deficiency_anaemia	12046	7810	302	40	453
+HC180	thyroid_problem_(not_cancer)	1305	894	14	7	20
+HC182	osteopenia	1521	1063	4	6	17
+HC184	aortic_aneurysm_rupture	1501	1084	7	1	9
+HC185	cellulitis	8897	6168	69	9	102
+HC188	cholelithiasis/gall_stones	21280	14938	126	54	236
+HC193	heart_arrhythmia	2642	1884	23	8	14
+HC194	liver/biliary/pancreas_problem	931	640	3	4	8
+HC195	ureteric_obstruction/hydronephrosis	1245	870	14	6	18
+HC196	labyrinthitis	1140	764	18	6	18
+HC198	hyperparathyroidism	1015	699	23	2	16
+HC200	fracture_tibia	2577	1811	16	6	23
+HC201	ulcerative_colitis	4580	3147	28	5	85
+HC202	trapped_nerve/compressed_nerve	1532	1084	12	1	29
+HC203	pulmonary_embolism_+/-_dvt	7001	4968	81	10	39
+HC204	bursitis	2766	1928	28	3	28
+HC205	endometriosis	7769	5390	104	23	102
+HC206	parkinsons_disease	1525	1082	8	2	18
+HC209	gastric/stomach_ulcers	3700	2406	76	20	57
+HC215	hypertension	156133	107391	2790	523	2716
+HC216	pneumothorax	1590	1143	13	4	20
+HC219	hypothyroidism/myxoedema	28859	19917	170	53	541
+HC22	osteoporosis	13486	9133	78	33	162
+HC221	diabetes	32146	20437	895	136	1473
+HC222	arterial_embolism	1134	782	7	1	10
+HC223	fracture_pelvis	1823	1268	12	6	15
+HC224	rubella_/_german_measles	886	638	1	3	2
+HC225	cholecystitis	18490	12961	117	44	216
+HC231	heart_valve_problem/heart_murmur	3368	2326	25	7	21
+HC232	abnormal_smear_(cervix)	773	527	8	2	15
+HC233	mania/bipolar_disorder/manic_depression	1461	958	17	1	16
+HC234	allergy_or_anaphylactic_reaction_to_food	2421	1621	33	11	27
+HC237	back_problem	8727	5947	95	29	112
+HC239	subdural_haemorrhage/haematoma	6512	4450	87	18	95
+HC240	fracture_finger	2150	1498	12	1	39
+HC243	inguinal_hernia	19487	14039	117	22	239
+HC246	schizophrenia	1021	568	57	4	29
+HC25	cataract	28901	19446	550	145	837
+HC253	meniere's_disease	1701	1199	4	2	13
+HC254	uterine_polyps	1545	1122	8	6	10
+HC255	subarachnoid_haemorrhage	1558	1091	21	5	22
+HC257	femoral_hernia	845	597	5	2	3
+HC259	aortic_stenosis	2248	1593	5	3	25
+HC260	fracture_fibula	1146	798	12	1	13
+HC261	eczema/dermatitis	16538	11642	140	67	214
+HC262	diverticular_disease/diverticulitis	5561	4033	11	2	14
+HC263	nasal/sinus_disorder	1868	1327	7	3	28
+HC267	tennis_elbow_/_lateral_epicondylitis	1084	725	9	5	23
+HC269	high_cholesterol	62762	43047	699	193	1362
+HC271	epicondylitis	973	655	8	2	17
+HC273	essential_hypertension	93930	64225	1709	260	1879
+HC274	umbilical_hernia	4773	3311	101	3	63
+HC275	gastritis/gastric_erosions	862	573	20	1	23
+HC276	glaucoma	8614	5863	222	30	182
+HC28	bronchiectasis	2726	1938	16	7	30
+HC280	peripheral_neuropathy	758	566	2	0	3
+HC281	atrial_fibrillation	17578	12665	85	23	124
+HC282	whooping_cough_/_pertussis	4333	2962	60	14	75
+HC283	cystitis	3928	2711	44	10	48
+HC284	fracture_nose	740	522	1	0	10
+HC285	other_joint_disorder	45581	31602	566	97	643
+HC287	infectious_mononucleosis_/_glandular_fever_/_epstein_barr_virus_(ebv)	813	588	4	0	4
+HC290	fracture_upper_arm_/_humerus_/_elbow	2494	1749	8	2	24
+HC291	polycystic_ovaries/polycystic_ovarian_syndrome	791	511	14	2	18
+HC293	fracture_patella_/_knee	736	511	7	4	16
+HC294	renal/kidney_failure	10485	7081	215	22	235
+HC295	carpal_tunnel_syndrome	11936	8150	159	40	184
+HC298	chronic_sinusitis	6384	4393	58	25	81
+HC299	heart_failure/pulmonary_odema	6784	4657	70	9	145
+HC3	ectopic_pregnancy	827	514	29	5	18
+HC302	retinal_detachment	4517	3247	39	13	58
+HC303	malabsorption/coeliac_disease	2907	2093	5	0	20
+HC307	colitis/not_crohns_or_ulcerative_colitis	1532	1095	6	3	31
+HC308	hypertrophic_cardiomyopathy_(hcm_/_hocm)	1579	1096	32	2	19
+HC31	uterine_fibroids	8217	5416	363	34	93
+HC310	hiatus_hernia	58526	41254	469	81	736
+HC311	measles_/_morbillivirus	2863	2120	15	2	20
+HC314	fracture_hand	3493	2438	16	5	52
+HC316	dyspepsia_/_indigestion	15129	10001	265	82	300
+HC32	other_renal/kidney_problem	2174	1502	15	2	25
+HC320	meningitis	2321	1639	17	3	21
+HC321	sjogren's_syndrome/sicca_syndrome	850	555	15	4	26
+HC322	crohns_disease	2365	1652	17	2	35
+HC323	head_injury	6429	4398	58	12	67
+HC326	heart_attack/myocardial_infarction	17618	12138	122	25	403
+HC328	gout	9002	6278	83	43	137
+HC331	tonsiltis	3634	2608	19	4	39
+HC334	fracture_sternum	2213	1587	6	2	21
+HC339	fracture_lower_leg_/_ankle	8426	5880	68	14	82
+HC34	pleurisy	2320	1626	6	2	13
+HC340	menorrhagia_(unknown_cause)	1605	1112	25	4	22
+HC342	prostate_problem_(not_cancer)	852	593	6	0	18
+HC346	fibromyalgia	1734	1166	27	0	24
+HC347	blistering/desquamating_skin_disorder	787	525	9	1	9
+HC351	blepharitis_/_eyelid_infection	762	519	9	0	12
+HC352	systemic_lupus_erythematosis/sle	794	473	37	3	22
+HC353	other_neurological_problem	1968	1406	9	1	19
+HC355	rectal_prolapse	1381	965	8	3	18
+HC357	duodenal_ulcer	5389	3619	57	20	93
+HC36	pneumonia	18008	12610	173	34	204
+HC361	anorexia/bulimia/other_eating_disorder	1325	902	15	2	13
+HC362	respiratory_infection	11866	8173	137	21	187
+HC363	fracture_clavicle_/_collar_bone	825	591	2	1	9
+HC364	sleep_apnoea	6143	4082	93	12	113
+HC366	allergy/hypersensitivity/anaphylaxis	3517	2490	17	12	36
+HC370	other_respiratory_problems	819	585	7	2	8
+HC371	bronchitis	7083	4985	46	12	59
+HC373	fracture_rib	1196	853	3	3	6
+HC374	kidney_stone/ureter_stone/bladder_stone	3925	2811	12	15	48
+HC376	osteoarthritis	42162	29941	310	66	422
+HC379	infective/viral_hepatitis	1132	709	10	16	9
+HC38	psoriasis	7193	5074	18	10	88
+HC380	fracture_ulna	2079	1485	7	6	13
+HC382	asthma	63457	43619	788	206	1078
+HC383	bph_/_benign_prostatic_hypertrophy	1041	720	7	0	15
+HC385	peripheral_vascular_disease	5167	3516	54	6	69
+HC386	helicobacter_pylori	2515	1564	56	9	55
+HC389	urticaria	1652	1125	17	8	41
+HC39	lichen_planus	852	586	6	2	12
+HC392	pancreatitis	3012	2106	33	1	48
+HC395	bladder_problem_(not_cancer)	2974	2066	17	4	34
+HC396	fracture_shoulder_/_scapula	3452	2429	12	7	23
+HC397	scarlet_fever_/_scarlatina	732	555	0	0	0
+HC398	fracture_wrist_/_colles_fracture	1546	1096	9	2	8
+HC4	nephritis	1632	1060	30	4	43
+HC40	nervous_breakdown	717	530	4	1	5
+HC400	transient_ischaemic_attack_(tia)	3938	2827	30	4	41
+HC401	varicose_veins	14496	10151	87	31	156
+HC402	spinal_stenosis	4513	3112	77	6	83
+HC404	urinary_tract_infection/kidney_infection	16705	11507	211	53	269
+HC405	vaginal_prolapse/uterine_prolapse	2878	2041	8	3	25
+HC406	fracture_neck_of_femur_/_hip	3272	2335	16	5	29
+HC41	depression	29300	20456	195	39	300
+HC414	cardiomyopathy	1909	1309	32	2	34
+HC415	aortic_aneurysm	1679	1209	10	2	9
+HC418	cervical_spondylosis	6252	4317	56	9	85
+HC42	spontaneous_pneumothorax/recurrent_pneumothorax	1978	1398	13	3	15
+HC421	other_abdominal_problem	709	478	8	0	4
+HC422	ankylosing_spondylitis	1664	1184	7	2	19
+HC423	respiratory_failure	2669	1819	28	4	48
+HC424	fracture_skull_/_head	2959	2012	24	7	42
+HC427	ovarian_cyst_or_cysts	4145	2831	39	19	35
+HC43	unclassifiable	20564	14353	125	45	174
+HC430	rheumatoid_arthritis	8203	5586	105	18	156
+HC431	emphysema	2221	1581	10	1	8
+HC432	mitral_valve_prolapse	682	487	5	2	7
+HC433	lymphoedema	772	516	14	1	6
+HC435	ear/vestibular_disorder	4404	3086	27	13	55
+HC437	epilepsy	5977	4210	54	11	68
+HC438	hepatitis	1875	1138	72	39	36
+HC44	bile_duct_obstruction/ascending_cholangitis	1391	980	10	3	20
+HC440	atrial_flutter	16906	12186	82	23	120
+HC442	chronic_obstructive_airways_disease/copd	10451	7286	40	5	99
+HC443	headaches_(not_migraine)	4400	2974	64	23	56
+HC45	mumps_/_epidemic_parotitis	1707	1228	13	7	18
+HC49	hayfever/allergic_rhinitis	29660	20720	354	237	444
+HC52	aortic_dissection	1649	1185	10	2	10
+HC53	spinal_injury	982	681	6	2	7
+HC54	peptic_ulcer	1011	662	17	4	17
+HC55	hyperthyroidism/thyrotoxicosis	5429	3647	89	40	83
+HC57	fracture_radius	6378	4584	13	14	50
+HC58	benign_breast_lump	3504	2354	68	16	62
+HC6	eye/eyelid_problem	3902	2697	41	10	43
+HC60	oesophagitis/barretts_oesophagus	13614	9525	78	26	178
+HC61	haemorrhoids_/_piles	29396	19958	378	178	515
+HC62	tuberculosis_(tb)	2815	1739	50	14	156
+HC64	irritable_bowel_syndrome	16346	11554	125	15	133
+HC68	disorder_of_adrenal_gland	878	588	21	3	7
+HC69	polycythaemia_vera	675	482	0	3	6
+HC7	back_pain	13227	8707	270	43	341
+HC72	chronic_fatigue_syndrome	2158	1558	7	0	12
+HC74	female_infertility	1832	1185	50	17	35
+HC76	fracture_foot	1767	1269	5	5	11
+HC77	allergy_or_anaphylactic_reaction_to_drug	4674	3397	41	14	36
+HC78	arthritis_(nos)	22341	15330	330	38	407
+HC79	appendicitis	8063	5533	82	23	100
+HC8	gall_bladder_disease	2274	1637	4	3	22
+HC82	cerebral_palsy	2711	1843	46	5	48
+HC83	fracture_forearm_/_wrist	8410	6014	30	16	73
+HC84	pulmonary_fibrosis	1113	747	13	3	25
+HC85	enlarged_prostate	7142	5078	46	16	90
+HC86	migraine	17228	12177	134	35	196
+HC88	heart/cardiac_problem	1647	1148	13	4	27
+HC91	psoriatic_arthropathy	1366	954	2	1	18
+HC93	dry_eyes	1026	672	10	4	35
+HC95	inflammatory_bowel_disease	5478	3783	31	6	101
+HC96	polymyalgia_rheumatica	1978	1421	11	2	10
+HC98	stomach_disorder	2259	1570	19	10	24
+cancer1001	lung_cancer	2858	1981	26	6	12
+cancer1002	breast_cancer	15992	11241	112	59	144
+cancer1003	skin_cancer	26066	19168	11	7	23
+cancer1004	cancer_of_lip/mouth/pharynx/oral_cavity	935	659	6	5	11
+cancer1017	oesophageal_cancer	911	667	3	0	1
+cancer1018	stomach_cancer	816	568	13	2	5
+cancer1020	large_bowel_cancer/colorectal_cancer	6178	4382	49	17	44
+cancer1022	colon_cancer/sigmoid_cancer	4594	3251	38	15	33
+cancer1023	rectal_cancer	2839	2026	17	5	18
+cancer1026	pancreas_cancer	828	593	4	4	8
+cancer1032	brain_cancer_/_primary_malignant_brain_tumour	791	555	6	6	7
+cancer1034	kidney/renal_cell_cancer	1556	1093	8	1	16
+cancer1035	bladder_cancer	2771	1996	11	2	24
+cancer1037	female_genital_tract_cancer	7091	4945	51	21	39
+cancer1038	male_genital_tract_cancer	4677	3448	68	4	25
+cancer1039	ovarian_cancer	1726	1207	12	9	17
+cancer1040	uterine/endometrial_cancer	2291	1610	13	12	27
+cancer1041	cervical_cancer	4022	2814	30	8	16
+cancer1044	prostate_cancer	8869	6459	161	13	58
+cancer1045	testicular_cancer	907	678	1	0	6
+cancer1047	lymphoma	2632	1852	14	8	25
+cancer1048	leukaemia	1218	870	5	0	9
+cancer1050	multiple_myeloma	735	501	21	1	9
+cancer1053	non-hodgkins_lymphoma	2038	1429	8	7	21
+cancer1055	chronic_lymphocytic	834	596	4	0	5
+cancer1059	malignant_melanoma	5564	4099	2	4	4
+cancer1060	non-melanoma_skin_cancer	22828	16789	10	4	21
+cancer1065	thyroid_cancer	784	513	11	11	11
+cancer1084	respiratory_/_intrathoracic_cancer	3449	2392	27	7	17
+cancer1085	bone_metastases_/_bony_secondaries	2507	1780	24	7	14
