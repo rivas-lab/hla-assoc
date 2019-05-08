@@ -116,7 +116,16 @@ phenotype and  allelotype-pair.
 
 * `figures.ipynb`: Contains draft figures for the manuscript.
 
-* `hla_NHGRI_hits_bma.tsv`: Guhan manually went through the 46 phenotypes that had
+* `hla_NHGRI_hits_bma.tsv`: Guhan manually went through the 46 phenotypes that
+were used for BMA, selected the best HLA-region NHGRI
+phenotype matches for each, then joined this list with the NHGRI database. Then, he
+right-joined on `bma_post_prob_sig_literature.csv` on both `gene` and `NHGRI phenotype`
+columns, which results in this list. Nice verification that scraping NHGRI worked: most
+of the hits that successfully join are marked `Yes` in the `Manual curation found` column
+Guhan populated manually as `Present in literature?` column in `bma_post_prob_sig_literature.csv`. 
+The unjoined allelotype-phenotype pairs at bottom mostly have `No` in this column.
+
+* `hla_NHGRI_single_variant_hits.tsv`: Guhan manually went through the 64 phenotypes that had
 significant single variant analysis allelotypes, selected the best HLA-region NHGRI
 phenotype matches for each, then joined this list with the NHGRI database. Then, he
 right-joined on `bma_post_prob_sig_literature.csv` on both `gene` and `NHGRI phenotype`
