@@ -1,0 +1,61 @@
+allelotype	phe_ID	phenotype	posterior_probability	Present in literature?	Literature source	source DOI	Notes
+DQB1*05:01	cancer1003	skin cancer	0.8690000000000001	N			only cervical
+DQB1*05:01	cancer1053	non-hodgkins lymphoma	0.958	Y (HLA-wide AS)	http://onlinelibrary.wiley.com/doi/10.1111/j.1399-0039.2012.01845.x/full		Follicular lymphoma
+DQB1*05:01	cancer1060	non-melanoma skin cancer	0.983	N			
+DQB1*03:02	cancer1003	skin cancer	0.8690000000000001	Y	https://www.ncbi.nlm.nih.gov/pubmed/7960221		same allele group, adjacent coded protein
+DQB1*03:02	cancer1060	non-melanoma skin cancer	0.965	N			
+DQB1*03:02	HC17	diabetic eye disease	1.0	Y	https://link.springer.com/article/10.1007/s11892-011-0223-x		type 1 diabetes
+DQB1*03:02	HC221	diabetes	1.0	Y	https://link.springer.com/article/10.1007/s11892-011-0223-x		type 1 diabetes
+DQA1*03:01	cancer1037	female genital tract cancer	1.0	Y (HLA-wide AS)	http://www.jstor.org/stable/pdf/41465746.pdf		cervical cancer, specifically
+DQA1*03:01	HC136	connective tissue disorder	0.9990000000000001	Y (HLA-wide AS)	http://onlinelibrary.wiley.com/doi/10.1034/j.1399-0039.1999.540603.x/full		arthritis, Just DQA1*:03
+DQA1*03:01	HC156	nasal polyps	0.968	N			
+DQA1*03:01	HC219	hypothyroidism/myxoedema	1.0	N			
+DQA1*03:01	HC78	arthritis (nos)	1.0	Y (HLA-wide AS)	http://onlinelibrary.wiley.com/doi/10.1034/j.1399-0039.1999.540603.x/full		arthritis, Just DQA1*:03
+DQA1*01:01	cancer1055	chronic lymphocytic	0.815	N			
+DQA1*01:01	HC169	pernicious anaemia	0.97	N			
+B*40:01	cancer1060	non-melanoma skin cancer	0.965	N			
+B*08:01	HC136	connective tissue disorder	0.9990000000000001	Y (HLA-wide AS)	http://onlinelibrary.wiley.com/doi/10.1002/art.33415/full	10.1002/art.33415	psoriatic arthritis/psoriasis
+B*08:01	HC170	sarcoidosis	1.0	N			
+B*08:01	HC303	malabsorption/coeliac disease	1.0	N			
+B*08:01	HC310	hiatus hernia	0.927	N			
+B*08:01	HC321	sjogren's syndrome/sicca syndrome	1.0	N			
+B*08:01	HC352	systemic lupus erythematosis/sle	1.0	Y (GWAS)	http://www.sciencedirect.com/science/article/pii/S0002929712004673	10.1016/j.ajhg.2012.08.026	
+B*08:01	HC55	hyperthyroidism/thyrotoxicosis	0.9329999999999999	N			
+DRB1*04:04	HC136	connective tissue disorder	0.9990000000000001	Y (HLA-wide AS)	https://arthritis-research.biomedcentral.com/articles/10.1186/s13075-015-0692-4		Rhematoid arthritis
+DRB1*04:04	HC430	rheumatoid arthritis	1.0	Y (HLA-wide AS)	https://arthritis-research.biomedcentral.com/articles/10.1186/s13075-015-0692-4		Rhematoid arthritis
+DRB1*04:04	HC49	hayfever/allergic rhinitis	0.917	N			
+DRB1*04:04	HC96	polymyalgia rheumatica	1.0	Y (HLA-wide AS)	https://arthritis-research.biomedcentral.com/articles/10.1186/s13075-015-0692-4		Rhematoid arthritis
+B*39:06	HC169	pernicious anaemia	0.866	N			
+DQB1*02:01	HC17	diabetic eye disease	0.8859999999999999	Y	https://link.springer.com/article/10.1007/s11892-011-0223-x		type 1 diabetes
+DQB1*02:01	HC219	hypothyroidism/myxoedema	0.975	Y (HLA-wide AS)	http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0016635		Just DQB1*02
+DQB1*02:01	HC303	malabsorption/coeliac disease	1.0	Y	https://jbiomedsci.biomedcentral.com/articles/10.1186/1423-0127-19-88		
+DRB3*99:01	HC170	sarcoidosis	1.0	N			
+DRB3*99:01	HC430	rheumatoid arthritis	1.0	N			
+DQB1*05:03	HC170	sarcoidosis	0.966	N			
+DRB1*01:03	HC201	ulcerative colitis	0.8079999999999999	Y (HLA-wide AS)	https://www.nature.com/articles/ng.3176		
+DRB1*01:03	HC95	inflammatory bowel disease	1.0	Y (HLA-wide AS)	https://www.nature.com/articles/ng.3176		
+DQA1*01:02	HC219	hypothyroidism/myxoedema	1.0	N			
+DQA1*01:02	HC430	rheumatoid arthritis	1.0	N			
+DQB1*03:01	HC219	hypothyroidism/myxoedema	1.0	Y (HLA-wide AS)	http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0016635		Has DQB1*03:02 rather than :01
+DRB1*04:01	HC221	diabetes	1.0	Y	https://link.springer.com/article/10.1007/s11892-011-0223-x		type 1 diabetes
+DRB1*04:01	HC430	rheumatoid arthritis	1.0	Y (HLA-wide AS)	http://www.jrheum.org/content/28/1/122.short		early onset RA
+DRB1*04:01	HC96	polymyalgia rheumatica	1.0	Y (HLA-wide AS)	http://www.jrheum.org/content/28/1/122.short		early onset RA
+B*57:01	HC261	eczema/dermatitis	0.8809999999999999	N but ADR	https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0124878; https://link.springer.com/content/pdf/10.1186%2Fs13321-018-0257-z.pdf; https://scinapse.io/papers/1970700764		not direct association, but interesting one: acyclovir (which targets this allelotype) was used to treat eczema and resulted in rash. uncovered an ADR?
+B*57:01	HC38	psoriasis	1.0	Y (HLA-wide AS)	https://arthritis-research.biomedcentral.com/track/pdf/10.1186/s13075-015-0640-3?site=http://arthritis-research.biomedcentral.com	10.1186/s13075-015-0640-3	psoriatic arthritis
+DRB4*01:01	HC261	eczema/dermatitis	0.828	N			
+B*07:02	HC269	high cholesterol	0.9540000000000001	N			
+B*07:02	HC273	essential hypertension	0.892	N			
+DPB1*04:01	HC28	bronchiectasis	1.0	N			links to rheumatoid arthritis papers
+DQB1*03:03	HC28	bronchiectasis	0.965	Contradiction	http://onlinelibrary.wiley.com/doi/10.1111/j.1365-2249.2008.03596.x/full, https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2384066/		Shows insignificant
+A*26:08	HC28	bronchiectasis	0.853	N			
+DPA1*02:01	HC303	malabsorption/coeliac disease	1.0	N			
+DRB1*13:01	HC321	sjogren's syndrome/sicca syndrome	0.9520000000000001	Y	https://www.nature.com/articles/gene201640		general protective for autoimmune disorders
+C*06:02	HC38	psoriasis	1.0	Y (HLA-wide AS)	https://arthritis-research.biomedcentral.com/track/pdf/10.1186/s13075-015-0640-3?site=http://arthritis-research.biomedcentral.com	10.1186/s13075-015-0640-3	psoriatic arthritis
+C*06:02	HC91	psoriatic arthropathy	1.0	Y  (HLA-wide AS)	http://onlinelibrary.wiley.com/doi/10.1002/art.33415/full	10.1002/art.33415	psoriasis
+A*01:01	HC401	varicose veins	0.878	N			
+B*27:05	HC422	ankylosing spondylitis	1.0	Y (causal)	http://ard.bmj.com/content/early/2012/02/21/annrheumdis-2011-200347.short	10.1136/annrheumdis-2011-200347	
+B*27:05	HC91	psoriatic arthropathy	1.0	Y (HLA-wide AS)	https://arthritis-research.biomedcentral.com/track/pdf/10.1186/s13075-015-0640-3?site=http://arthritis-research.biomedcentral.com	10.1186/s13075-015-0640-3	psoriatic arthropathy
+B*27:02	HC422	ankylosing spondylitis	1.0	Y (HLA-wide AS)	https://www.nature.com/articles/ncomms8146	10.1038/ncomms8146	
+DQA1*01:03	HC49	hayfever/allergic rhinitis	0.917	N			
+DQA1*05:01	HC55	hyperthyroidism/thyrotoxicosis	0.883	Y  (HLA-wide AS)	https://academic.oup.com/jcem/article/99/1/E177/2836486		autoimmune polyglandular syndrome
+B*39:01	HC91	psoriatic arthropathy	1.0	Y (HLA-wide AS)	http://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1002514	10.1371/journal.pgen.1002514	psoriasis
