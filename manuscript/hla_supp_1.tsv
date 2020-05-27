@@ -1,0 +1,179 @@
+allelotype	locus	GBE_ID	GBE_NAME	BMA_posterior_prob	novel	nonadditive	PMID	PMCID	URL
+A*02:01	HLA-A	HC810	TTE_multiple_sclerosis	100	N		26142251	PMC4687745	https://pubmed.ncbi.nlm.nih.gov/26142251/
+A*02:01	HLA-A	HC1188	TTE_vitiligo	100	N		26787886	PMC4747738	https://pubmed.ncbi.nlm.nih.gov/26787886/
+A*02:01	HLA-A	HC530	TTE_zoster_[herpes_zoster]	100	N		25355886	PMC4300672	https://pubmed.ncbi.nlm.nih.gov/25355886/
+A*02:01	HLA-A	HC144	chickenpox	86.7	N		25355886	PMC4300672	https://pubmed.ncbi.nlm.nih.gov/25355886/
+A*02:01	HLA-A	HC1102	TTE_ulcerative_colitis	93.1	Y				
+A*03:01	HLA-A	HC703	TTE_disorders_of_mineral_metabolism	100	Y				
+A*03:01	HLA-A	HC1162	TTE_lichen_planus	100	Y				
+A*03:01	HLA-A	HC1158	TTE_other_dermatitis	100	Y				
+A*03:01	HLA-A	HC990	TTE_varicose_veins_of_lower_extremities	89.3	Y				
+A*11:01	HLA-A	HC900	TTE_otitis_externa	100	Y				
+A*24:02	HLA-A	HC1200	TTE_granulomatous_disorders_of_skin_and_subcutaneous_tissue	100	Y				
+B*07:02	HLA-B	HC269	high_cholesterol	100	Y				
+B*07:02	HLA-B	HC1178	TTE_other_nonscarring_hair_loss	100	Y				
+B*08:01	HLA-B	HC136	connective_tissue_disorder	100	N		24598797	PMC4102853	https://pubmed.ncbi.nlm.nih.gov/24598797/
+B*08:01	HLA-B	HC303	malabsorption/coeliac_disease	100	N		28148736		https://pubmed.ncbi.nlm.nih.gov/28148736/
+B*08:01	HLA-B	HC321	sjogren's_syndrome/sicca_syndrome	100	N		28379387	PMC6279161	https://pubmed.ncbi.nlm.nih.gov/28379387/
+B*08:01	HLA-B	HC1236	TTE_other_systemic_involvement_of_connective_tissue	100	N		25187641		https://pubmed.ncbi.nlm.nih.gov/25187641/
+B*08:01	HLA-B	HC639	TTE_sarcoidosis	100	N		30410504	PMC6210504	https://pubmed.ncbi.nlm.nih.gov/30410504/
+B*08:01	HLA-B	HC1233	TTE_systemic_lupus_erythematosus	100	N		24598797	PMC4102853	https://pubmed.ncbi.nlm.nih.gov/24598797/
+B*08:01	HLA-B	HC645	TTE_thyrotoxicosis_[hyperthyroidism]	100	N		28919585		https://pubmed.ncbi.nlm.nih.gov/28919585/
+B*08:01	HLA-B	HC310	hiatus_hernia	100	Y				
+B*08:01	HLA-B	HC1182	TTE_acne	100	Y				
+B*08:01	HLA-B	HC1036	TTE_asthma	100	Y				
+B*08:01	HLA-B	HC1132	TTE_intestinal_malabsorption	100	Y				
+B*08:01	HLA-B	HC1024	TTE_nasal_polyp	100	Y				
+B*08:01	HLA-B	HC608	TTE_vitamin_b12_deficiency_anaemia	100	Y				
+B*15:01	HLA-B	HC219	hypothyroidism/myxoedema	100	Y				
+B*18:01	HLA-B	HC530	TTE_zoster_[herpes_zoster]	80.3	Y				
+B*27:05	HLA-B	HC91	psoriatic_arthropathy	100	N		25948071	PMC4422545	https://pubmed.ncbi.nlm.nih.gov/25948071/
+B*27:05	HLA-B	HC430	rheumatoid_arthritis	100	N		23804219	PMC3798713	https://pubmed.ncbi.nlm.nih.gov/23804219/
+B*27:05	HLA-B	HC1242	TTE_ankylosing_spondylitis	100	N		28259985	PMC5364987	https://pubmed.ncbi.nlm.nih.gov/28259985/
+B*27:05	HLA-B	HC868	TTE_iridocyclitis	100	N		27428175		https://pubmed.ncbi.nlm.nih.gov/27428175/
+B*27:05	HLA-B	HC1212	TTE_other_rheumatoid_arthritis	100	N		23804219	PMC3798713	https://pubmed.ncbi.nlm.nih.gov/23804219/
+B*27:05	HLA-B	HC219	hypothyroidism/myxoedema	100	Y				
+B*27:05	HLA-B	HC900	TTE_otitis_externa	100	Y				
+B*35:01	HLA-B	HC646	TTE_thyroiditis	100	N		32079059	PMC7074389	https://pubmed.ncbi.nlm.nih.gov/32079059/
+B*39:01	HLA-B	HC91	psoriatic_arthropathy	100	N		25948071	PMC4422545	https://pubmed.ncbi.nlm.nih.gov/25948071/
+B*39:06	HLA-B	HC219	hypothyroidism/myxoedema	100	N				https://doi.org/10.1016/j.jtauto.2020.100057
+B*39:06	HLA-B	HC608	TTE_vitamin_b12_deficiency_anaemia	100	Y				
+B*40:01	HLA-B	HC530	TTE_zoster_[herpes_zoster]	100	N		25355886	PMC4300672	https://pubmed.ncbi.nlm.nih.gov/25355886/
+B*40:01	HLA-B	cancer1060	non-melanoma_skin_cancer	100	Y				
+B*44:02	HLA-B	HC530	TTE_zoster_[herpes_zoster]	80.3	N		25355886	PMC4300672	https://pubmed.ncbi.nlm.nih.gov/25355886/
+B*44:02	HLA-B	HC1329	TTE_redundant_prepuce,_phimosis_and_paraphimosis	100	Y				
+B*44:03	HLA-B	cancer1060	non-melanoma_skin_cancer	100	Y				
+B*44:03	HLA-B	cancer1003	skin_cancer	100	Y				
+B*44:03	HLA-B	HC1021	TTE_vasomotor_and_allergic_rhinitis	100	Y				
+B*57:01	HLA-B	HC1159	TTE_psoriasis	100	N		25948071	PMC4422545	https://pubmed.ncbi.nlm.nih.gov/25948071/
+B*57:01	HLA-B	HC261	eczema/dermatitis	100	Y				
+B*57:01	HLA-B	HC1304	TTE_calculus_of_kidney_and_ureter	100	Y				
+B*57:01	HLA-B	HC1158	TTE_other_dermatitis	100	Y				
+C*05:01	HLA-C	HC219	hypothyroidism/myxoedema	100	Y				
+C*06:02	HLA-C	HC91	psoriatic_arthropathy	100	N	Y	29760713	PMC5936982	https://pubmed.ncbi.nlm.nih.gov/29760713/
+C*06:02	HLA-C	HC1159	TTE_psoriasis	100	N	Y	26258845	PMC4552599	https://pubmed.ncbi.nlm.nih.gov/26258845/
+C*06:02	HLA-C	HC1149	TTE_seborrhoeic_dermatitis	100	Y				
+DPA1*01:03	HLA-DPA1	HC219	hypothyroidism/myxoedema	100	Y				
+DPB1*01:01	HLA-DPB1	HC303	malabsorption/coeliac_disease	100	N		9129973		https://pubmed.ncbi.nlm.nih.gov/9129973/
+DPB1*01:01	HLA-DPB1	HC49	hayfever/allergic_rhinitis	100	Y				
+DPB1*02:01	HLA-DPB1	HC1198	TTE_atrophic_disorders_of_skin	100	Y				
+DPB1*02:01	HLA-DPB1	HC1329	TTE_redundant_prepuce,_phimosis_and_paraphimosis	100	Y				
+DPB1*03:01	HLA-DPB1	HC49	hayfever/allergic_rhinitis	100	N				http://www.ghrnet.org/index.php/jrr/article/view/2153/2530
+DPB1*03:01	HLA-DPB1	HC1021	TTE_vasomotor_and_allergic_rhinitis	100	Y				
+DQA1*01:01	HLA-DQA1	HC303	malabsorption/coeliac_disease	100	N	Y	26258845	PMC4552599	https://pubmed.ncbi.nlm.nih.gov/26258845/
+DQA1*01:01	HLA-DQA1	HC49	hayfever/allergic_rhinitis	100	N				http://www.ghrnet.org/index.php/jrr/article/view/2153/2530
+DQA1*01:01	HLA-DQA1	HC91	psoriatic_arthropathy	100	N		18644131	PMC2515830	https://pubmed.ncbi.nlm.nih.gov/18644131/
+DQA1*01:01	HLA-DQA1	HC1036	TTE_asthma	100	N		10792356		https://pubmed.ncbi.nlm.nih.gov/10792356/
+DQA1*01:01	HLA-DQA1	HC1132	TTE_intestinal_malabsorption	100	N		23041663		https://pubmed.ncbi.nlm.nih.gov/23041663/
+DQA1*01:01	HLA-DQA1	HC169	pernicious_anaemia	100	Y				
+DQA1*01:01	HLA-DQA1	HC1171	TTE_skin_changes_due_to_chronic_exposure_to_nonionising_radiation	100	Y				
+DQA1*01:01	HLA-DQA1	HC1021	TTE_vasomotor_and_allergic_rhinitis	100	Y				
+DQA1*01:01	HLA-DQA1	HC608	TTE_vitamin_b12_deficiency_anaemia	100	Y				
+DQA1*01:02	HLA-DQA1	HC430	rheumatoid_arthritis	100	N		15479890	PMC1754800	https://pubmed.ncbi.nlm.nih.gov/15479890/
+DQA1*01:02	HLA-DQA1	HC1036	TTE_asthma	100	Y				
+DQA1*01:02	HLA-DQA1	HC1230	TTE_other_joint_disorders,_not_elsewhere_classified	100	Y				
+DQA1*01:02	HLA-DQA1	HC1212	TTE_other_rheumatoid_arthritis	100	Y				
+DQA1*01:03	HLA-DQA1	HC49	hayfever/allergic_rhinitis	100	Y				
+DQA1*01:03	HLA-DQA1	HC1036	TTE_asthma	100	Y				
+DQA1*03:01	HLA-DQA1	cancer1037	female_genital_tract_cancer	100	N		10380373		https://pubmed.ncbi.nlm.nih.gov/10380373/
+DQA1*03:01	HLA-DQA1	HC1211	TTE_seropositive_rheumatoid_arthritis	100	N		11482129		https://pubmed.ncbi.nlm.nih.gov/11482129/
+DQA1*03:01	HLA-DQA1	HC534	TTE_viral_warts	100	N		15257408		https://pubmed.ncbi.nlm.nih.gov/15257408/
+DQA1*03:01	HLA-DQA1	HC1582	AD_chronic_obstructive_pulmonary_disease	100	Y				
+DQA1*03:01	HLA-DQA1	HC78	arthritis_(nos)	100	Y				
+DQA1*03:01	HLA-DQA1	HC261	eczema/dermatitis	100	Y				
+DQA1*03:01	HLA-DQA1	HC219	hypothyroidism/myxoedema	100	Y				
+DQA1*03:01	HLA-DQA1	HC1024	TTE_nasal_polyp	100	Y				
+DQA1*05:01	HLA-DQA1	HC303	malabsorption/coeliac_disease	100	N	Y	26258845	PMC4552599	https://pubmed.ncbi.nlm.nih.gov/26258845/
+DQA1*05:01	HLA-DQA1	HC1132	TTE_intestinal_malabsorption	100	N	Y	26258845	PMC4552599	https://pubmed.ncbi.nlm.nih.gov/26258845/
+DQA1*05:01	HLA-DQA1	HC219	hypothyroidism/myxoedema	100	Y				
+DQB1*02:01	HLA-DQB1	HC221	diabetes	100	N	Y	26258845	PMC4552599	https://pubmed.ncbi.nlm.nih.gov/26258845/
+DQB1*02:01	HLA-DQB1	HC303	malabsorption/coeliac_disease	100	N	Y	26258845	PMC4552599	https://pubmed.ncbi.nlm.nih.gov/26258845/
+DQB1*02:01	HLA-DQB1	HC648	TTE_insulin-dependent_diabetes_mellitus	100	N	Y	26258845	PMC4552599	https://pubmed.ncbi.nlm.nih.gov/26258845/
+DQB1*02:01	HLA-DQB1	HC652	TTE_unspecified_diabetes_mellitus	100	N	Y	26258845	PMC4552599	https://pubmed.ncbi.nlm.nih.gov/26258845/
+DQB1*02:01	HLA-DQB1	HC1132	TTE_intestinal_malabsorption	100	N		17190762		https://pubmed.ncbi.nlm.nih.gov/17190762/
+DQB1*02:01	HLA-DQB1	HC17	diabetic_eye_disease	82.9	N		19551681		https://pubmed.ncbi.nlm.nih.gov/19551681/
+DQB1*02:01	HLA-DQB1	HC654	TTE_other_disorders_of_pancreatic_internal_secretion	100	Y				
+DQB1*02:01	HLA-DQB1	HC881	TTE_retinal_disorders_in_diseases_classified_elsewhere	100	Y				
+DQB1*02:01	HLA-DQB1	HC620	TTE_other_anaemias	87.2	Y		30763397	PMC6375622	https://pubmed.ncbi.nlm.nih.gov/30763397/
+DQB1*03:01	HLA-DQB1	HC303	malabsorption/coeliac_disease	100	N	Y	26258845	PMC4552599	https://pubmed.ncbi.nlm.nih.gov/26258845/
+DQB1*03:01	HLA-DQB1	HC1176	TTE_alopecia_areata	100	N		7798612		https://pubmed.ncbi.nlm.nih.gov/7798612/
+DQB1*03:01	HLA-DQB1	HC1132	TTE_intestinal_malabsorption	100	Y				
+DQB1*03:02	HLA-DQB1	HC221	diabetes	100	N	Y	26258845	PMC4552599	https://pubmed.ncbi.nlm.nih.gov/26258845/
+DQB1*03:02	HLA-DQB1	HC648	TTE_insulin-dependent_diabetes_mellitus	100	N	Y	26258845	PMC4552599	https://pubmed.ncbi.nlm.nih.gov/26258845/
+DQB1*03:02	HLA-DQB1	HC652	TTE_unspecified_diabetes_mellitus	100	N	Y	26258845	PMC4552599	https://pubmed.ncbi.nlm.nih.gov/26258845/
+DQB1*03:02	HLA-DQB1	HC17	diabetic_eye_disease	100	N		8932997		https://pubmed.ncbi.nlm.nih.gov/8932997/
+DQB1*03:02	HLA-DQB1	HC881	TTE_retinal_disorders_in_diseases_classified_elsewhere	100	N				
+DQB1*03:02	HLA-DQB1	cancer1060	non-melanoma_skin_cancer	100	Y				
+DQB1*03:02	HLA-DQB1	cancer1003	skin_cancer	100	Y				
+DQB1*03:02	HLA-DQB1	HC1113	TTE_haemorrhoids_and_perianal_venous_thrombosis	100	Y				
+DQB1*03:02	HLA-DQB1	HC649	TTE_non-insulin-dependent_diabetes_mellitus	100	Y				
+DQB1*03:02	HLA-DQB1	HC654	TTE_other_disorders_of_pancreatic_internal_secretion	100	Y				
+DQB1*03:02	HLA-DQB1	HC1232	TTE_other_necrotising_vasculopathies	100	Y				
+DQB1*03:02	HLA-DQB1	HC1020	TTE_unspecified_acute_lower_respiratory_infection	100	Y				
+DQB1*03:03	HLA-DQB1	HC91	psoriatic_arthropathy	100	N		22577363	PMC3343879	https://pubmed.ncbi.nlm.nih.gov/22577363/
+DQB1*03:03	HLA-DQB1	HC645	TTE_thyrotoxicosis_[hyperthyroidism]	90.7	N		23380142		https://pubmed.ncbi.nlm.nih.gov/23380142/
+DQB1*03:03	HLA-DQB1	HC1132	TTE_intestinal_malabsorption	100	Y				
+DQB1*05:01	HLA-DQB1	cancer1041	cervical_cancer	100	N		8033385		https://pubmed.ncbi.nlm.nih.gov/8181853/
+DQB1*05:01	HLA-DQB1	cancer1053	non-hodgkins_lymphoma	100	N		22296171	PMC3293942	https://pubmed.ncbi.nlm.nih.gov/22296171/
+DQB1*05:01	HLA-DQB1	cancer1060	non-melanoma_skin_cancer	100	N		29754218	PMC7081741	https://pubmed.ncbi.nlm.nih.gov/29754218/
+DQB1*05:01	HLA-DQB1	cancer1003	skin_cancer	100	N		29754218	PMC7081741	https://pubmed.ncbi.nlm.nih.gov/29754218/
+DQB1*05:01	HLA-DQB1	HC78	arthritis_(nos)	100	Y				
+DQB1*05:03	HLA-DQB1	HC639	TTE_sarcoidosis	100	N		20685690	PMC4351376	https://pubmed.ncbi.nlm.nih.gov/20685690/
+DQB1*06:04	HLA-DQB1	HC219	hypothyroidism/myxoedema	100	N		24285682		https://pubmed.ncbi.nlm.nih.gov/24285682/
+DQB1*06:04	HLA-DQB1	HC1036	TTE_asthma	100	Y				
+DRB1*01:01	HLA-DRB1	HC1162	TTE_lichen_planus	100	N		17665209		https://pubmed.ncbi.nlm.nih.gov/17665209/
+DRB1*01:01	HLA-DRB1	HC1212	TTE_other_rheumatoid_arthritis	82.4	N	Y	26258845	PMC4552599	https://pubmed.ncbi.nlm.nih.gov/26258845/
+DRB1*01:01	HLA-DRB1	HC1158	TTE_other_dermatitis	100	Y				
+DRB1*01:02	HLA-DRB1	HC1162	TTE_lichen_planus	100	N		9098452		https://pubmed.ncbi.nlm.nih.gov/9098452/
+DRB1*01:03	HLA-DRB1	HC95	inflammatory_bowel_disease	100	N		25559196	PMC4310771	https://pubmed.ncbi.nlm.nih.gov/25559196/
+DRB1*01:03	HLA-DRB1	HC1101	TTE_crohn's_disease_[regional_enteritis]	100	N		25559196	PMC4310771	https://pubmed.ncbi.nlm.nih.gov/25559196/
+DRB1*01:03	HLA-DRB1	HC1102	TTE_ulcerative_colitis	100	N		25559196	PMC4310771	https://pubmed.ncbi.nlm.nih.gov/25559196/
+DRB1*01:03	HLA-DRB1	HC645	TTE_thyrotoxicosis_[hyperthyroidism]	100	Y				
+DRB1*01:03	HLA-DRB1	HC1149	TTE_seborrhoeic_dermatitis	87.9	Y				
+DRB1*03:01	HLA-DRB1	HC645	TTE_thyrotoxicosis_[hyperthyroidism]	95.6	N		11272094		https://pubmed.ncbi.nlm.nih.gov/11272094/
+DRB1*04:01	HLA-DRB1	HC221	diabetes	100	N	Y	26258845	PMC4552599	https://pubmed.ncbi.nlm.nih.gov/26258845/
+DRB1*04:01	HLA-DRB1	HC430	rheumatoid_arthritis	100	N	Y	26258845	PMC4552599	https://pubmed.ncbi.nlm.nih.gov/26258845/
+DRB1*04:01	HLA-DRB1	HC648	TTE_insulin-dependent_diabetes_mellitus	100	N	Y	26258845	PMC4552599	https://pubmed.ncbi.nlm.nih.gov/26258845/
+DRB1*04:01	HLA-DRB1	HC1212	TTE_other_rheumatoid_arthritis	100	N	Y	26258845	PMC4552599	https://pubmed.ncbi.nlm.nih.gov/26258845/
+DRB1*04:01	HLA-DRB1	HC652	TTE_unspecified_diabetes_mellitus	100	N	Y	26258845	PMC4552599	https://pubmed.ncbi.nlm.nih.gov/26258845/
+DRB1*04:01	HLA-DRB1	HC136	connective_tissue_disorder	100	N		8456439		https://pubmed.ncbi.nlm.nih.gov/1540038/
+DRB1*04:01	HLA-DRB1	HC96	polymyalgia_rheumatica	100	N		8670595		https://pubmed.ncbi.nlm.nih.gov/8670595/
+DRB1*04:01	HLA-DRB1	HC1036	TTE_asthma	100	N		27503745	PMC4989996	https://pubmed.ncbi.nlm.nih.gov/27503745/
+DRB1*04:01	HLA-DRB1	HC1236	TTE_other_systemic_involvement_of_connective_tissue	100	N		12559632		https://pubmed.ncbi.nlm.nih.gov/12559632/
+DRB1*04:01	HLA-DRB1	HC881	TTE_retinal_disorders_in_diseases_classified_elsewhere	100	N		8932997		https://pubmed.ncbi.nlm.nih.gov/8932997/
+DRB1*04:01	HLA-DRB1	HC125	anaemia	100	Y				
+DRB1*04:01	HLA-DRB1	HC607	TTE_iron_deficiency_anaemia	100	Y				
+DRB1*04:01	HLA-DRB1	HC654	TTE_other_disorders_of_pancreatic_internal_secretion	100	Y				
+DRB1*04:01	HLA-DRB1	HC1158	TTE_other_dermatitis	84.4	Y				
+DRB1*04:04	HLA-DRB1	HC136	connective_tissue_disorder	100	N		25187641		https://pubmed.ncbi.nlm.nih.gov/25187641/
+DRB1*04:04	HLA-DRB1	HC49	hayfever/allergic_rhinitis	100	N				http://www.ghrnet.org/index.php/jrr/article/view/2153/2530
+DRB1*04:04	HLA-DRB1	HC96	polymyalgia_rheumatica	100	N		8147928		https://pubmed.ncbi.nlm.nih.gov/8147928/
+DRB1*04:04	HLA-DRB1	HC430	rheumatoid_arthritis	100	N		11359453	PMC1906025	https://pubmed.ncbi.nlm.nih.gov/11359453/
+DRB1*04:04	HLA-DRB1	HC1212	TTE_other_rheumatoid_arthritis	100	N		11359453	PMC1906025	https://pubmed.ncbi.nlm.nih.gov/11359453/
+DRB1*04:04	HLA-DRB1	HC1021	TTE_vasomotor_and_allergic_rhinitis	100	N				http://www.ghrnet.org/index.php/jrr/article/view/2153/2530
+DRB1*04:04	HLA-DRB1	HC1236	TTE_other_systemic_involvement_of_connective_tissue	100	Y				
+DRB1*04:04	HLA-DRB1	HC1183	TTE_rosacea	100	Y				
+DRB1*10:01	HLA-DRB1	HC1162	TTE_lichen_planus	100	N		8033385		https://pubmed.ncbi.nlm.nih.gov/8033385/
+DRB1*11:01	HLA-DRB1	HC1171	TTE_skin_changes_due_to_chronic_exposure_to_nonionising_radiation	100	Y				
+DRB1*13:02	HLA-DRB1	HC1101	TTE_crohn's_disease_[regional_enteritis]	100	N		25559196	PMC4310771	https://pubmed.ncbi.nlm.nih.gov/25559196/
+DRB3*01:01	HLA-DRB3	HC648	TTE_insulin-dependent_diabetes_mellitus	100	N		23462545	PMC3712046	https://pubmed.ncbi.nlm.nih.gov/23462545/
+DRB3*02:02	HLA-DRB3	HC430	rheumatoid_arthritis	100	N		26919467	PMC4769216	https://pubmed.ncbi.nlm.nih.gov/26919467/
+DRB3*02:02	HLA-DRB3	HC1212	TTE_other_rheumatoid_arthritis	100	N		26919467	PMC4769216	https://pubmed.ncbi.nlm.nih.gov/26919467/
+DRB3*02:02	HLA-DRB3	HC649	TTE_non-insulin-dependent_diabetes_mellitus	100	Y				
+DRB3*99:01	HLA-DRB3	cancer1041	cervical_cancer	100	N		30099516	PMC6217726	https://pubmed.ncbi.nlm.nih.gov/30099516/
+DRB3*99:01	HLA-DRB3	HC49	hayfever/allergic_rhinitis	100	Y				
+DRB3*99:01	HLA-DRB3	HC1176	TTE_alopecia_areata	100	Y				
+DRB3*99:01	HLA-DRB3	HC1023	TTE_chronic_sinusitis	100	Y				
+DRB3*99:01	HLA-DRB3	HC1021	TTE_vasomotor_and_allergic_rhinitis	100	Y				
+DRB4*01:01	HLA-DRB4	HC303	malabsorption/coeliac_disease	100	N	Y	26258845	PMC4552599	https://pubmed.ncbi.nlm.nih.gov/26258845/
+DRB4*01:01	HLA-DRB4	HC261	eczema/dermatitis	100	Y				
+DRB4*01:03	HLA-DRB4	HC61	haemorrhoids_/_piles	100	Y				
+DRB4*01:03	HLA-DRB4	HC942	TTE_chronic_ischaemic_heart_disease	100	Y				
+DRB4*01:03	HLA-DRB4	HC700	TTE_disorders_of_lipoprotein_metabolism_and_other_lipidaemias	100	Y				
+DRB4*01:03	HLA-DRB4	HC1106	TTE_diverticular_disease_of_intestine	100	Y				
+DRB4*01:03	HLA-DRB4	HC932	TTE_essential_(primary_hypertension)	100	Y				
+DRB4*01:03	HLA-DRB4	HC1132	TTE_intestinal_malabsorption	100	Y				
+DRB4*99:01	HLA-DRB4	HC1132	TTE_intestinal_malabsorption	100	Y				
+DRB4*99:01	HLA-DRB4	HC1357	TTE_other_noninflammatory_disorders_of_vulva_and_perineum	100	Y				
+DRB4*99:01	HLA-DRB4	HC810	TTE_multiple_sclerosis	83.2	Y				
+DRB5*99:01	HLA-DRB5	HC219	hypothyroidism/myxoedema	100	Y				
