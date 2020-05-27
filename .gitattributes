@@ -1,2 +1,1 @@
-output/process_plink_results/plink_results_all.tsv.gz filter=lfs diff=lfs merge=lfs -text
 output/** filter=lfs diff=lfs merge=lfs -text
