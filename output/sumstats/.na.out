@@ -1,3 +1,284 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:60b856d8487fd6f40cf43ca9a0440a16da50ffcb8f4285e4a3ddd4db56f008d4
-size 6425
+
+Attaching package: ‘dplyr’
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+[1] "Reading in dosage file..."
+[1] "Reading in dosage file..."
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+[1] "Reading in dosage file..."
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+[1] "Reading in dosage file..."
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+[1] "Reading in dosage file..."
+[1] "Subsetting to analysis alleles..."
+[1] "Reading in covariates file..."
+[1] "Subsetting to analysis alleles..."
+[1] "Reading in covariates file..."
+[1] "Subsetting to covariates of interest..."
+[1] "Reading phenotype:"
+[1] "HC1001"
+[1] "from file:"
+[1] "/oak/stanford/groups/mrivas/ukbb24983/phenotypedata/extras/highconfidenceqc/v2_2020/phe/HC1001.phe"
+[1] "Subsetting to covariates of interest..."
+[1] "Reading phenotype:"
+[1] "HC1"
+[1] "from file:"
+[1][1] "/oak/stanford/groups/mrivas/ukbb24983/phenotypedata/extras/highconfidenceqc/v2_2020/phe/HC1.phe" "Subsetting to analysis alleles..."
+
+[1] "Reading in covariates file..."
+[1] "Subsetting to analysis alleles..."
+[1] "Reading in covariates file..."
+[1] "Subsetting to covariates of interest..."
+[1] "Reading phenotype:"
+[1] "HC1002"
+[1] "from file:"
+[1] "/oak/stanford/groups/mrivas/ukbb24983/phenotypedata/extras/highconfidenceqc/v2_2020/phe/HC1002.phe"
+[1] "Subsetting to covariates of interest..."
+[1] "Reading phenotype:"
+[1] "HC1003"
+[1] "from file:"
+[1] "/oak/stanford/groups/mrivas/ukbb24983/phenotypedata/extras/highconfidenceqc/v2_2020/phe/HC1003.phe"
+[1] "Subsetting to analysis alleles..."
+[1] "Reading in covariates file..."
+[1] "Subsetting to covariates of interest..."
+[1] "Reading phenotype:"
+[1] "HC0"
+[1] "from file:"
+[1] "/oak/stanford/groups/mrivas/ukbb24983/phenotypedata/extras/highconfidenceqc/v2_2020/phe/HC0.phe"
+[1][1] "Subsetting to those rows that have covariates..."
+ "Subsetting to those rows that have covariates..."
+[1] "Subsetting to those rows that have covariates..."
+[1] "Subsetting to those rows that have covariates..."
+[1][1] "Adding phenotype to covariate matrix, filtering out missing phenotypes..."
+ "Adding phenotype to covariate matrix, filtering out missing phenotypes..."
+[1] "Adding phenotype to covariate matrix, filtering out missing phenotypes..."
+[1] "Subsetting to those rows that have covariates..."
+[1] "Replacing binary values..."
+[1] "Replacing binary values..."
+[1] "Replacing binary values..."
+[1] "Subsetting dosage file to those rows in covariates file..."
+[1] "Subsetting dosage file to those rows in covariates file..."
+[1] "Subsetting dosage file to those rows in covariates file..."
+[1] "Starting nonadditivity analysis..."
+[1] "Starting nonadditivity analysis..."
+[1] "Starting nonadditivity analysis..."
+[1] "A_101"
+[1][1] "A_101" "A_101"
+
+[1] "Adding phenotype to covariate matrix, filtering out missing phenotypes..."
+[1] "Replacing binary values..."
+[1] "Subsetting dosage file to those rows in covariates file..."
+[1] "Starting nonadditivity analysis..."
+[1] "A_101"
+[1] "Adding phenotype to covariate matrix, filtering out missing phenotypes..."
+[1] "Replacing binary values..."
+[1] "Subsetting dosage file to those rows in covariates file..."
+[1] "Starting nonadditivity analysis..."
+[1] "A_101"
+[1] "A_201"
+[1] "A_201"
+[1] "A_201"
+[1] "A_201"
+[1] "A_201"
+[1] "A_205"
+[1] "A_205"
+[1][1] "A_205" "A_205"
+
+[1] "A_205"
+[1] "A_206"
+[1] "A_206"
+[1] "A_206"
+[1] "A_206"
+[1] "A_206"
+[1] "A_301"
+[1] "A_301"
+[1] "A_301"
+[1] "A_301"
+[1] "A_301"
+[1] "A_302"
+[1] "A_302"
+[1] "A_302"
+[1] "A_302"
+[1] "A_302"
+[1] "A_1101"
+[1] "A_1101"
+[1] "A_1101"
+[1] "A_1101"
+[1] "A_2301"
+[1] "A_2301"
+[1] "A_2301"
+[1] "A_1101"
+[1] "A_2301"
+[1] "A_2402"
+[1] "A_2402"
+[1] "A_2402"
+[1] "A_2301"
+[1] "A_2402"
+[1] "A_2501"
+[1] "A_2501"
+[1] "A_2501"
+[1] "A_2402"
+[1] "A_2501"
+[1] "A_2601"
+[1] "A_2601"
+[1] "A_2601"
+[1] "A_2501"
+[1] "A_2601"
+[1] "A_2902"
+[1] "A_2902"
+[1] "A_2902"
+[1] "A_2601"
+[1] "A_2902"
+[1] "A_3001"
+[1] "A_3001"
+[1] "A_3001"
+[1] "A_3001"
+[1] "A_3002"
+[1] "A_3002"
+[1] "A_2902"
+[1] "A_3002"
+[1] "A_3002"
+[1] "A_3101"
+[1] "A_3101"
+[1] "A_3001"
+[1] "A_3101"
+[1] "A_3101"
+[1] "A_3201"
+[1] "A_3201"
+[1] "A_3002"
+[1] "A_3201"
+[1] "A_3201"
+[1] "A_3301"
+[1] "A_3301"
+[1] "A_3301"
+[1] "A_3101"
+[1] "A_3301"
+[1] "A_3303"
+[1] "A_3303"
+[1] "A_3201"
+[1] "A_3303"
+[1] "A_3303"
+[1] "A_6601"
+[1] "A_6601"
+[1] "A_3301"
+[1] "A_6601"
+[1] "A_6601"
+[1] "A_6801"
+[1] "A_6801"
+[1] "A_6801"
+[1] "A_3303"
+[1] "A_6801"
+[1] "A_6802"
+[1] "A_6802"
+[1] "A_6802"
+[1] "A_6802"
+[1] "A_6601"
+[1][1] "B_702" "B_702"
+
+[1] "B_702"
+[1] "B_702"
+[1] "B_705"
+[1] "B_705"
+[1] "A_6801"
+[1] "B_705"
+[1] "B_705"
+[1] "B_801"
+[1] "B_801"
+[1] "B_801"
+[1] "A_6802"
+[1] "B_801"
+[1] "B_1302"
+[1] "B_1302"
+[1] "B_1302"
+[1] "B_702"
+[1] "B_1302"
+[1] "B_1401"
+[1] "B_1401"
+[1] "B_1401"
+[1] "B_1401"
+[1] "B_705"
+[1] "B_1402"
+[1] "B_1402"
+[1] "B_1402"
+[1] "B_1402"
+[1] "B_801"
+[1] "B_1501"
+[1] "B_1501"
+[1] "B_1501"
+[1] "B_1302"
+[1] "B_1517"
+[1] "B_1501"
+[1] "B_1517"
+[1] "B_1517"
+[1] "B_1517"
+[1] "B_1518"
+[1] "B_1401"
+[1] "B_1518"
+[1] "B_1518"
+[1] "B_1518"
+[1] "B_1801"
+[1] "B_1402"
+[1] "B_1801"
+[1] "B_1801"
+[1] "B_2705"
+[1] "B_1801"
+[1] "B_2705"
+[1] "B_1501"
+[1] "B_2705"
+[1] "B_3501"
+[1] "B_2705"
+[1] "B_3501"
+[1] "B_3501"
+slurmstepd: error: *** JOB 332750 ON sh02-09n54 CANCELLED AT 2020-05-13T20:38:02 ***
+slurmstepd: error: *** JOB 332749 ON sh02-09n54 CANCELLED AT 2020-05-13T20:38:02 ***
+slurmstepd: error: *** JOB 332751 ON sh02-09n53 CANCELLED AT 2020-05-13T20:38:02 ***
+slurmstepd: error: *** JOB 332748 ON sh02-02n07 CANCELLED AT 2020-05-13T20:38:02 ***
+slurmstepd: error: *** JOB 332752 ON sh02-16n04 CANCELLED AT 2020-05-13T20:38:02 ***
