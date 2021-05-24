@@ -88,9 +88,9 @@ if (nrow(phe_results) < 2) {
     names(results_df) <- c("Posterior mean", "Posterior standard deviation", "Prob!=0", "Phenotype")
     # save output
     print("Saving results to file prefix:")
-    print(paste0("/oak/stanford/groups/mrivas/users/guhan/sandbox/hla_manuscript/output/bma/hla_bma_", phe_name))
-    write.table(results_df, paste0("/oak/stanford/groups/mrivas/users/guhan/sandbox/hla_manuscript/output/bma/hla_bma_", phe_name, "_","round_all",".tsv"), col.names=NA, quote=FALSE, sep='\t')
-    pdf(paste0("/oak/stanford/groups/mrivas/users/guhan/sandbox/hla_manuscript/output/bma/hla_bma_", phe_name, "_round_adjp_all",".pdf"))
+    print(paste0("/oak/stanford/groups/mrivas/users/guhan/repos/hla-assoc/output/bma/hla_bma_", phe_name))
+    write.table(results_df, paste0("/oak/stanford/groups/mrivas/users/guhan/repos/hla-assoc/output/bma/hla_bma_", phe_name, "_","round_all",".tsv"), col.names=NA, quote=FALSE, sep='\t')
+    pdf(paste0("/oak/stanford/groups/mrivas/users/guhan/repos/hla-assoc/output/bma/hla_bma_", phe_name, "_round_adjp_all",".pdf"))
 
     # plot image
     imageplot.bma(glm.out.FF)
